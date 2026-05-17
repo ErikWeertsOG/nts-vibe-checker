@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Act, Category, Payload } from "./types";
+import InstallModal from "./InstallModal";
 
 type Tab = "vibe" | "all";
 
@@ -129,6 +130,7 @@ export default function App() {
   const [tab, setTab] = useState<Tab>("vibe");
   const [q, setQ] = useState("");
   const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [showInstall, setShowInstall] = useState(false);
 
   useEffect(() => {
     fetch("/acts.json")
@@ -169,7 +171,14 @@ export default function App() {
           <div className="ll-tag text-ll-cream/50 mt-4">
             {data.stats.with_own_show} EIGEN NTS-SHOWS · {data.stats.with_presence} MET NTS-SPOREN · {data.stats.with_vibe_70_plus} MET STERKE VIBE
           </div>
+          <button
+            onClick={() => setShowInstall(true)}
+            className="mt-5 ll-btn bg-ll-red text-ll-cream hover:bg-ll-cyan hover:text-ll-indigo text-sm"
+          >
+            ACTIVEER OP LOWLANDS.NL →
+          </button>
         </header>
+        {showInstall && <InstallModal onClose={() => setShowInstall(false)} />}
 
         <div className="sticky top-0 bg-ll-indigo-deep/95 backdrop-blur py-3 z-10 border-b border-ll-indigo flex gap-2 items-center">
           <div className="flex gap-0">
