@@ -1,0 +1,13 @@
+{
+  "_comment": "Manual overrides for acts where Claude's vibe judgment is wrong. Slugs match Lowlands /acts/<slug>/. Fields: vibe (int 0-100), vibe_reason (string), blurb (string, 2 zinnen NTS-stijl). Alle drie velden zijn optioneel — wat je weglaat blijft Claude's oordeel.",
+  "smib": {
+    "vibe": 78,
+    "vibe_reason": "Bijlmer-collectief dat hip-hop, kunst en mode samenvoegt — exact het multidisciplinaire scene-werk dat NTS programmeert.",
+    "blurb": "SMIB is geen 'mainstream nederhop'-act maar een Bijlmer-collectief van rappers, designers en videomakers — Ray Fuego, Nnelg, GRGY — die hip-hop, mode en visuele kunst onder één naam draaien. Het soort multidisciplinaire stadsscene-arbeid waar NTS structureel programma's voor maakt."
+  },
+  "ijsland": {
+    "vibe": 72,
+    "vibe_reason": "Protest-hip-hop met punk-energie van Sef en Abel — politiek-georiënteerd, DIY-toon, scene-aansluiting.",
+    "blurb": "Sef en Abel als IJSLAND combineren Amsterdamse straatrap met punk-energie en uitgesproken politiek commentaar. Geen radio-formule, eerder de tradities van JPEGMAFIA en Death Grips toegepast op Nederlands taalgebied."
+  }
+}

@@ -19,6 +19,7 @@ export type Act = {
   category: Category;
 
   reasons: string[];
+  overridden: boolean;
   nts_links: NtsLink[];
   own_show: string | null;
   nts_genres: string[];

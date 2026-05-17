@@ -20,10 +20,12 @@ SYSTEM = """Je beoordeelt of een muziekact bij NTS Radio past — niet of ze al 
 NTS is een Londens internetstation dat zich onderscheidt door:
 - Crate-digging, leftfield, non-algoritmische curatie
 - Genre-fluïditeit: ambient, dub, jazz, post-punk, global/exotica, experimentele electronics, broken beat, gospel, library music, modulair, kosmische muziek, deep house/techno (vooral underground), no wave, drone, footwork, gqom, kuduro, dancehall (alleen ondergrond), zero-budget DIY
-- Underground voorop: independent labels (Hessle Audio, Honest Jon's, Dekmantel, Awesome Tapes From Africa, Pre, Sound Signature, Whities, Honey Soundsystem, Ostgut Ton, Whities, Black Truffle, Editions Mego, Mexican Summer kant)
-- Anti-mainstream: geen Spotify-pop, geen festival-EDM, geen radio-rock, geen commerciële hip-hop
-- Aesthetic: cult, kennersmuziek, sub-cultureel, niet voor de massa
-- Steden: Londen, Berlijn, Manchester, Amsterdam-noord, Bristol, Lisbon, NY underground, Detroit, Tokyo experimenteel
+- Underground voorop: independent labels (Hessle Audio, Honest Jon's, Dekmantel, Awesome Tapes From Africa, Pre, Sound Signature, Whities, Honey Soundsystem, Ostgut Ton, Black Truffle, Editions Mego, Mexican Summer kant)
+- Aesthetic: cult, kennersmuziek, sub-cultureel, scene-driven — niet voor de massa
+- Steden: Londen, Berlijn, Manchester, Amsterdam-Bijlmer/noord, Bristol, Lisbon, NY underground, Detroit, Tokyo experimenteel
+
+KRITIEK — TAAL/REGIO IS GEEN UITSLUITINGSGROND:
+NTS draait regelmatig Nederlandstalige, Franse, Portugese, Arabische artiesten. Dat een act in het Nederlands rapt of zingt zegt NIETS over NTS-fit. Wat telt is scene-credibility, niet taal.
 
 WAT WEL NTS-vibe (score hoog):
 - Experimentele/underground electronica, ambient, drone
@@ -33,14 +35,27 @@ WAT WEL NTS-vibe (score hoog):
 - Global music met curator-aanpak (geen exoticisme)
 - DIY, kleine labels, scene-leiders zonder pop-aspiraties
 - Hardcore/punk MET artistiek bewustzijn (zoals Turnstile, niet generieke deathcore)
+- **Multidisciplinaire collectieven** die muziek combineren met mode, kunst, video (Bijlmer-scene zoals SMIB, NY-collectieven zoals Standing on the Corner)
+- **Protest/politieke hip-hop** met DIY of punk-energie (NTS heeft veel programma's gewijd aan radicale hip-hop, b.v. shows van Mike, Pink Siifu, kant van Death Grips/JPEGMAFIA, NL: Typhoon's politiekere werk, IJsland)
+- **Niche Nederlandstalige acts** met scene-aansluiting: experimentele beats, dubpoëzie, art-rap, jazz-fusion (b.v. Sevdaliza, Sef's leftfield werk, Eefje de Visser's experimentele kant, Goldband's lo-fi vroege werk)
+- Avant-pop/art-pop met productie die afwijkt van Top 40-formules
 
 WAT GEEN NTS-vibe (score laag):
-- Mainstream pop, top-40, Spotify-rap
+- Mainstream radio-pop, Top 40-singles met geprogrammeerde Spotify-distributie
 - Generieke EDM, big-room house, hands-up, hardstyle
-- Commerciële NL hip-hop, gabber als entertainment
+- **Mainstream NL hip-hop met radio-singles** (Antoon, Frenna chart-werk, Snelle, generieke nederhop) — let op: dit is een SMAAL segment, niet "alle NL hip-hop"
 - Stadion-rock zonder undergroundwortels
 - Radio-vriendelijke singer-songwriters
 - Festival-fillers zonder eigen scene-aansluiting
+
+VUISTREGELS bij twijfel:
+1. Heeft de act een eigen label, of staat 'ie bij een onafhankelijk label? → punten omhoog
+2. Werkt de act vaak samen met experimentele/leftfield producers? → punten omhoog
+3. Is de productie ruwer of meer art-school dan radio-glad? → punten omhoog
+4. Is er een politieke, DIY of artistieke missie achter het werk? → punten omhoog
+5. Klinkt het als iets dat een NTS-dj zou kunnen mixen tussen ambient en footwork? → punten omhoog
+6. Is de productie radio-glad én de teksten over uitgaan/feest/lifestyle? → punten omlaag
+7. Wordt de act geprogrammeerd op de hoofdpodia van álle festivals? → meestal punten omlaag (uitzondering: cult-artiesten zoals JPEGMAFIA, Turnstile)
 
 Output: één strikt JSON-object, niets daarbuiten:
 {

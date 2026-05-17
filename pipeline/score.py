@@ -156,13 +156,37 @@ def score_all(
     return results
 
 
+def _load_overrides() -> dict:
+    """Manual overrides keyed by slug. See pipeline/overrides.json."""
+    import json
+    from pathlib import Path
+    p = Path(__file__).parent / "overrides.json"
+    if not p.exists():
+        return {}
+    data = json.loads(p.read_text())
+    return {k: v for k, v in data.items() if not k.startswith("_")}
+
+
 def combine(presence_scored: list[dict], vibe_judgments: dict[str, dict]) -> list[dict]:
-    """Merge presence + vibe into final score and category."""
+    """Merge presence + vibe (+ manual overrides) into final score and category."""
+    overrides = _load_overrides()
     for a in presence_scored:
         v = vibe_judgments.get(a["slug"], {})
         a["vibe_score"] = int(v.get("vibe", 0) or 0)
         a["vibe_reason"] = v.get("reason", "")
         a["blurb"] = v.get("blurb", "")
+        # Apply manual override if present
+        o = overrides.get(a["slug"])
+        if o:
+            if "vibe" in o:
+                a["vibe_score"] = int(o["vibe"])
+            if "vibe_reason" in o:
+                a["vibe_reason"] = o["vibe_reason"]
+            if "blurb" in o:
+                a["blurb"] = o["blurb"]
+            a["overridden"] = True
+        else:
+            a["overridden"] = False
         p = a["presence_score"]
         a["score"] = max(p, a["vibe_score"])
         # category for badge

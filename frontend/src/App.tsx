@@ -68,7 +68,12 @@ function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onT
 
           {act.vibe_reason && (
             <div>
-              <div className="ll-tag text-ll-cream/50 mb-1">VIBE-OORDEEL</div>
+              <div className="ll-tag text-ll-cream/50 mb-1 flex items-center gap-2">
+                <span>VIBE-OORDEEL</span>
+                {act.overridden && (
+                  <span className="bg-ll-red text-ll-cream px-1.5 py-0.5 text-[9px]">HANDMATIG</span>
+                )}
+              </div>
               <div className="text-ll-cream/90 font-body">{act.vibe_reason}</div>
             </div>
           )}
