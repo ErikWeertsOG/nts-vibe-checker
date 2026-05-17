@@ -1,29 +1,33 @@
 import { useEffect, useMemo, useState } from "react";
-import type { Act, Payload } from "./types";
+import type { Act, Category, Payload } from "./types";
 
-type Tab = "all" | "vibe" | "now";
+type Tab = "vibe" | "all";
 
-const scoreColor = (s: number) => {
-  if (s >= 90) return "bg-yellow-400 text-black";
-  if (s >= 75) return "bg-orange-400 text-black";
-  if (s >= 50) return "bg-pink-400 text-black";
-  if (s >= 1) return "bg-zinc-600 text-white";
-  return "bg-zinc-900 text-zinc-500";
+const categoryStyle: Record<Category, { bg: string; label: string }> = {
+  RESIDENT: { bg: "bg-yellow-400 text-black", label: "NTS RESIDENT" },
+  "NTS-PRESENCE": { bg: "bg-yellow-200 text-black", label: "NTS PRESENCE" },
+  "NTS-VIBE": { bg: "bg-pink-400 text-black", label: "NTS VIBE" },
+  ADJACENT: { bg: "bg-zinc-500 text-white", label: "ADJACENT" },
+  OFF: { bg: "bg-zinc-900 text-zinc-600", label: "OFF SPECTRUM" },
 };
 
-const scoreLabel = (s: number) => {
-  if (s >= 90) return "NTS BAAS";
-  if (s >= 75) return "NTS";
-  if (s >= 50) return "NTS-ADJACENT";
-  if (s >= 1) return "WHIFF";
-  return "—";
-};
-
-function ScoreBadge({ score }: { score: number }) {
+function ScoreBadge({ score, category }: { score: number; category: Category }) {
+  const { bg, label } = categoryStyle[category];
   return (
-    <div className={`nts-mono font-bold ${scoreColor(score)} flex flex-col items-center justify-center w-14 h-14 shrink-0`}>
-      <span className="text-xl leading-none">{score}</span>
-      <span className="text-[8px] opacity-80 mt-1">{scoreLabel(score)}</span>
+    <div className={`nts-mono font-bold ${bg} flex flex-col items-center justify-center w-16 h-16 shrink-0`}>
+      <span className="text-2xl leading-none">{score}</span>
+      <span className="text-[8px] opacity-80 mt-1 text-center px-1 leading-tight">{label}</span>
+    </div>
+  );
+}
+
+function MiniBar({ value, color }: { value: number; color: string }) {
+  return (
+    <div className="flex items-center gap-2">
+      <div className="flex-1 bg-zinc-900 h-1 overflow-hidden">
+        <div className={`h-full ${color}`} style={{ width: `${value}%` }} />
+      </div>
+      <span className="nts-mono text-xs w-8 text-right">{value}</span>
     </div>
   );
 }
@@ -32,40 +36,57 @@ function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onT
   return (
     <li className="border-b border-zinc-800">
       <button onClick={onToggle} className="w-full text-left p-4 hover:bg-zinc-950 transition-colors flex items-start gap-4">
-        <ScoreBadge score={act.score} />
+        <ScoreBadge score={act.score} category={act.category} />
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-2 flex-wrap">
             <h2 className="text-lg font-semibold">{act.name}</h2>
-            {act.own_show && (
-              <span className="text-[10px] nts-mono text-yellow-400">NTS RESIDENT</span>
+            {act.lowlands_genres.length > 0 && (
+              <span className="text-xs nts-mono text-zinc-500">{act.lowlands_genres.join(" · ").toUpperCase()}</span>
             )}
           </div>
-          {act.blurb ? (
+          {act.blurb && (
             <p className="text-sm text-zinc-300 mt-1 leading-relaxed">{act.blurb}</p>
-          ) : (
-            <p className="text-sm text-zinc-500 mt-1 italic">{act.reasons[0]}</p>
           )}
         </div>
         <span className="text-zinc-600 nts-mono text-xs mt-1 shrink-0">{expanded ? "−" : "+"}</span>
       </button>
       {expanded && (
-        <div className="px-4 pb-4 pl-20 text-sm space-y-3">
-          {act.genres.length > 0 && (
-            <div>
-              <span className="text-zinc-500 nts-mono text-xs">GENRES </span>
-              <span className="text-zinc-300">{act.genres.join(" · ")}</span>
+        <div className="px-4 pb-4 pl-20 text-sm space-y-4">
+          <div className="space-y-2">
+            <div className="text-zinc-500 nts-mono text-xs">SCORES</div>
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-zinc-400 w-20 nts-mono">PRESENCE</span>
+                <div className="flex-1"><MiniBar value={act.presence_score} color="bg-yellow-400" /></div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-zinc-400 w-20 nts-mono">VIBE</span>
+                <div className="flex-1"><MiniBar value={act.vibe_score} color="bg-pink-400" /></div>
+              </div>
             </div>
-          )}
-          {act.moods.length > 0 && (
-            <div>
-              <span className="text-zinc-500 nts-mono text-xs">MOODS </span>
-              <span className="text-zinc-300">{act.moods.join(" · ")}</span>
-            </div>
-          )}
-          <div>
-            <span className="text-zinc-500 nts-mono text-xs">SIGNAL </span>
-            <span className="text-zinc-300">{act.reasons.join(" · ")}</span>
           </div>
+
+          {act.vibe_reason && (
+            <div>
+              <span className="text-zinc-500 nts-mono text-xs">VIBE-OORDEEL </span>
+              <span className="text-zinc-300">{act.vibe_reason}</span>
+            </div>
+          )}
+
+          {act.reasons.length > 0 && act.presence_score > 0 && (
+            <div>
+              <span className="text-zinc-500 nts-mono text-xs">NTS-SPOREN </span>
+              <span className="text-zinc-300">{act.reasons.join(" · ")}</span>
+            </div>
+          )}
+
+          {act.nts_genres.length > 0 && (
+            <div>
+              <span className="text-zinc-500 nts-mono text-xs">NTS-GENRES </span>
+              <span className="text-zinc-300">{act.nts_genres.join(" · ")}</span>
+            </div>
+          )}
+
           {act.nts_links.length > 0 && (
             <div className="space-y-1">
               {act.nts_links.map((l) => (
@@ -75,9 +96,22 @@ function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onT
               ))}
             </div>
           )}
-          <a href={act.url} target="_blank" rel="noopener noreferrer" className="block text-zinc-500 hover:text-zinc-300 text-xs nts-mono">
-            LOWLANDS.NL/{act.slug.toUpperCase()}
-          </a>
+
+          <div className="flex gap-3 nts-mono text-xs pt-2">
+            <a href={act.url} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300">
+              LOWLANDS →
+            </a>
+            {act.soundcloud && (
+              <a href={act.soundcloud} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300">
+                SOUNDCLOUD →
+              </a>
+            )}
+            {act.spotify && (
+              <a href={act.spotify} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300">
+                SPOTIFY →
+              </a>
+            )}
+          </div>
         </div>
       )}
     </li>
@@ -101,10 +135,14 @@ export default function App() {
   const filtered = useMemo(() => {
     if (!data) return [];
     let acts = data.acts;
-    if (tab === "vibe") acts = acts.filter((a) => a.score > 0);
+    if (tab === "vibe") acts = acts.filter((a) => a.score >= 40);
     if (q) {
       const n = q.toLowerCase();
-      acts = acts.filter((a) => a.name.toLowerCase().includes(n));
+      acts = acts.filter((a) =>
+        a.name.toLowerCase().includes(n) ||
+        a.bio.toLowerCase().includes(n) ||
+        a.lowlands_genres.some((g) => g.toLowerCase().includes(n))
+      );
     }
     return acts;
   }, [data, tab, q]);
@@ -117,10 +155,10 @@ export default function App() {
       <header className="pt-10 pb-6 border-b border-zinc-800">
         <h1 className="text-3xl font-bold nts-mono">NTS VIBE CHECKER</h1>
         <p className="text-zinc-400 mt-2">
-          Welke Lowlands 2026-acts halen het hoogste NTS-gehalte? Score 0–100 op basis van eigen NTS-show, mixtape-credits en guest-vermeldingen.
+          Welke Lowlands 2026-acts dragen het hoogste NTS-gehalte? Score combineert harde NTS-aanwezigheid (eigen show, mixtape-credit) met aesthetic fit (Claude beoordeelt op basis van de bio of NTS dit zou draaien).
         </p>
         <p className="text-zinc-600 text-xs nts-mono mt-2">
-          {data.stats.with_any_signal} van {data.stats.total} acts hebben NTS-sporen. {data.stats.with_own_show} hebben een eigen show.
+          {data.stats.with_own_show} eigen NTS-shows · {data.stats.with_presence} met NTS-sporen · {data.stats.with_vibe_70_plus} met sterke vibe (≥70)
         </p>
       </header>
 
@@ -132,15 +170,15 @@ export default function App() {
               onClick={() => setTab(t)}
               className={`px-3 py-2 ${tab === t ? "bg-white text-black" : "text-zinc-400 hover:text-white"}`}
             >
-              {t === "vibe" ? "ALLEEN NTS-VIBE" : "ALLE ACTS"}
+              {t === "vibe" ? "NTS-VIBE (40+)" : "ALLE 126"}
             </button>
           ))}
         </div>
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="zoek act..."
-          className="ml-auto bg-zinc-900 text-white px-3 py-2 text-sm border border-zinc-800 focus:border-yellow-400 outline-none w-40"
+          placeholder="zoek act / genre..."
+          className="ml-auto bg-zinc-900 text-white px-3 py-2 text-sm border border-zinc-800 focus:border-yellow-400 outline-none w-44"
         />
       </div>
 
@@ -155,7 +193,7 @@ export default function App() {
       )}
 
       <footer className="mt-12 pt-6 border-t border-zinc-800 text-xs text-zinc-600 nts-mono">
-        gebouwd voor LL26 · data via nts.live + lowlands.nl · gegenereerd {data.generated_at.slice(0, 10)}
+        gebouwd voor LL26 · data via nts.live + lowlands.nl · vibe via claude · gegenereerd {data.generated_at.slice(0, 10)}
       </footer>
     </div>
   );

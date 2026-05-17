@@ -53,7 +53,7 @@ def score_act(
     episode_count: int,
     in_mixtape: bool = False,
 ) -> dict:
-    """Compute 0-100 score and reasoning."""
+    """Compute presence score (hard NTS data only) + reasoning."""
     reasons = []
     nts_links = []
     score = 0
@@ -109,12 +109,12 @@ def score_act(
 
     return {
         **act,
-        "score": score,
+        "presence_score": score,
         "reasons": reasons,
         "nts_links": nts_links,
         "own_show": own_show.get("show_alias") if own_show else None,
-        "genres": [g.get("value") for g in (own_show or {}).get("genres", [])],
-        "moods": [m.get("value") for m in (own_show or {}).get("moods", [])],
+        "nts_genres": [g.get("value") for g in (own_show or {}).get("genres", [])],
+        "nts_moods": [m.get("value") for m in (own_show or {}).get("moods", [])],
         "nts_description": (own_show or {}).get("description"),
         "episode_count": episode_count,
     }
@@ -153,5 +153,28 @@ def score_all(
                 print(f"  scored {i+1}/{len(acts)}")
             if own:
                 time.sleep(0.1)
-    results.sort(key=lambda x: -x["score"])
     return results
+
+
+def combine(presence_scored: list[dict], vibe_judgments: dict[str, dict]) -> list[dict]:
+    """Merge presence + vibe into final score and category."""
+    for a in presence_scored:
+        v = vibe_judgments.get(a["slug"], {})
+        a["vibe_score"] = int(v.get("vibe", 0) or 0)
+        a["vibe_reason"] = v.get("reason", "")
+        a["blurb"] = v.get("blurb", "")
+        p = a["presence_score"]
+        a["score"] = max(p, a["vibe_score"])
+        # category for badge
+        if p >= 80:
+            a["category"] = "RESIDENT"
+        elif p >= 50:
+            a["category"] = "NTS-PRESENCE"
+        elif a["vibe_score"] >= 70:
+            a["category"] = "NTS-VIBE"
+        elif a["vibe_score"] >= 40:
+            a["category"] = "ADJACENT"
+        else:
+            a["category"] = "OFF"
+    presence_scored.sort(key=lambda x: (-x["score"], -x["presence_score"]))
+    return presence_scored
