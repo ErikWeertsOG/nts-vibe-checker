@@ -1,0 +1,2088 @@
+{
+  "generated_at": "2026-05-17T09:52:27.531578Z",
+  "acts": [
+    {
+      "slug": "floating-points-live",
+      "name": "Floating Points Live",
+      "url": "https://lowlands.nl/acts/floating-points-live/",
+      "score": 100,
+      "reasons": [
+        "Vaste NTS-resident (107 episodes)"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Floating Points",
+          "url": "https://www.nts.live/shows/floating-points"
+        }
+      ],
+      "own_show": "floating-points",
+      "genres": [
+        "Techno",
+        "Bossa Nova",
+        "Soul",
+        "Spiritual Jazz"
+      ],
+      "moods": [
+        "Collectors"
+      ],
+      "nts_description": "Sam Shepherd a.k.a Floating Points barely needs introduction. Cataloguing depths uncharted to expose some of the best jazz, soul, rare groove and disco around. ",
+      "episode_count": 107,
+      "blurb": "Sam Shepherd heeft als vaste NTS-resident 107 keer bewezen dat hij jazz, soul, rare groove en disco moeiteloos uit elkaar trekt en weer samenvoegt. In een livecontext vertaalt die breedte zich naar modulaire precisie en gospel-geheugen tegelijk."
+    },
+    {
+      "slug": "nia-archives",
+      "name": "Nia Archives",
+      "url": "https://lowlands.nl/acts/nia-archives/",
+      "score": 92,
+      "reasons": [
+        "Eigen NTS-show (11 episodes)"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Up Ya Archives w/ Nia Archives",
+          "url": "https://www.nts.live/shows/nia-archives"
+        }
+      ],
+      "own_show": "nia-archives",
+      "genres": [],
+      "moods": [],
+      "nts_description": "Star UK producer Nia Archives takes over the NTS airwaves in a weekly residency, celebrating the launch of Up Ya Archives, the new record label playing host to the best of new gen junglism. ",
+      "episode_count": 11,
+      "blurb": "Leeds-based producer en vocalist die jungle en drum & bass naar het heden trekt zonder de rauwe 90s-texturen kwijt te raken. Oprichter van Up Ya Archives, een label dat nieuwe generatie junglism een thuis geeft."
+    },
+    {
+      "slug": "upsammy",
+      "name": "Upsammy",
+      "url": "https://lowlands.nl/acts/upsammy/",
+      "score": 92,
+      "reasons": [
+        "Eigen NTS-show (32 episodes)",
+        "Ook in NTS Infinite Mixtape credits"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Pacing The Platform w/ upsammy",
+          "url": "https://www.nts.live/shows/upsammy"
+        }
+      ],
+      "own_show": "upsammy",
+      "genres": [],
+      "moods": [
+        "No Talkin"
+      ],
+      "nts_description": "Rising Dutch producer + DJ Upsammy brings her ear for crystalline melody and intricate rhythm to the NTS airwaves for adventurous and narrative mixes once a month. ",
+      "episode_count": 32,
+      "blurb": "Amsterdamse producer en dj met een scherp oor voor kristallijne melodie en ingewikkelde ritmiek. Haar maandelijkse NTS-show levert verhalende mixen die net zoveel aandacht vragen als haar eigen productiewerk."
+    },
+    {
+      "slug": "this-must-be-the-pace-with-theo-parrish",
+      "name": "This Must Be The Pace With Theo Parrish",
+      "url": "https://lowlands.nl/acts/this-must-be-the-pace-with-theo-parrish/",
+      "score": 92,
+      "reasons": [
+        "Eigen NTS-show (11 episodes)"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Theo Parrish",
+          "url": "https://www.nts.live/shows/theo-parrish"
+        }
+      ],
+      "own_show": "theo-parrish",
+      "genres": [],
+      "moods": [],
+      "nts_description": "Semi-regular feature length sessions from one of the greatest to ever grace the decks. Theo Parrish on NTS: you know it makes sense. ",
+      "episode_count": 11,
+      "blurb": "Detroit via Chicago, Parrish bouwt sets die uren duren en geen genre respecteren. Rauwe house, funk, soul en onkatalogiseerbare obscuriteiten — gebracht met de grillige logica van iemand die alleen aan de muziek verantwoording aflegt."
+    },
+    {
+      "slug": "skee-mask",
+      "name": "Skee Mask",
+      "url": "https://lowlands.nl/acts/skee-mask/",
+      "score": 92,
+      "reasons": [
+        "Eigen NTS-show (19 episodes)",
+        "Plus 1 guest-spots op andere shows"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Feierabend w/ Skee Mask",
+          "url": "https://www.nts.live/shows/skee-mask"
+        }
+      ],
+      "own_show": "skee-mask",
+      "genres": [],
+      "moods": [],
+      "nts_description": "Skee's insight through his daily listening habits, from guilty pleasures to casual recommendations and in between…",
+      "episode_count": 19,
+      "blurb": "Anoniem München-project dat zijn genres even makkelijk verwisselt als zijn alias — van rave-georiënteerde techno naar IDM, jungle en ambient zonder te verantwoorden waarom. 19 afleveringen eigen show op NTS, waar hij zijn dagelijkse luistergewoonten deelt van schaamteloos guilty pleasure tot terloopse aanbeveling."
+    },
+    {
+      "slug": "james-k",
+      "name": "James K",
+      "url": "https://lowlands.nl/acts/james-k/",
+      "score": 92,
+      "reasons": [
+        "Eigen NTS-show (38 episodes)",
+        "Ook in NTS Infinite Mixtape credits"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Trip Lick w/ James K",
+          "url": "https://www.nts.live/shows/james-k"
+        }
+      ],
+      "own_show": "james-k",
+      "genres": [
+        "Glitch",
+        "Ambient Techno"
+      ],
+      "moods": [
+        "No Talkin"
+      ],
+      "nts_description": "Enter the mythology of NYC artist James K - her sound, equally organic and electronic, is a combination of odd dreams, hybridizing enchanted samples, ripped, broken and morphed rhythms, and vocals, both incomprehensible and appealing.",
+      "episode_count": 38,
+      "blurb": "NYC-gebaseerde James K bouwt haar geluid uit gelaagde vocalen, gebroken ritmes en enchanted samples die ergens tussen organisch en volledig gemuteerd in zweven. Haar 38-episode NTS-run spreekt boekdelen — glitch en ambient techno als vehikel voor iets wat moeilijk te categoriseren valt."
+    },
+    {
+      "slug": "jane-remover",
+      "name": "Jane Remover",
+      "url": "https://lowlands.nl/acts/jane-remover/",
+      "score": 92,
+      "reasons": [
+        "Eigen NTS-show (18 episodes)"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Wait Watch This w/ Jane Remover",
+          "url": "https://www.nts.live/shows/jane-remover"
+        }
+      ],
+      "own_show": "jane-remover",
+      "genres": [],
+      "moods": [],
+      "nts_description": "janeremoverremixes.zip",
+      "episode_count": 18,
+      "blurb": "New York-based producer en songwriter wiens werk de grenzen tussen hyperpop, shoegaze en experimentele electronica opzoekt. De show-titel *janeremoverremixes.zip* zegt genoeg over de benadering: alles is bronmateriaal."
+    },
+    {
+      "slug": "turnstile",
+      "name": "Turnstile",
+      "url": "https://lowlands.nl/acts/turnstile/",
+      "score": 85,
+      "reasons": [
+        "Eigen NTS-show (5 episodes)"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Turnstile",
+          "url": "https://www.nts.live/shows/turnstile"
+        }
+      ],
+      "own_show": "turnstile",
+      "genres": [],
+      "moods": [],
+      "nts_description": "A five-part series from Baltimore hardcore band Turnstile, with each band member curating and presenting a personal selection of music on NTS.",
+      "episode_count": 5,
+      "blurb": "Baltimore hardcore band waarbij elk lid een eigen selectie cureerde voor NTS. Breed genoeg om vijf afzonderlijke muzikale werelden te vullen — de band zit duidelijk niet vast aan één referentiekader."
+    },
+    {
+      "slug": "the-femcels",
+      "name": "The Femcels",
+      "url": "https://lowlands.nl/acts/the-femcels/",
+      "score": 80,
+      "reasons": [
+        "Eigen NTS-show in catalogus"
+      ],
+      "nts_links": [
+        {
+          "label": "Eigen NTS-show: Good Songs w/ The Femcels",
+          "url": "https://www.nts.live/shows/the-femcels"
+        }
+      ],
+      "own_show": "the-femcels",
+      "genres": [],
+      "moods": [],
+      "nts_description": "The femcels – Rowan (brunette) and Gabriella (blonde with snapback) – present their favourite songs: rock and roll, electronic, twee, also featuring interviews with friends and people who are cool. They will also tell jokes, and the weather. ",
+      "episode_count": 0,
+      "blurb": "Rowan en Gabriella draaien rock-and-roll, elektronisch en twee door elkaar, met ruimte voor vrienden, interviews en weersvoorspellingen. Geen format, geen pretentie — gewoon wat cool is."
+    },
+    {
+      "slug": "ben-ufo",
+      "name": "Ben Ufo",
+      "url": "https://lowlands.nl/acts/ben-ufo/",
+      "score": 70,
+      "reasons": [
+        "Gecredit op een NTS Infinite Mixtape (geen eigen show)"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Londense dj en Hessle Audio-mede-oprichter met een oor voor de ruwere kanten van techno, UK bass en garage. Vaste naam op Berghain en Fabric, bekend om langzaam opgebouwde sets die functioneel blijven zonder ooit saai te worden."
+    },
+    {
+      "slug": "helena-hauff",
+      "name": "Helena Hauff",
+      "url": "https://lowlands.nl/acts/helena-hauff/",
+      "score": 70,
+      "reasons": [
+        "Gecredit op een NTS Infinite Mixtape (geen eigen show)"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Hamburg-based producer en dj met een voorkeur voor ruwe, analoge hardware en donkere elektro. Vaste naam op Europese clubcircuits via labels als Werkdiscs en Return To Disorder."
+    },
+    {
+      "slug": "voices-from-the-lake",
+      "name": "Voices From The Lake",
+      "url": "https://lowlands.nl/acts/voices-from-the-lake/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Voices From The Lake staat niet op de NTS-radar."
+    },
+    {
+      "slug": "violent-magic-orchestra",
+      "name": "Violent Magic Orchestra",
+      "url": "https://lowlands.nl/acts/violent-magic-orchestra/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Violent Magic Orchestra staat niet op de NTS-radar."
+    },
+    {
+      "slug": "tyler-ballgame",
+      "name": "Tyler Ballgame",
+      "url": "https://lowlands.nl/acts/tyler-ballgame/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Tyler Ballgame."
+    },
+    {
+      "slug": "speed",
+      "name": "Speed",
+      "url": "https://lowlands.nl/acts/speed/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Speed."
+    },
+    {
+      "slug": "sor",
+      "name": "Sor",
+      "url": "https://lowlands.nl/acts/sor/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Sor staat niet op de NTS-radar."
+    },
+    {
+      "slug": "smib",
+      "name": "Smib",
+      "url": "https://lowlands.nl/acts/smib/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Smib staat niet op de NTS-radar."
+    },
+    {
+      "slug": "president",
+      "name": "President",
+      "url": "https://lowlands.nl/acts/president/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor President."
+    },
+    {
+      "slug": "nusantara-beat",
+      "name": "Nusantara Beat",
+      "url": "https://lowlands.nl/acts/nusantara-beat/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Nusantara Beat staat niet op de NTS-radar."
+    },
+    {
+      "slug": "maruja",
+      "name": "Maruja",
+      "url": "https://lowlands.nl/acts/maruja/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Maruja staat niet op de NTS-radar."
+    },
+    {
+      "slug": "ko-shin-moon",
+      "name": "Ko Shin Moon",
+      "url": "https://lowlands.nl/acts/ko-shin-moon/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Ko Shin Moon staat niet op de NTS-radar."
+    },
+    {
+      "slug": "keo",
+      "name": "Keo",
+      "url": "https://lowlands.nl/acts/keo/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Keo staat niet op de NTS-radar."
+    },
+    {
+      "slug": "guilt-trip",
+      "name": "Guilt Trip",
+      "url": "https://lowlands.nl/acts/guilt-trip/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Guilt Trip staat niet op de NTS-radar."
+    },
+    {
+      "slug": "durand-bernarr",
+      "name": "Durand Bernarr",
+      "url": "https://lowlands.nl/acts/durand-bernarr/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Durand Bernarr staat niet op de NTS-radar."
+    },
+    {
+      "slug": "dikke",
+      "name": "Dikke",
+      "url": "https://lowlands.nl/acts/dikke/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Dikke staat niet op de NTS-radar."
+    },
+    {
+      "slug": "cobrah",
+      "name": "Cobrah",
+      "url": "https://lowlands.nl/acts/cobrah/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Cobrah staat niet op de NTS-radar."
+    },
+    {
+      "slug": "chloe-qisha",
+      "name": "Chloe Qisha",
+      "url": "https://lowlands.nl/acts/chloe-qisha/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Chloe Qisha staat niet op de NTS-radar."
+    },
+    {
+      "slug": "bassvictim",
+      "name": "Bassvictim",
+      "url": "https://lowlands.nl/acts/bassvictim/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Bassvictim staat niet op de NTS-radar."
+    },
+    {
+      "slug": "bassolino",
+      "name": "Bassolino",
+      "url": "https://lowlands.nl/acts/bassolino/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Bassolino staat niet op de NTS-radar."
+    },
+    {
+      "slug": "ana-frango-eletrico",
+      "name": "Ana Frango Eletrico",
+      "url": "https://lowlands.nl/acts/ana-frango-eletrico/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Braziliaanse singer-songwriter en producer Ana Frango Elétrico staat nog niet op de NTS-radar."
+    },
+    {
+      "slug": "wunderhorse",
+      "name": "Wunderhorse",
+      "url": "https://lowlands.nl/acts/wunderhorse/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Wunderhorse staat niet op de NTS-radar."
+    },
+    {
+      "slug": "steel-pulse",
+      "name": "Steel Pulse",
+      "url": "https://lowlands.nl/acts/steel-pulse/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Steel Pulse staat niet op de NTS-radar."
+    },
+    {
+      "slug": "skye-newman",
+      "name": "Skye Newman",
+      "url": "https://lowlands.nl/acts/skye-newman/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Skye Newman staat niet op de NTS-radar."
+    },
+    {
+      "slug": "richie-hawtin-dex-efx-x0x",
+      "name": "Richie Hawtin Dex Efx X0x",
+      "url": "https://lowlands.nl/acts/richie-hawtin-dex-efx-x0x/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Richie Hawtin staat niet op de NTS-radar."
+    },
+    {
+      "slug": "ravyn-lenae",
+      "name": "Ravyn Lenae",
+      "url": "https://lowlands.nl/acts/ravyn-lenae/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Ravyn Lenae staat niet op de NTS-radar."
+    },
+    {
+      "slug": "pale-jay",
+      "name": "Pale Jay",
+      "url": "https://lowlands.nl/acts/pale-jay/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Pale Jay staat niet op de NTS-radar."
+    },
+    {
+      "slug": "nu-genea-live-band",
+      "name": "Nu Genea Live Band",
+      "url": "https://lowlands.nl/acts/nu-genea-live-band/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Nu Genea Live Band."
+    },
+    {
+      "slug": "milolaathetlukken",
+      "name": "Milolaathetlukken",
+      "url": "https://lowlands.nl/acts/milolaathetlukken/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Milolaathetlukken staat niet op de NTS-radar."
+    },
+    {
+      "slug": "leisure",
+      "name": "Leisure",
+      "url": "https://lowlands.nl/acts/leisure/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Leisure staat niet op de NTS-radar."
+    },
+    {
+      "slug": "jpegmafia",
+      "name": "Jpegmafia",
+      "url": "https://lowlands.nl/acts/jpegmafia/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Jpegmafia staat niet op de NTS-radar."
+    },
+    {
+      "slug": "ijsland",
+      "name": "Ijsland",
+      "url": "https://lowlands.nl/acts/ijsland/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Ijsland staat niet op de NTS-radar."
+    },
+    {
+      "slug": "fcukers",
+      "name": "Fcukers",
+      "url": "https://lowlands.nl/acts/fcukers/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Fcukers staan (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "dove-ellis",
+      "name": "Dove Ellis",
+      "url": "https://lowlands.nl/acts/dove-ellis/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Dove Ellis staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "buraka-som-sistema",
+      "name": "Buraka Som Sistema",
+      "url": "https://lowlands.nl/acts/buraka-som-sistema/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Buraka Som Sistema staat niet op de NTS-radar."
+    },
+    {
+      "slug": "adela",
+      "name": "Adela",
+      "url": "https://lowlands.nl/acts/adela/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Adela staat niet op de NTS-radar."
+    },
+    {
+      "slug": "s10",
+      "name": "S10",
+      "url": "https://lowlands.nl/acts/s10/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Rotterdamse singer-songwriter bekend van het Eurovisiesongfestival en mainstream Nederlandse popmuziek. Staat niet op de NTS-radar."
+    },
+    {
+      "slug": "noord-nederlands-orkest-",
+      "name": "Noord Nederlands Orkest",
+      "url": "https://lowlands.nl/acts/noord-nederlands-orkest-/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Klassiek symfonisch orkest uit Groningen, buiten het bereik van de NTS-radar."
+    },
+    {
+      "slug": "maribou-state",
+      "name": "Maribou State",
+      "url": "https://lowlands.nl/acts/maribou-state/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Maribou State staat niet op de NTS-radar."
+    },
+    {
+      "slug": "major-lazer",
+      "name": "Major Lazer",
+      "url": "https://lowlands.nl/acts/major-lazer/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Major Lazer staat niet op de NTS-radar."
+    },
+    {
+      "slug": "kneecap",
+      "name": "Kneecap",
+      "url": "https://lowlands.nl/acts/kneecap/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Kneecap staat niet op de NTS-radar."
+    },
+    {
+      "slug": "hermanos-gutierrez",
+      "name": "Hermanos Gutierrez",
+      "url": "https://lowlands.nl/acts/hermanos-gutierrez/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Hermanos Gutierrez staat niet op de NTS-radar."
+    },
+    {
+      "slug": "geese",
+      "name": "Geese",
+      "url": "https://lowlands.nl/acts/geese/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geese staat niet op de NTS-radar."
+    },
+    {
+      "slug": "eefje-de-visser",
+      "name": "Eefje De Visser",
+      "url": "https://lowlands.nl/acts/eefje-de-visser/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Eefje De Visser staat niet op de NTS-radar."
+    },
+    {
+      "slug": "dijon",
+      "name": "Dijon",
+      "url": "https://lowlands.nl/acts/dijon/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Dijon staat niet op de NTS-radar."
+    },
+    {
+      "slug": "clipse",
+      "name": "Clipse",
+      "url": "https://lowlands.nl/acts/clipse/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Clipse staat niet op de NTS-radar."
+    },
+    {
+      "slug": "blood-orange",
+      "name": "Blood Orange",
+      "url": "https://lowlands.nl/acts/blood-orange/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Blood Orange staat niet op de NTS-radar."
+    },
+    {
+      "slug": "antoon",
+      "name": "Antoon",
+      "url": "https://lowlands.nl/acts/antoon/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Antoon staat niet op de NTS-radar."
+    },
+    {
+      "slug": "amyl-and-the-sniffers",
+      "name": "Amyl And The Sniffers",
+      "url": "https://lowlands.nl/acts/amyl-and-the-sniffers/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Amyl And The Sniffers staan niet op de NTS-radar."
+    },
+    {
+      "slug": "2hollis",
+      "name": "2hollis",
+      "url": "https://lowlands.nl/acts/2hollis/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Staat niet op de NTS-radar."
+    },
+    {
+      "slug": "sombr",
+      "name": "Sombr",
+      "url": "https://lowlands.nl/acts/sombr/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Sombr staat niet op de NTS-radar."
+    },
+    {
+      "slug": "parcels",
+      "name": "Parcels",
+      "url": "https://lowlands.nl/acts/parcels/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Parcels staan niet op de NTS-radar."
+    },
+    {
+      "slug": "new-wave",
+      "name": "New Wave",
+      "url": "https://lowlands.nl/acts/new-wave/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen sporen van New Wave op de NTS-radar."
+    },
+    {
+      "slug": "lorde",
+      "name": "Lorde",
+      "url": "https://lowlands.nl/acts/lorde/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Lorde staat niet op de NTS-radar."
+    },
+    {
+      "slug": "tyler-the-creator",
+      "name": "Tyler The Creator",
+      "url": "https://lowlands.nl/acts/tyler-the-creator/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Mainstream rapper met Grammy en miljoenenpubliek — ver buiten de NTS-radar."
+    },
+    {
+      "slug": "waxfiend",
+      "name": "Waxfiend",
+      "url": "https://lowlands.nl/acts/waxfiend/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Waxfiend staat niet op de NTS-radar."
+    },
+    {
+      "slug": "tantu-beats",
+      "name": "Tantu Beats",
+      "url": "https://lowlands.nl/acts/tantu-beats/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Tantu Beats staat niet op de NTS-radar."
+    },
+    {
+      "slug": "saidah",
+      "name": "Saidah",
+      "url": "https://lowlands.nl/acts/saidah/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Saidah staat nog niet op de NTS-radar."
+    },
+    {
+      "slug": "sirene",
+      "name": "Sirene",
+      "url": "https://lowlands.nl/acts/sirene/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Sirene staat niet op de NTS-radar."
+    },
+    {
+      "slug": "nala",
+      "name": "Nala",
+      "url": "https://lowlands.nl/acts/nala/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Nala staat niet op de NTS-radar."
+    },
+    {
+      "slug": "kaboutertje-putlucht",
+      "name": "Kaboutertje Putlucht",
+      "url": "https://lowlands.nl/acts/kaboutertje-putlucht/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Kaboutertje Putlucht staat niet op de NTS-radar."
+    },
+    {
+      "slug": "identified-patient",
+      "name": "Identified Patient",
+      "url": "https://lowlands.nl/acts/identified-patient/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Identified Patient staat niet op de NTS-radar."
+    },
+    {
+      "slug": "mary-lake",
+      "name": "Mary Lake",
+      "url": "https://lowlands.nl/acts/mary-lake/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Mary Lake."
+    },
+    {
+      "slug": "iconic",
+      "name": "Iconic",
+      "url": "https://lowlands.nl/acts/iconic/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Iconic staat niet op de NTS-radar."
+    },
+    {
+      "slug": "benny-rodrigues",
+      "name": "Benny Rodrigues",
+      "url": "https://lowlands.nl/acts/benny-rodrigues/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Benny Rodrigues staat niet op de NTS-radar."
+    },
+    {
+      "slug": "andromedik",
+      "name": "Andromedik",
+      "url": "https://lowlands.nl/acts/andromedik/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Andromedik staat niet op de NTS-radar."
+    },
+    {
+      "slug": "afra",
+      "name": "Afra",
+      "url": "https://lowlands.nl/acts/afra/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Afra staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "tlm",
+      "name": "Tlm",
+      "url": "https://lowlands.nl/acts/tlm/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Tlm staat niet op de NTS-radar."
+    },
+    {
+      "slug": "skream-benga",
+      "name": "Skream Benga",
+      "url": "https://lowlands.nl/acts/skream-benga/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Skream en Benga staan niet op de NTS-radar."
+    },
+    {
+      "slug": "boys-noize",
+      "name": "Boys Noize",
+      "url": "https://lowlands.nl/acts/boys-noize/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Berlijnse producer en Boiler Room-vaste waarde, bekend om harde electro en techno-crossovers. Staat niet op de NTS-radar."
+    },
+    {
+      "slug": "chloe-caillet",
+      "name": "Chloe Caillet",
+      "url": "https://lowlands.nl/acts/chloe-caillet/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Chloé Caillet staat niet op de NTS-radar."
+    },
+    {
+      "slug": "s-candalo",
+      "name": "S Candalo",
+      "url": "https://lowlands.nl/acts/s-candalo/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor S Candalo."
+    },
+    {
+      "slug": "djrum",
+      "name": "Djrum",
+      "url": "https://lowlands.nl/acts/djrum/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Djrum staat niet op de NTS-radar."
+    },
+    {
+      "slug": "nene-h",
+      "name": "Nene H",
+      "url": "https://lowlands.nl/acts/nene-h/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Nene H staat niet op de NTS-radar."
+    },
+    {
+      "slug": "flava-d",
+      "name": "Flava D",
+      "url": "https://lowlands.nl/acts/flava-d/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Flava D staat niet op de NTS-radar."
+    },
+    {
+      "slug": "basshall-kybba-tribal-kush-nems",
+      "name": "Basshall Kybba Tribal Kush Nems",
+      "url": "https://lowlands.nl/acts/basshall-kybba-tribal-kush-nems/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Basshall Kybba Tribal Kush Nems staat niet op de NTS-radar."
+    },
+    {
+      "slug": "marron",
+      "name": "Marron",
+      "url": "https://lowlands.nl/acts/marron/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Marron staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "kettama",
+      "name": "Kettama",
+      "url": "https://lowlands.nl/acts/kettama/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Kettama staat niet op de NTS-radar."
+    },
+    {
+      "slug": "freddy-k",
+      "name": "Freddy K",
+      "url": "https://lowlands.nl/acts/freddy-k/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Freddy K staat niet op de NTS-radar."
+    },
+    {
+      "slug": "h%C3%A9ctor-oaks",
+      "name": "Héctor Oaks",
+      "url": "https://lowlands.nl/acts/h%C3%A9ctor-oaks/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Héctor Oaks staat niet op de NTS-radar."
+    },
+    {
+      "slug": "rose-gray",
+      "name": "Rose Gray",
+      "url": "https://lowlands.nl/acts/rose-gray/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Naam niet gevonden in het NTS-archief."
+    },
+    {
+      "slug": "%C3%A1cido-pantera",
+      "name": "Ácido Pantera",
+      "url": "https://lowlands.nl/acts/%C3%A1cido-pantera/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Ácido Pantera staat niet op de NTS-radar."
+    },
+    {
+      "slug": "anaiis",
+      "name": "Anaiis",
+      "url": "https://lowlands.nl/acts/anaiis/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Anaiis staat vooralsnog niet op de NTS-radar."
+    },
+    {
+      "slug": "celeste",
+      "name": "Celeste",
+      "url": "https://lowlands.nl/acts/celeste/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Celeste staat niet op de NTS-radar."
+    },
+    {
+      "slug": "chalk",
+      "name": "Chalk",
+      "url": "https://lowlands.nl/acts/chalk/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Chalk staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "compagnia-la-giostra",
+      "name": "Compagnia La Giostra",
+      "url": "https://lowlands.nl/acts/compagnia-la-giostra/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Compagnia La Giostra staat niet op de NTS-radar."
+    },
+    {
+      "slug": "el-pony-pisador",
+      "name": "El Pony Pisador",
+      "url": "https://lowlands.nl/acts/el-pony-pisador/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor El Pony Pisador."
+    },
+    {
+      "slug": "erin-lecount",
+      "name": "Erin Lecount",
+      "url": "https://lowlands.nl/acts/erin-lecount/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Erin Lecount staat niet op de NTS-radar."
+    },
+    {
+      "slug": "fauna",
+      "name": "Fauna",
+      "url": "https://lowlands.nl/acts/fauna/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Fauna staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "fulu-miziki",
+      "name": "Fulu Miziki",
+      "url": "https://lowlands.nl/acts/fulu-miziki/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Fulu Miziki staat niet op de NTS-radar."
+    },
+    {
+      "slug": "geordie-greep",
+      "name": "Geordie Greep",
+      "url": "https://lowlands.nl/acts/geordie-greep/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geordie Greep staat niet op de NTS-radar."
+    },
+    {
+      "slug": "gurriers",
+      "name": "Gurriers",
+      "url": "https://lowlands.nl/acts/gurriers/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Gurriers staan niet op de NTS-radar."
+    },
+    {
+      "slug": "gys%C3%A8le",
+      "name": "Gysèle",
+      "url": "https://lowlands.nl/acts/gys%C3%A8le/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Gysèle staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "il-mago-del-gelato",
+      "name": "Il Mago Del Gelato",
+      "url": "https://lowlands.nl/acts/il-mago-del-gelato/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Nog niet op de NTS-radar verschenen."
+    },
+    {
+      "slug": "jet-van-der-steen",
+      "name": "Jet Van Der Steen",
+      "url": "https://lowlands.nl/acts/jet-van-der-steen/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Jet Van Der Steen staat niet op de NTS-radar."
+    },
+    {
+      "slug": "jos%C3%A9-gonz%C3%A1lez",
+      "name": "José González",
+      "url": "https://lowlands.nl/acts/jos%C3%A9-gonz%C3%A1lez/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Zweedse singer-songwriter bekend van akoestische folk-pop en covers als \"Heartbeats.\" Staat niet op de NTS-radar."
+    },
+    {
+      "slug": "kelis",
+      "name": "Kelis",
+      "url": "https://lowlands.nl/acts/kelis/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Kelis staat niet op de NTS-radar."
+    },
+    {
+      "slug": "lambrini-girls",
+      "name": "Lambrini Girls",
+      "url": "https://lowlands.nl/acts/lambrini-girls/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Lambrini Girls staan niet op de NTS-radar."
+    },
+    {
+      "slug": "latanya-alberto",
+      "name": "Latanya Alberto",
+      "url": "https://lowlands.nl/acts/latanya-alberto/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Latanya Alberto staat niet op de NTS-radar."
+    },
+    {
+      "slug": "maey",
+      "name": "Maey",
+      "url": "https://lowlands.nl/acts/maey/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Maey staat (nog) niet op de NTS-radar."
+    },
+    {
+      "slug": "naomi-sharon",
+      "name": "Naomi Sharon",
+      "url": "https://lowlands.nl/acts/naomi-sharon/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Naomi Sharon staat niet op de NTS-radar."
+    },
+    {
+      "slug": "ninajirachi",
+      "name": "Ninajirachi",
+      "url": "https://lowlands.nl/acts/ninajirachi/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Ninajirachi staat niet op de NTS-radar."
+    },
+    {
+      "slug": "politie-warnsveld",
+      "name": "Politie Warnsveld",
+      "url": "https://lowlands.nl/acts/politie-warnsveld/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Politie Warnsveld staat niet op de NTS-radar."
+    },
+    {
+      "slug": "radio-z",
+      "name": "Radio Z",
+      "url": "https://lowlands.nl/acts/radio-z/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Radio Z."
+    },
+    {
+      "slug": "romy-liz-rose",
+      "name": "Romy Liz Rose",
+      "url": "https://lowlands.nl/acts/romy-liz-rose/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Romy Liz Rose staat niet op de NTS-radar."
+    },
+    {
+      "slug": "sophie-straat",
+      "name": "Sophie Straat",
+      "url": "https://lowlands.nl/acts/sophie-straat/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Naam niet teruggevonden in het NTS-archief."
+    },
+    {
+      "slug": "susobrino",
+      "name": "Susobrino",
+      "url": "https://lowlands.nl/acts/susobrino/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Susobrino staat niet op de NTS-radar."
+    },
+    {
+      "slug": "teen-jesus-and-the-jean-teasers",
+      "name": "Teen Jesus And The Jean Teasers",
+      "url": "https://lowlands.nl/acts/teen-jesus-and-the-jean-teasers/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Ierse indie-rockband uit Armagh, niet aanwezig op de NTS-radar."
+    },
+    {
+      "slug": "teen-mortgage",
+      "name": "Teen Mortgage",
+      "url": "https://lowlands.nl/acts/teen-mortgage/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Teen Mortgage."
+    },
+    {
+      "slug": "terzij-de-horde",
+      "name": "Terzij De Horde",
+      "url": "https://lowlands.nl/acts/terzij-de-horde/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Terzij De Horde staat niet op de NTS-radar."
+    },
+    {
+      "slug": "tracey",
+      "name": "Tracey",
+      "url": "https://lowlands.nl/acts/tracey/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Tracey staat niet op de NTS-radar."
+    },
+    {
+      "slug": "viagra-boys",
+      "name": "Viagra Boys",
+      "url": "https://lowlands.nl/acts/viagra-boys/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Zweedse post-punk band met weinig tot geen aanwezigheid in het NTS-ecosysteem."
+    },
+    {
+      "slug": "violet-grohl",
+      "name": "Violet Grohl",
+      "url": "https://lowlands.nl/acts/violet-grohl/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Violet Grohl staat niet op de NTS-radar."
+    },
+    {
+      "slug": "willem",
+      "name": "Willem",
+      "url": "https://lowlands.nl/acts/willem/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Geen NTS-aanwezigheid gevonden voor Willem."
+    },
+    {
+      "slug": "worldpeace-dmt",
+      "name": "Worldpeace Dmt",
+      "url": "https://lowlands.nl/acts/worldpeace-dmt/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Worldpeace Dmt staat niet op de NTS-radar."
+    },
+    {
+      "slug": "zep",
+      "name": "Zep",
+      "url": "https://lowlands.nl/acts/zep/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Zep staat niet op de NTS-radar."
+    },
+    {
+      "slug": "zeyne",
+      "name": "Zeyne",
+      "url": "https://lowlands.nl/acts/zeyne/",
+      "score": 0,
+      "reasons": [
+        "Geen NTS-aanwezigheid gevonden"
+      ],
+      "nts_links": [],
+      "own_show": null,
+      "genres": [],
+      "moods": [],
+      "nts_description": null,
+      "episode_count": 0,
+      "blurb": "Zeyne staat niet op de NTS-radar."
+    }
+  ],
+  "stats": {
+    "total": 126,
+    "with_own_show": 9,
+    "with_any_signal": 11
+  }
+}
