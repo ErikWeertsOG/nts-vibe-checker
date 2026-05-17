@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "NTS Vibe Checker — Lowlands 2026",
+  "version": "0.1.0",
+  "description": "Toont NTS Vibe-badges naast acts op lowlands.nl, gebaseerd op data van nts-vibe-checker.vercel.app.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://lowlands.nl/*",
+    "https://nts-vibe-checker.vercel.app/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://lowlands.nl/*"],
+      "js": ["src/storage.js", "src/content.js"],
+      "css": ["src/badge.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "NTS Vibe Checker"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/badge.css"],
+      "matches": ["https://lowlands.nl/*"]
+    }
+  ]
+}

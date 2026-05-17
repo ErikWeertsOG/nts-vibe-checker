@@ -1,0 +1,142 @@
+/* NTS Vibe Checker — injected badge styles.
+   All classes are prefixed `ntsvc-` to avoid colliding with Lowlands BEM.
+   We use high specificity + a few !important to survive cascading. */
+
+.ntsvc-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 4px 6px;
+  font-family: Impact, "Bebas Neue", "Oswald", "Arial Narrow", sans-serif !important;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ntsvc-badge .ntsvc-score {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.ntsvc-badge .ntsvc-label {
+  font-size: 9px;
+  margin-top: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* Detail-page: fixed floating widget bottom-left, always visible. */
+.ntsvc-floating {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.ntsvc-badge--detail {
+  position: relative;
+  top: auto;
+  right: auto;
+  min-width: 72px;
+  min-height: 72px;
+  display: inline-flex;
+  pointer-events: auto;
+}
+.ntsvc-badge--detail .ntsvc-score { font-size: 32px; }
+.ntsvc-badge--detail .ntsvc-label { font-size: 11px; margin-top: 4px; }
+
+/* Category colors — mirror DESIGN-lowlands.md tokens. */
+.ntsvc-cat-resident      { background: #B80028; color: #FFEBE7; }
+.ntsvc-cat-nts-vibe      { background: #D9FFF9; color: #1B1464; }
+.ntsvc-cat-nts-presence  { background: #1371C3; color: #D9FFF9; }
+.ntsvc-cat-adjacent      { background: #5a5a5a; color: #FFEBE7; }
+.ntsvc-cat-off           { background: #262626; color: #FFEBE7; opacity: 0.85; }
+
+/* Marker so we don't double-inject. */
+.ntsvc-host { position: relative; }
+
+/* Detail-page expandable "waarom?" panel. */
+.ntsvc-why {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 6px 10px;
+  background: #1B1464;
+  color: #D9FFF9;
+  font-family: Impact, "Bebas Neue", "Oswald", sans-serif !important;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0 !important;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.ntsvc-why:hover { background: #2a1f8c; }
+
+.ntsvc-panel {
+  position: fixed;
+  left: 20px;
+  bottom: 110px;
+  width: 360px;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 2147483647;
+  padding: 20px;
+  background: #1B1464;
+  color: #D9FFF9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.ntsvc-panel h3 {
+  margin: 0 0 8px 0;
+  font-family: Impact, "Bebas Neue", "Oswald", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ntsvc-panel h3 .ntsvc-manual {
+  display: inline-block;
+  background: #B80028;
+  color: #FFEBE7;
+  font-family: Impact, "Bebas Neue", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 3px 6px;
+  line-height: 1;
+}
+.ntsvc-panel .ntsvc-panel-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  color: #D9FFF9;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+.ntsvc-panel p { margin: 6px 0; }
+.ntsvc-panel a { color: #D9FFF9; text-decoration: underline; }
+.ntsvc-panel ul { margin: 6px 0; padding-left: 18px; }
+.ntsvc-panel .ntsvc-meta { font-size: 11px; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.05em; }

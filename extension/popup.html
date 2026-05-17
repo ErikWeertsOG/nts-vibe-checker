@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NTS Vibe Checker</title>
+    <link rel="stylesheet" href="src/popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>NTS VIBE</h1>
+      <div class="meta" id="meta">…</div>
+    </header>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Zoek act…" autocomplete="off" />
+      <div class="filters">
+        <button data-top="10" class="active">Top 10</button>
+        <button data-top="25">Top 25</button>
+        <button data-top="50">Top 50</button>
+        <button data-top="all">Alles</button>
+      </div>
+    </div>
+
+    <ul id="list" class="list"></ul>
+
+    <footer>
+      <button id="refresh">Refresh data</button>
+      <a href="https://nts-vibe-checker.vercel.app" target="_blank" rel="noopener">web-app ↗</a>
+    </footer>
+
+    <script src="src/storage.js"></script>
+    <script src="src/popup.js"></script>
+  </body>
+</html>
