@@ -1,20 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --ll-red: #b80028;
+    --ll-indigo: #1b1464;
+    --ll-indigo-deep: #0d0840;
+    --ll-cyan: #d9fff9;
+    --ll-blue: #1371c3;
+    --ll-cream: #ffebe7;
+    --ll-ink: #262626;
+  }
   html {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+    background: var(--ll-indigo-deep);
   }
   body {
-    @apply bg-black text-white;
+    background: var(--ll-indigo-deep);
+    color: var(--ll-cream);
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', 'Oswald', 'Impact', sans-serif;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
   }
 }
 
 @layer components {
-  .nts-mono {
-    font-family: "JetBrains Mono", "Courier New", monospace;
-    letter-spacing: -0.02em;
+  .ll-display {
+    font-family: 'Bebas Neue', 'Oswald', 'Impact', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .ll-tag {
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+    line-height: 1;
+  }
+  .ll-btn {
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 0;
+    padding: 10px 14px;
+    line-height: 1;
+    transition: background-color .12s, color .12s;
   }
 }
