@@ -86,10 +86,21 @@ het onduidelijk is — vraag het dan.
 
 ### 4. Rapporteer terug
 
-Geef de gebruiker de Spotify-link uit het tool-resultaat (`desktop_uri` /
-`deep_link_uri`), het aantal geselecteerde acts, en welke modus is gebruikt.
-Construeer nooit zelf een Spotify-URL — gebruik alleen de link die de tool
-teruggeeft.
+Geef de gebruiker de **volledige, onbewerkte** `deep_link_uri` (of
+`desktop_uri`) uit het tool-resultaat, plus het aantal geselecteerde acts en
+de gebruikte modus.
+
+> **Kort de link NOOIT in.** De `create_playlist`-tool maakt een generatieve
+> AI-playlist (`"is_lazy_loaded": true`, `"playlist_subtitle_metadata":
+> {"type": "GENERATIVE"}`). De link bevat een verplichte `nl=`-parameter die
+> de playlist materialiseert. Een kale `open.spotify.com/playlist/<id>`
+> zonder die query geeft een **404**. Plak de link exact zoals de tool 'm
+> teruggeeft; construeer nooit zelf een Spotify-URL.
+
+> **Zeg er expliciet bij:** dit is een tijdelijke generatieve playlist. De
+> gebruiker moet 'm in Spotify openen (dán worden de tracks geladen) én
+> **opslaan / aan de bibliotheek toevoegen**, anders verdwijnt 'ie weer en
+> is hij later niet meer terug te vinden via de search-tool.
 
 ## Belangrijke regels
 
@@ -97,6 +108,9 @@ teruggeeft.
   uit `acts.json`. Voeg geen artiesten toe op eigen smaak.
 - **Geen exacte tracklijst mogelijk** met de `create_playlist`-tool; wees
   hierover eerlijk tegen de gebruiker (benadering, geen 1-op-1 kopie).
-- **Geen verzonnen URLs.** Alleen links uit het tool-resultaat tonen.
+- **Geen verzonnen of ingekorte URLs.** Alleen de volledige link uit het
+  tool-resultaat tonen — inkorten breekt de generatieve playlist (404).
+- **Generatief = vluchtig.** Altijd benoemen dat de gebruiker de playlist
+  moet openen en opslaan, anders is hij weg.
 - **acts.json ontbreekt of is leeg?** Stop en zeg dat de pipeline eerst moet
   draaien — niet zelf data verzinnen.
