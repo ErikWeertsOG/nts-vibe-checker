@@ -22,7 +22,17 @@ import re
 import sys
 from pathlib import Path
 
-ACTS_JSON = Path(__file__).resolve().parents[3] / "frontend" / "public" / "acts.json"
+ACTS_JSON = next(
+    (
+        p
+        for p in (
+            Path(__file__).resolve().parent / "acts.json",
+            Path(__file__).resolve().parents[3] / "frontend" / "public" / "acts.json",
+        )
+        if p.exists()
+    ),
+    Path(__file__).resolve().parent / "acts.json",
+)
 
 
 def clean_name(name: str) -> str:
