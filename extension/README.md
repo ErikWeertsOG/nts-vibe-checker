@@ -17,6 +17,35 @@ scraping in de extensie zelf.
 - ✅ Popup: festival-kiezer, top 10/25/50 + zoekveld, instelbare data-URL.
 - ✅ Cache 24u via `chrome.storage.local`, met stale fallback bij netwerkfout.
 
+## Live scan: badges op ELKE site (klik-om-te-scannen)
+
+Naast de vaste festival-data kun je op een willekeurige website **"Scan deze
+pagina"** klikken (knop in de popup). De extensie:
+
+1. zoekt korte, naam-achtige teksten op de pagina (filtert UI-woorden weg);
+2. checkt eerst de client-cache (elke artiest wordt maar één keer opgezocht);
+3. stuurt alleen de onbekende namen naar de backend `/api/score`;
+4. plakt een badge bij elke act met NTS-relevantie (categorie ≠ OFF).
+
+De backend (`api/score.py`, serverless op Vercel) zoekt per naam live NTS op en
+laat Claude de "vibe" beoordelen. Vereist op je Vercel-deploy:
+
+- **`ANTHROPIC_API_KEY`** als *Environment Variable* (Project → Settings →
+  Environment Variables). Zónder key werkt het ook, maar dan alleen
+  presence-scores (NTS-data), geen vibe-oordeel.
+- Niets verder nodig: caching gebeurt client-side in de extensie. (Een
+  server-side cache zoals Vercel KV kan later, voor lagere kosten bij meerdere
+  gebruikers.)
+
+> **Eén onzekerheid die alleen een echte deploy uitwijst:** of NTS-requests
+> vanaf Vercel-IP's slagen. Test na deploy met
+> `https://<jouw-deploy>/api/score?names=Hunee` — krijg je een `presence_score`
+> > 0, dan werkt de NTS-kant. Zo niet (NTS blokkeert het IP), dan vallen de
+> presence-scores op 0 terug en zie je alleen vibe-gebaseerde badges.
+
+Kosten: alleen een Claude-call per *nieuwe* artiest; herhaalde scans/bezoeken
+komen uit cache.
+
 ## Eénmalig: data-URL instellen
 
 De extensie haalt data van een deploy. Standaard `nts-vibe-checker.vercel.app`.

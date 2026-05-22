@@ -153,6 +153,115 @@
     }
   }
 
+  // ---- Live click-to-scan (any site) ---------------------------------------
+  // Words that look name-ish but are UI chrome — never query these.
+  const STOPWORDS = new Set([
+    "tickets", "ticket", "line up", "lineup", "programma", "program", "menu",
+    "home", "search", "zoeken", "login", "log in", "sign in", "sign up",
+    "read more", "lees meer", "meer", "more", "info", "news", "nieuws",
+    "contact", "about", "over ons", "over", "faq", "shop", "cart", "winkelmand",
+    "agenda", "festival", "festivals", "line", "up", "next", "prev", "previous",
+    "back", "terug", "close", "open", "play", "pause", "share", "delen",
+    "volgende", "vorige", "cookie", "cookies", "accept", "accepteer", "privacy",
+    "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
+    "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag",
+    "january", "february", "march", "april", "may", "june", "july", "august",
+    "september", "october", "november", "december",
+  ]);
+
+  function looksLikeName(txt) {
+    if (txt.length < 2 || txt.length > 40) return false;
+    if (!/[a-zA-Z]/.test(txt)) return false;
+    if (/[.!?;:]\s/.test(txt)) return false;          // looks like a sentence
+    if (txt.split(/\s+/).length > 5) return false;     // names are short
+    const key = NV.normName(txt);
+    if (key.length < 3) return false;
+    if (STOPWORDS.has(key)) return false;
+    return true;
+  }
+
+  function collectCandidates() {
+    const els = document.querySelectorAll(GENERIC_SEL);
+    const byKey = new Map(); // normname -> { name, els: [] }
+    for (const el of els) {
+      if (el.children.length) continue;
+      if (el.dataset.ntsvcInjected || el.dataset.ntsvcLive) continue;
+      if (el.closest(".ntsvc-badge, .ntsvc-panel, .ntsvc-floating")) continue;
+      const next = el.nextElementSibling;
+      if (next && next.classList && next.classList.contains("ntsvc-badge")) continue;
+      const txt = (el.textContent || "").trim();
+      if (!looksLikeName(txt)) continue;
+      const key = NV.normName(txt);
+      if (!byKey.has(key)) byKey.set(key, { name: txt, els: [] });
+      byKey.get(key).els.push(el);
+    }
+    return byKey;
+  }
+
+  function applyLive(results, byKey) {
+    let n = 0;
+    for (const [name, act] of Object.entries(results)) {
+      if (!act || act.category === "OFF") continue; // skip non-NTS noise
+      const entry = byKey.get(NV.normName(name));
+      if (!entry) continue;
+      for (const el of entry.els) {
+        if (el.dataset.ntsvcLive) continue;
+        el.dataset.ntsvcLive = "1";
+        if (el.parentNode) {
+          el.insertAdjacentElement("afterend", buildBadge(act, { inline: true }));
+          n++;
+        }
+      }
+    }
+    return n;
+  }
+
+  let liveScanRunning = false;
+  async function liveScan() {
+    if (liveScanRunning) return;
+    liveScanRunning = true;
+    try {
+      const byKey = collectCandidates();
+      const names = [...byKey.values()].map((v) => v.name).slice(0, 120);
+      if (!names.length) { toast("Geen namen gevonden op deze pagina."); return; }
+      toast(`Scannen… ${names.length} namen`);
+
+      const { hits, misses } = await NV.getCachedLive(names);
+      let badged = applyLive(hits, byKey);
+
+      for (let i = 0; i < misses.length; i += NV.LIVE_CHUNK) {
+        const chunk = misses.slice(i, i + NV.LIVE_CHUNK);
+        toast(`Opzoeken… ${Math.min(i + chunk.length, misses.length)}/${misses.length}`);
+        try {
+          const results = await NV.liveScoreChunk(chunk);
+          await NV.setCachedLive(results);
+          badged += applyLive(results, byKey);
+        } catch (err) {
+          console.error("[NTS Vibe] live score failed:", err);
+          toast("Score-service onbereikbaar.");
+          return;
+        }
+      }
+      toast(badged ? `Klaar — ${badged} badge${badged === 1 ? "" : "s"}.` : "Geen NTS-matches gevonden.");
+    } finally {
+      liveScanRunning = false;
+    }
+  }
+
+  let toastEl = null;
+  let toastTimer = null;
+  function toast(text) {
+    if (!toastEl) {
+      toastEl = document.createElement("div");
+      toastEl.className = "ntsvc-toast";
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = text;
+    toastEl.style.opacity = "1";
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { if (toastEl) toastEl.style.opacity = "0"; }, 2500);
+  }
+
   // ---- Shared panel ---------------------------------------------------------
   function showPanel(act) {
     document.querySelectorAll(".ntsvc-panel").forEach((p) => p.remove());
@@ -264,6 +373,14 @@
     })();
     return pending;
   }
+
+  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+    if (msg && msg.type === "ntsvc-scan") {
+      liveScan();
+      sendResponse({ ok: true });
+    }
+    return false;
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init, { once: true });

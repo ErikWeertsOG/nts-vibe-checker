@@ -7,6 +7,7 @@ const searchEl = document.getElementById("search");
 const metaEl = document.getElementById("meta");
 const refreshEl = document.getElementById("refresh");
 const festivalEl = document.getElementById("festival");
+const scanEl = document.getElementById("scan");
 const baseInput = document.getElementById("baseUrl");
 const saveBaseEl = document.getElementById("saveBase");
 const webappEl = document.getElementById("webapp");
@@ -135,6 +136,18 @@ filterButtons.forEach((btn) => {
     topN = v === "all" ? "all" : parseInt(v, 10);
     render();
   });
+});
+
+scanEl.addEventListener("click", async () => {
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!tab || !tab.id) return;
+    await chrome.tabs.sendMessage(tab.id, { type: "ntsvc-scan" });
+    window.close();
+  } catch (err) {
+    metaEl.textContent = "Scan kan niet op deze pagina.";
+    console.error(err);
+  }
 });
 
 festivalEl.addEventListener("change", () => loadFestival(festivalEl.value));

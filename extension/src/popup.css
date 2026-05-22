@@ -61,7 +61,24 @@ h1 {
 }
 .filters button.active { background: #D9FFF9; color: #1B1464; border-color: #D9FFF9; }
 
-.list { list-style: none; margin: 0; padding: 0; max-height: 440px; overflow-y: auto; }
+.scan-btn {
+  display: block;
+  width: calc(100% - 28px);
+  margin: 0 14px 8px;
+  padding: 10px;
+  background: #D9FFF9;
+  color: #1B1464;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.scan-btn:hover { background: #fff; }
+.scan-btn:disabled { opacity: 0.5; cursor: default; }
+
+.list { list-style: none; margin: 0; padding: 0; max-height: 360px; overflow-y: auto; }
 .list li {
   display: flex;
   align-items: center;

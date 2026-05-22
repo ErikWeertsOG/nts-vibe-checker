@@ -89,6 +89,24 @@
 /* Marker so we don't double-inject. */
 .ntsvc-host { position: relative; }
 
+/* Live-scan status toast. */
+.ntsvc-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
+  padding: 10px 14px;
+  background: #1B1464;
+  color: #D9FFF9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
 /* Detail-page expandable "waarom?" panel. */
 .ntsvc-why {
   display: inline-block;

@@ -104,6 +104,49 @@ function indexByName(payload) {
   return map;
 }
 
+// ---- Live scoring (click-to-scan on any site) ----------------------------
+// Each artist is scored once and cached client-side, so repeated scans and
+// revisits cost nothing. Negative results (not on NTS) are cached too.
+const LIVE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+const LIVE_CHUNK = 40;
+
+function liveKey(name) {
+  return "ntsvc_live_" + normName(name).replace(/\s+/g, "_");
+}
+
+async function getCachedLive(names) {
+  const keys = names.map(liveKey);
+  const got = await chrome.storage.local.get(keys);
+  const hits = {};
+  const misses = [];
+  for (const name of names) {
+    const e = got[liveKey(name)];
+    if (e && e.ts && Date.now() - e.ts < LIVE_TTL_MS) hits[name] = e.act;
+    else misses.push(name);
+  }
+  return { hits, misses };
+}
+
+async function setCachedLive(results) {
+  const toSet = {};
+  for (const [name, act] of Object.entries(results)) {
+    toSet[liveKey(name)] = { act: act || null, ts: Date.now() };
+  }
+  if (Object.keys(toSet).length) await chrome.storage.local.set(toSet);
+}
+
+async function liveScoreChunk(names) {
+  const base = await getBaseUrl();
+  const res = await fetch(`${base}/api/score`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ names }),
+  });
+  if (!res.ok) throw new Error(`/api/score HTTP ${res.status}`);
+  const data = await res.json();
+  return data.results || {};
+}
+
 // Lowlands-only: extract slug from a /acts/<slug>/ URL or href.
 function slugFromHref(href) {
   if (!href) return null;
@@ -120,4 +163,5 @@ self.NTSVibe = {
   getIndex, getPayloadForEntry, getPayloadForHost,
   indexBySlug, indexByName, normName, slugFromHref,
   festivalIdForHost, getBaseUrl, setBaseUrl, DEFAULT_BASE_URL,
+  getCachedLive, setCachedLive, liveScoreChunk, LIVE_CHUNK,
 };
