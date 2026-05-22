@@ -60,6 +60,25 @@
 .ntsvc-badge--detail .ntsvc-score { font-size: 32px; }
 .ntsvc-badge--detail .ntsvc-label { font-size: 11px; margin-top: 4px; }
 
+/* Generic name-matched sites: small inline badge placed after the act name. */
+.ntsvc-badge--inline {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  display: inline-flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 0;
+  padding: 2px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  pointer-events: auto;
+}
+.ntsvc-badge--inline .ntsvc-score { font-size: 13px; }
+.ntsvc-badge--inline .ntsvc-label { font-size: 9px; margin-top: 0; }
+
 /* Category colors — mirror DESIGN-lowlands.md tokens. */
 .ntsvc-cat-resident      { background: #B80028; color: #FFEBE7; }
 .ntsvc-cat-nts-vibe      { background: #D9FFF9; color: #1B1464; }

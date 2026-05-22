@@ -13,6 +13,7 @@
     </header>
 
     <div class="controls">
+      <select id="festival" aria-label="Kies festival"></select>
       <input id="search" type="search" placeholder="Zoek act…" autocomplete="off" />
       <div class="filters">
         <button data-top="10" class="active">Top 10</button>
@@ -24,9 +25,16 @@
 
     <ul id="list" class="list"></ul>
 
+    <details class="settings">
+      <summary>Instellingen</summary>
+      <label for="baseUrl">Data-URL (je deploy)</label>
+      <input id="baseUrl" type="url" placeholder="https://jouw-deploy.vercel.app" autocomplete="off" />
+      <button id="saveBase">Opslaan &amp; herladen</button>
+    </details>
+
     <footer>
       <button id="refresh">Refresh data</button>
-      <a href="https://nts-vibe-checker.vercel.app" target="_blank" rel="noopener">web-app ↗</a>
+      <a id="webapp" href="#" target="_blank" rel="noopener">web-app ↗</a>
     </footer>
 
     <script src="src/storage.js"></script>

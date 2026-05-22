@@ -1,10 +1,21 @@
-// Inject NTS Vibe badges onto lowlands.nl act cards and detail pages.
-// Reads from `self.NTSVibe` populated by storage.js.
+// Inject NTS Vibe badges onto festival line-up pages.
+//
+// Two modes:
+//  - lowlands.nl: precise slug matching against /acts/<slug>/ cards + detail
+//    page (unchanged behaviour).
+//  - any other festival site: name-based matching — find leaf elements whose
+//    text equals an act name and drop an inline badge next to it. No
+//    site-specific selectors needed.
+//
+// Which festival's data loads is decided by storage.js from the hostname.
 
 (function () {
-  const { getActsPayload, indexBySlug, slugFromHref } = self.NTSVibe;
+  const NV = self.NTSVibe;
+  const host = location.hostname.replace(/^www\./, "");
+  const isLowlands = host === "lowlands.nl" || host.endsWith(".lowlands.nl");
 
   let actsBySlug = null;
+  let actsByName = null;
   let pending = null;
 
   function categoryClass(category) {
@@ -29,12 +40,13 @@
     }
   }
 
-  function buildBadge(act, { detail = false } = {}) {
+  function buildBadge(act, { detail = false, inline = false } = {}) {
     const el = document.createElement("div");
     el.className = `ntsvc-badge ${categoryClass(act.category)}`;
     if (detail) el.classList.add("ntsvc-badge--detail");
-    el.dataset.ntsvcSlug = act.slug;
-    el.title = `${act.name} — ${categoryLabel(act.category)} (${act.score})`;
+    if (inline) el.classList.add("ntsvc-badge--inline");
+    el.dataset.ntsvcSlug = act.slug || "";
+    el.title = `${act.name} — ${categoryLabel(act.category)} (${Math.round(act.score)})`;
 
     const score = document.createElement("span");
     score.className = "ntsvc-score";
@@ -46,33 +58,37 @@
 
     el.appendChild(score);
     el.appendChild(label);
+
+    if (inline || detail) {
+      el.style.cursor = "pointer";
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        showPanel(act);
+      });
+    }
     return el;
   }
 
+  // ---- Lowlands (slug) mode -------------------------------------------------
   function injectOnCard(cardEl) {
     if (cardEl.dataset.ntsvcInjected === "1") return;
-    const href = cardEl.getAttribute("href");
-    const slug = slugFromHref(href);
+    const slug = NV.slugFromHref(cardEl.getAttribute("href"));
     if (!slug) return;
     const act = actsBySlug.get(slug);
-    if (!act) {
-      // Mark as processed so we don't keep retrying.
-      cardEl.dataset.ntsvcInjected = "miss";
-      return;
-    }
+    if (!act) { cardEl.dataset.ntsvcInjected = "miss"; return; }
     cardEl.classList.add("ntsvc-host");
     cardEl.appendChild(buildBadge(act));
     cardEl.dataset.ntsvcInjected = "1";
   }
 
   function injectOnDetailPage() {
-    const slug = slugFromHref(location.pathname);
+    const slug = NV.slugFromHref(location.pathname);
     if (!slug) return;
-    // Already injected for this slug?
     const existing = document.querySelector(".ntsvc-floating");
     if (existing) {
       if (existing.dataset.ntsvcSlug === slug) return;
-      existing.remove(); // stale from previous detail page
+      existing.remove();
     }
     const act = actsBySlug.get(slug);
     if (!act) return;
@@ -80,9 +96,7 @@
     const floating = document.createElement("div");
     floating.className = "ntsvc-floating";
     floating.dataset.ntsvcSlug = slug;
-
-    const badge = buildBadge(act, { detail: true });
-    floating.appendChild(badge);
+    floating.appendChild(buildBadge(act, { detail: true }));
 
     const why = document.createElement("button");
     why.className = "ntsvc-why";
@@ -99,6 +113,47 @@
     }
   }
 
+  function scanLowlands() {
+    document.querySelectorAll("a.act-list-card__button").forEach(injectOnCard);
+
+    document.querySelectorAll(".act-list__headliners-item a[href*='/acts/']").forEach((a) => {
+      if (a.dataset.ntsvcInjected) return;
+      const slug = NV.slugFromHref(a.getAttribute("href"));
+      if (!slug) return;
+      const act = actsBySlug.get(slug);
+      if (!act) { a.dataset.ntsvcInjected = "miss"; return; }
+      a.classList.add("ntsvc-host");
+      if (!a.querySelector(".ntsvc-badge")) a.appendChild(buildBadge(act));
+      a.dataset.ntsvcInjected = "1";
+    });
+
+    if (/^\/acts\/[^/]+\/?$/.test(location.pathname)) injectOnDetailPage();
+    else removeFloatingIfOffDetail();
+  }
+
+  // ---- Generic (name) mode --------------------------------------------------
+  const GENERIC_SEL = "a,span,div,li,h1,h2,h3,h4,h5,p,strong,b,em,figcaption,td";
+
+  function scanGeneric() {
+    if (!actsByName) return;
+    const els = document.querySelectorAll(GENERIC_SEL);
+    for (const el of els) {
+      if (el.dataset.ntsvcInjected) continue;
+      if (el.children.length) continue;           // leaf text nodes only
+      if (el.closest(".ntsvc-badge, .ntsvc-panel, .ntsvc-floating")) continue;
+      const txt = (el.textContent || "").trim();
+      if (txt.length < 3 || txt.length > 60) continue;
+      const key = NV.normName(txt);
+      if (key.length < 3) continue;
+      const act = actsByName.get(key);
+      if (!act) continue;
+      el.dataset.ntsvcInjected = "1";
+      if (!el.parentNode) continue;
+      el.insertAdjacentElement("afterend", buildBadge(act, { inline: true }));
+    }
+  }
+
+  // ---- Shared panel ---------------------------------------------------------
   function showPanel(act) {
     document.querySelectorAll(".ntsvc-panel").forEach((p) => p.remove());
     const panel = document.createElement("div");
@@ -118,6 +173,10 @@
       h3.appendChild(tag);
     }
 
+    const title = document.createElement("p");
+    title.className = "ntsvc-meta";
+    title.textContent = act.name;
+
     const meta = document.createElement("p");
     meta.className = "ntsvc-meta";
     meta.textContent = `Presence ${Math.round(act.presence_score)} · Vibe ${Math.round(act.vibe_score)}`;
@@ -130,6 +189,7 @@
 
     panel.appendChild(close);
     panel.appendChild(h3);
+    panel.appendChild(title);
     panel.appendChild(meta);
     if (act.blurb) panel.appendChild(blurb);
     if (act.vibe_reason) panel.appendChild(reason);
@@ -163,33 +223,10 @@
   }
 
   function scan() {
-    if (!actsBySlug) return;
-    // Acts overview cards
-    const cards = document.querySelectorAll("a.act-list-card__button");
-    cards.forEach(injectOnCard);
-
-    // Headliner items may wrap an <a> — try to find act links inside.
-    document.querySelectorAll(".act-list__headliners-item a[href*='/acts/']").forEach((a) => {
-      if (a.dataset.ntsvcInjected) return;
-      const slug = slugFromHref(a.getAttribute("href"));
-      if (!slug) return;
-      const act = actsBySlug.get(slug);
-      if (!act) { a.dataset.ntsvcInjected = "miss"; return; }
-      a.classList.add("ntsvc-host");
-      // Avoid stacking by checking for an existing badge inside this anchor.
-      if (!a.querySelector(".ntsvc-badge")) a.appendChild(buildBadge(act));
-      a.dataset.ntsvcInjected = "1";
-    });
-
-    // Detail page
-    if (/^\/acts\/[^/]+\/?$/.test(location.pathname)) {
-      injectOnDetailPage();
-    } else {
-      removeFloatingIfOffDetail();
-    }
+    if (isLowlands) scanLowlands();
+    else scanGeneric();
   }
 
-  // Debounced scan to handle rapid mutations during SPA navigation.
   let scanTimer = null;
   function scheduleScan() {
     clearTimeout(scanTimer);
@@ -200,7 +237,6 @@
     const observer = new MutationObserver(scheduleScan);
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Watch for SPA URL changes (Nuxt doesn't always fire popstate on link clicks).
     let lastUrl = location.href;
     setInterval(() => {
       if (location.href !== lastUrl) {
@@ -214,13 +250,16 @@
     if (pending) return pending;
     pending = (async () => {
       try {
-        const payload = await getActsPayload();
-        actsBySlug = indexBySlug(payload);
-        console.log(`[NTS Vibe] loaded ${actsBySlug.size} acts`);
+        const payload = await NV.getPayloadForHost(host);
+        if (!payload) return; // no festival data deployed for this site
+        actsBySlug = NV.indexBySlug(payload);
+        actsByName = NV.indexByName(payload);
+        const fest = payload.festival ? payload.festival.name : host;
+        console.log(`[NTS Vibe] ${actsByName.size} acts loaded for ${fest}`);
         scan();
         startObserver();
       } catch (err) {
-        console.error("[NTS Vibe] failed to load acts.json:", err);
+        console.error("[NTS Vibe] failed to load festival data:", err);
       }
     })();
     return pending;
