@@ -28,22 +28,36 @@ def fetch_show_index(force: bool = False) -> list[dict]:
 
     DATA.mkdir(parents=True, exist_ok=True)
     all_shows, offset, limit = [], 0, 24
-    with httpx.Client(timeout=30) as client:
-        while offset <= MAX_OFFSET:
-            r = client.get(f"{API}/shows", params={"limit": limit, "offset": offset})
-            if r.status_code == 422:
-                break
-            r.raise_for_status()
-            results = r.json().get("results", [])
-            if not results:
-                break
-            all_shows.extend(results)
-            print(f"  fetched {len(all_shows)}")
-            offset += limit
-            time.sleep(0.1)
+    try:
+        with httpx.Client(timeout=30) as client:
+            while offset <= MAX_OFFSET:
+                r = client.get(f"{API}/shows", params={"limit": limit, "offset": offset})
+                if r.status_code == 422:
+                    break
+                r.raise_for_status()
+                results = r.json().get("results", [])
+                if not results:
+                    break
+                all_shows.extend(results)
+                print(f"  fetched {len(all_shows)}")
+                offset += limit
+                time.sleep(0.1)
+    except (httpx.HTTPError, OSError) as e:
+        print(f"  ! NTS show index unreachable ({e}); continuing without it")
+        return all_shows
 
     SHOWS_CACHE.write_text(json.dumps(all_shows))
     return all_shows
+
+
+def nts_available() -> bool:
+    """Quick reachability probe so a network-down run skips NTS cleanly
+    instead of poisoning the slug-lookup cache with false negatives."""
+    try:
+        r = httpx.get(f"{API}/shows", params={"limit": 1}, timeout=10)
+        return r.status_code == 200
+    except (httpx.HTTPError, OSError):
+        return False
 
 
 def slugify(name: str) -> str:
@@ -81,8 +95,12 @@ def fetch_mixtape_credits(force: bool = False) -> set[str]:
     if MIXTAPES_CACHE.exists() and not force:
         return set(json.loads(MIXTAPES_CACHE.read_text()))
     DATA.mkdir(parents=True, exist_ok=True)
-    r = httpx.get(f"{API}/mixtapes", timeout=30)
-    r.raise_for_status()
+    try:
+        r = httpx.get(f"{API}/mixtapes", timeout=30)
+        r.raise_for_status()
+    except (httpx.HTTPError, OSError) as e:
+        print(f"  ! NTS mixtapes unreachable ({e}); continuing without it")
+        return set()
     names = set()
     for m in r.json().get("results", []):
         for c in m.get("credits", []):
@@ -94,7 +112,10 @@ def fetch_mixtape_credits(force: bool = False) -> set[str]:
 
 
 def lookup_slug(client: httpx.Client, slug: str) -> dict | None:
-    r = client.get(f"{API}/shows/{slug}")
+    try:
+        r = client.get(f"{API}/shows/{slug}")
+    except (httpx.HTTPError, OSError):
+        return None
     if r.status_code == 200:
         return r.json()
     return None

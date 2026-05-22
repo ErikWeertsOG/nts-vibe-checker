@@ -2,12 +2,27 @@ export type NtsLink = { label: string; url: string };
 
 export type Category = "RESIDENT" | "NTS-PRESENCE" | "NTS-VIBE" | "ADJACENT" | "OFF";
 
+export type Festival = {
+  id: string;
+  name: string;
+  url: string;
+};
+
+export type FestivalIndexEntry = {
+  id: string;
+  name: string;
+  file: string;
+  total: number;
+  generated_at: string;
+};
+
 export type Act = {
   slug: string;
   name: string;
   url: string;
   bio: string;
-  lowlands_genres: string[];
+  genres?: string[];
+  lowlands_genres?: string[];
   subtitle: string;
   soundcloud: string;
   spotify: string;
@@ -31,6 +46,7 @@ export type Act = {
 
 export type Payload = {
   generated_at: string;
+  festival?: Festival;
   acts: Act[];
   stats: {
     total: number;

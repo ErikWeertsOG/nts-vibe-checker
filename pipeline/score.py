@@ -13,7 +13,10 @@ def normalize(s: str) -> str:
 
 def count_episodes(client: httpx.Client, show_alias: str) -> int:
     """Cheap episode count for a show."""
-    r = client.get(f"{API}/shows/{show_alias}/episodes", params={"limit": 1})
+    try:
+        r = client.get(f"{API}/shows/{show_alias}/episodes", params={"limit": 1})
+    except (httpx.HTTPError, OSError):
+        return 0
     if r.status_code != 200:
         return 0
     try:

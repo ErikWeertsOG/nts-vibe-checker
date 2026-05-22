@@ -5,13 +5,13 @@ export default {
     extend: {
       colors: {
         ll: {
-          red: "#b80028",
-          indigo: "#1b1464",
-          "indigo-deep": "#0d0840",
-          cyan: "#d9fff9",
-          blue: "#1371c3",
-          cream: "#ffebe7",
-          ink: "#262626",
+          red: "rgb(var(--ll-red) / <alpha-value>)",
+          indigo: "rgb(var(--ll-indigo) / <alpha-value>)",
+          "indigo-deep": "rgb(var(--ll-indigo-deep) / <alpha-value>)",
+          cyan: "rgb(var(--ll-cyan) / <alpha-value>)",
+          blue: "rgb(var(--ll-blue) / <alpha-value>)",
+          cream: "rgb(var(--ll-cream) / <alpha-value>)",
+          ink: "rgb(var(--ll-ink) / <alpha-value>)",
         },
       },
       fontFamily: {

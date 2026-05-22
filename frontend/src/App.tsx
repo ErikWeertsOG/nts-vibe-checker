@@ -1,8 +1,35 @@
 import { useEffect, useMemo, useState } from "react";
-import type { Act, Category, Payload } from "./types";
+import type { Act, Category, Festival, FestivalIndexEntry, Payload } from "./types";
 import InstallModal from "./InstallModal";
 
 type Tab = "vibe" | "all";
+
+const DEFAULT_FESTIVAL: Festival = {
+  id: "lowlands",
+  name: "Lowlands 2026",
+  url: "https://lowlands.nl/acts/",
+};
+
+const FALLBACK_INDEX: FestivalIndexEntry[] = [
+  { id: "lowlands", name: "Lowlands 2026", file: "/acts.json", total: 0, generated_at: "" },
+];
+
+const THEME_BY_ID: Record<string, string> = {
+  lowlands: "lowlands",
+  hiddengarden: "hiddengarden",
+  "demo-festival": "demo-festival",
+};
+const themeFor = (id: string) => THEME_BY_ID[id] ?? "default";
+
+const TAGLINE_BY_ID: Record<string, string> = {
+  lowlands: "A CAMPINGFLIGHT TO LOWLANDS PARADISE",
+};
+const taglineFor = (f: Festival) => TAGLINE_BY_ID[f.id] ?? `${f.name} × NTS`;
+const introFor = (f: Festival) =>
+  `Welke ${f.name}-acts dragen het hoogste NTS-gehalte? Score combineert harde NTS-aanwezigheid (eigen show, mixtape-credit) met aesthetic fit — Claude beoordeelt op basis van de bio of NTS dit zou draaien.`;
+
+const actGenres = (a: Act): string[] =>
+  a.genres && a.genres.length ? a.genres : a.lowlands_genres ?? [];
 
 const categoryStyle: Record<Category, { bg: string; label: string }> = {
   RESIDENT:       { bg: "bg-ll-red text-ll-cream",        label: "NTS RESIDENT" },
@@ -33,7 +60,10 @@ function MiniBar({ value, color }: { value: number; color: string }) {
   );
 }
 
-function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onToggle: () => void }) {
+function ActCard({
+  act, expanded, onToggle, sourceLabel,
+}: { act: Act; expanded: boolean; onToggle: () => void; sourceLabel: string }) {
+  const genres = actGenres(act);
   return (
     <li className="border-b border-ll-indigo">
       <button onClick={onToggle} className="w-full text-left p-4 hover:bg-ll-indigo/40 transition-colors flex items-start gap-4">
@@ -41,8 +71,8 @@ function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onT
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-2 flex-wrap">
             <h2 className="font-display text-2xl text-ll-cream leading-tight">{act.name}</h2>
-            {act.lowlands_genres.length > 0 && (
-              <span className="ll-tag text-ll-cyan/70">{act.lowlands_genres.join(" · ")}</span>
+            {genres.length > 0 && (
+              <span className="ll-tag text-ll-cyan/70">{genres.join(" · ")}</span>
             )}
           </div>
           {act.blurb && (
@@ -103,9 +133,9 @@ function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onT
             </div>
           )}
 
-          <div className="flex gap-2 pt-2">
+          <div className="flex gap-2 pt-2 flex-wrap">
             <a href={act.url} target="_blank" rel="noopener noreferrer" className="ll-btn bg-ll-indigo text-ll-cyan hover:bg-ll-cyan hover:text-ll-indigo text-xs">
-              LOWLANDS →
+              {sourceLabel} →
             </a>
             {act.soundcloud && (
               <a href={act.soundcloud} target="_blank" rel="noopener noreferrer" className="ll-btn bg-ll-indigo text-ll-cyan hover:bg-ll-cyan hover:text-ll-indigo text-xs">
@@ -125,6 +155,11 @@ function ActCard({ act, expanded, onToggle }: { act: Act; expanded: boolean; onT
 }
 
 export default function App() {
+  const [index, setIndex] = useState<FestivalIndexEntry[]>(FALLBACK_INDEX);
+  const [selectedId, setSelectedId] = useState<string>(() => {
+    const p = new URLSearchParams(window.location.search).get("f");
+    return p || "";
+  });
   const [data, setData] = useState<Payload | null>(null);
   const [err, setErr] = useState<string>("");
   const [tab, setTab] = useState<Tab>("vibe");
@@ -132,12 +167,55 @@ export default function App() {
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const [showInstall, setShowInstall] = useState(false);
 
+  // Load the festival index, then settle on a selected festival.
   useEffect(() => {
-    fetch("/acts.json")
+    fetch("/festivals/index.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.statusText)))
+      .then((idx: { festivals: FestivalIndexEntry[] }) => {
+        const list = idx.festivals?.length ? idx.festivals : FALLBACK_INDEX;
+        setIndex(list);
+        setSelectedId((cur) => (cur && list.some((f) => f.id === cur) ? cur : list[0].id));
+      })
+      .catch(() => {
+        setIndex(FALLBACK_INDEX);
+        setSelectedId((cur) => cur || "lowlands");
+      });
+  }, []);
+
+  // Load the selected festival's payload.
+  useEffect(() => {
+    if (!selectedId) return;
+    const entry = index.find((f) => f.id === selectedId);
+    const file = entry?.file ?? "/acts.json";
+    setData(null);
+    setErr("");
+    setOpen({});
+    fetch(file)
       .then((r) => (r.ok ? r.json() : Promise.reject(r.statusText)))
       .then(setData)
       .catch((e) => setErr(String(e)));
-  }, []);
+  }, [selectedId, index]);
+
+  const festival: Festival = useMemo(() => {
+    if (data?.festival) return data.festival;
+    const entry = index.find((f) => f.id === selectedId);
+    if (entry) return { id: entry.id, name: entry.name, url: DEFAULT_FESTIVAL.url };
+    return DEFAULT_FESTIVAL;
+  }, [data, index, selectedId]);
+
+  // Apply per-festival theme + document title.
+  useEffect(() => {
+    document.documentElement.dataset.theme = themeFor(festival.id);
+    document.title = `NTS Vibe Checker — ${festival.name}`;
+  }, [festival]);
+
+  const selectFestival = (id: string) => {
+    setSelectedId(id);
+    const url = new URL(window.location.href);
+    if (id === index[0]?.id) url.searchParams.delete("f");
+    else url.searchParams.set("f", id);
+    window.history.replaceState({}, "", url);
+  };
 
   const filtered = useMemo(() => {
     if (!data) return [];
@@ -148,35 +226,54 @@ export default function App() {
       acts = acts.filter((a) =>
         a.name.toLowerCase().includes(n) ||
         a.bio.toLowerCase().includes(n) ||
-        a.lowlands_genres.some((g) => g.toLowerCase().includes(n))
+        actGenres(a).some((g) => g.toLowerCase().includes(n))
       );
     }
     return acts;
   }, [data, tab, q]);
 
-  if (err) return <div className="p-8 text-ll-red">Error: {err}</div>;
-  if (!data) return <div className="p-8 text-ll-cream/60">Loading…</div>;
+  if (err) return <div className="min-h-screen bg-ll-indigo-deep p-8 text-ll-red">Error: {err}</div>;
+  if (!data) return <div className="min-h-screen bg-ll-indigo-deep p-8 text-ll-cream/60">Loading…</div>;
+
+  const isLowlands = festival.id === "lowlands";
+  const sourceLabel = isLowlands ? "LOWLANDS" : festival.name.toUpperCase();
 
   return (
     <div className="min-h-screen bg-ll-indigo-deep">
       <div className="max-w-3xl mx-auto px-4 pb-24">
         <header className="pt-12 pb-8 border-b-4 border-ll-red relative">
-          <div className="ll-tag text-ll-cyan mb-2">A CAMPINGFLIGHT TO LOWLANDS PARADISE</div>
+          <div className="flex items-start justify-between gap-4 flex-wrap">
+            <div className="ll-tag text-ll-cyan mb-2">{taglineFor(festival)}</div>
+            {index.length > 1 && (
+              <select
+                value={festival.id}
+                onChange={(e) => selectFestival(e.target.value)}
+                className="ll-btn bg-ll-indigo text-ll-cyan border-2 border-ll-indigo focus:border-ll-cyan outline-none text-sm cursor-pointer"
+                aria-label="Kies festival"
+              >
+                {index.map((f) => (
+                  <option key={f.id} value={f.id}>{f.name}</option>
+                ))}
+              </select>
+            )}
+          </div>
           <h1 className="font-display text-ll-cream text-[64px] sm:text-[88px] leading-[0.85] tracking-tight">
             NTS<br/>VIBE<br/>CHECKER
           </h1>
           <p className="text-ll-cream/80 mt-6 max-w-xl font-body leading-relaxed">
-            Welke Lowlands 2026-acts dragen het hoogste NTS-gehalte? Score combineert harde NTS-aanwezigheid (eigen show, mixtape-credit) met aesthetic fit — Claude beoordeelt op basis van de bio of NTS dit zou draaien.
+            {introFor(festival)}
           </p>
           <div className="ll-tag text-ll-cream/50 mt-4">
             {data.stats.with_own_show} EIGEN NTS-SHOWS · {data.stats.with_presence} MET NTS-SPOREN · {data.stats.with_vibe_70_plus} MET STERKE VIBE
           </div>
-          <button
-            onClick={() => setShowInstall(true)}
-            className="mt-5 ll-btn bg-ll-red text-ll-cream hover:bg-ll-cyan hover:text-ll-indigo text-sm"
-          >
-            ACTIVEER OP LOWLANDS.NL →
-          </button>
+          {isLowlands && (
+            <button
+              onClick={() => setShowInstall(true)}
+              className="mt-5 ll-btn bg-ll-red text-ll-cream hover:bg-ll-cyan hover:text-ll-indigo text-sm"
+            >
+              ACTIVEER OP LOWLANDS.NL →
+            </button>
+          )}
         </header>
         {showInstall && <InstallModal onClose={() => setShowInstall(false)} />}
 
@@ -192,7 +289,7 @@ export default function App() {
                     : "bg-ll-indigo text-ll-cream/80 hover:text-ll-cream"
                 }`}
               >
-                {t === "vibe" ? "NTS-VIBE (40+)" : "ALLE 126"}
+                {t === "vibe" ? "NTS-VIBE (40+)" : `ALLE ${data.stats.total}`}
               </button>
             ))}
           </div>
@@ -206,7 +303,7 @@ export default function App() {
 
         <ul>
           {filtered.map((a) => (
-            <ActCard key={a.slug} act={a} expanded={!!open[a.slug]} onToggle={() => setOpen((o) => ({ ...o, [a.slug]: !o[a.slug] }))} />
+            <ActCard key={a.slug} act={a} expanded={!!open[a.slug]} sourceLabel={sourceLabel} onToggle={() => setOpen((o) => ({ ...o, [a.slug]: !o[a.slug] }))} />
           ))}
         </ul>
 
@@ -214,8 +311,10 @@ export default function App() {
           <p className="text-ll-cream/40 p-8 text-center font-body">Geen acts gevonden.</p>
         )}
 
-        <footer className="mt-12 pt-6 border-t border-ll-indigo flex justify-between items-baseline">
-          <div className="ll-tag text-ll-cream/40">GEBOUWD VOOR LL26 · DATA NTS.LIVE + LOWLANDS.NL · VIBE VIA CLAUDE</div>
+        <footer className="mt-12 pt-6 border-t border-ll-indigo flex justify-between items-baseline gap-4 flex-wrap">
+          <div className="ll-tag text-ll-cream/40">
+            {isLowlands ? "GEBOUWD VOOR LL26 · DATA NTS.LIVE + LOWLANDS.NL · VIBE VIA CLAUDE" : "DATA NTS.LIVE · VIBE VIA CLAUDE"}
+          </div>
           <div className="ll-tag text-ll-cream/40">{data.generated_at.slice(0, 10)}</div>
         </footer>
       </div>
