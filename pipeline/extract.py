@@ -346,7 +346,7 @@ def extract_acts(url: str, force: bool = False, method: str = "auto") -> tuple[d
         acts = enrich_with_genres(fetch_lineup(force=force), force=force)
         for a in acts:
             a.setdefault("genres", a.get("lowlands_genres", []))
-        meta = {"id": "lowlands", "name": "Lowlands", "url": url}
+        meta = {"id": "lowlands", "name": "Lowlands 2026", "url": url}
         return meta, acts
 
     html = fetch_html(url, force=force)
