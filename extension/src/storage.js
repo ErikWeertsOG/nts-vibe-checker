@@ -110,8 +110,11 @@ function indexByName(payload) {
 const LIVE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 const LIVE_CHUNK = 40;
 
+// Versioned prefix: bump when scoring logic changes meaningfully, so old
+// negative-cache entries don't suppress fresh lookups.
+const LIVE_VERSION = "v2";
 function liveKey(name) {
-  return "ntsvc_live_" + normName(name).replace(/\s+/g, "_");
+  return `ntsvc_live_${LIVE_VERSION}_` + normName(name).replace(/\s+/g, "_");
 }
 
 async function getCachedLive(names) {

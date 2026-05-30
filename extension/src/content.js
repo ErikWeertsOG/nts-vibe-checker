@@ -223,10 +223,12 @@
     try {
       const byKey = collectCandidates();
       const names = [...byKey.values()].map((v) => v.name).slice(0, 120);
+      console.log("[NTS Vibe] candidates:", names);
       if (!names.length) { toast("Geen namen gevonden op deze pagina."); return; }
       toast(`Scannen… ${names.length} namen`);
 
       const { hits, misses } = await NV.getCachedLive(names);
+      console.log(`[NTS Vibe] ${Object.keys(hits).length} from cache, ${misses.length} to query`);
       let badged = applyLive(hits, byKey);
 
       for (let i = 0; i < misses.length; i += NV.LIVE_CHUNK) {
@@ -234,6 +236,7 @@
         toast(`Opzoeken… ${Math.min(i + chunk.length, misses.length)}/${misses.length}`);
         try {
           const results = await NV.liveScoreChunk(chunk);
+          console.log("[NTS Vibe] results:", results);
           await NV.setCachedLive(results);
           badged += applyLive(results, byKey);
         } catch (err) {
@@ -242,6 +245,7 @@
           return;
         }
       }
+      console.log(`[NTS Vibe] done — ${badged} badges placed`);
       toast(badged ? `Klaar — ${badged} badge${badged === 1 ? "" : "s"}.` : "Geen NTS-matches gevonden.");
     } finally {
       liveScanRunning = false;

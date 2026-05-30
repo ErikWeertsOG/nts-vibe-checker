@@ -12,6 +12,7 @@ needs ANTHROPIC_API_KEY in the environment; without it the endpoint still works
 and returns presence-only results (vibe = 0).
 """
 from http.server import BaseHTTPRequestHandler
+from concurrent.futures import ThreadPoolExecutor
 import json
 import os
 import re
@@ -129,8 +130,36 @@ def in_mixtape(name: str) -> bool:
     return n in mixtape_credits()
 
 
+def nts_artist_page(client: httpx.Client, name: str) -> str | None:
+    """NTS canonical artist URLs are /artists/<id>-<slug>. The platform also
+    serves /artists/<slug> and redirects/resolves to the canonical one — so a
+    200 there proves the artist plays/appears on NTS even without hosting.
+    Returns the final URL when found."""
+    slug = slugify(name)
+    if not slug or len(slug) < 3:
+        return None
+    try:
+        r = client.get(f"https://www.nts.live/artists/{slug}",
+                       follow_redirects=True, timeout=8)
+    except (httpx.HTTPError, OSError):
+        return None
+    if r.status_code != 200:
+        return None
+    final = str(r.url).lower()
+    if "/artists/" not in final:
+        return None
+    # Defensive: confirm the response actually mentions this artist's slug
+    # somewhere on the page, so we don't badge on generic fallback pages.
+    body = r.text.lower()
+    needle = slug.replace("-", "")
+    if needle not in body.replace("-", ""):
+        return None
+    return str(r.url)
+
+
 def nts_presence(client: httpx.Client, name: str) -> dict:
-    """Presence score from hard NTS data: own show + episode count + mixtape."""
+    """Presence score from hard NTS data: own show + episode count + mixtape
+    + 'plays on NTS' artist-page fallback."""
     own = None
     for slug in candidate_slugs(name):
         try:
@@ -179,6 +208,13 @@ def nts_presence(client: httpx.Client, name: str) -> dict:
             reasons.append("Ook gecredit op een NTS Infinite Mixtape")
         else:
             reasons.append("Ook in NTS Infinite Mixtape credits")
+
+    if score == 0:
+        artist_url = nts_artist_page(client, name)
+        if artist_url:
+            score = 60
+            reasons.append("Speelt op NTS (geen eigen show)")
+            links.append({"label": f"NTS-artiest: {name}", "url": artist_url})
 
     if score == 0:
         reasons.append("Geen NTS-aanwezigheid gevonden")
@@ -277,26 +313,46 @@ def score_name(client: httpx.Client, name: str) -> dict:
     }
 
 
+def _score_one_safe(name: str) -> dict | None:
+    """Each worker gets its own client so threads don't share connections."""
+    try:
+        with httpx.Client(timeout=10, headers=NTS_HEADERS) as c:
+            return score_name(c, name)
+    except Exception as e:
+        print(f"score error for {name!r}: {e}")
+        return None
+
+
 def score_many(names: list[str]) -> dict:
     out: dict = {}
     seen: dict[str, str] = {}  # normalized -> first display name
-    with httpx.Client(timeout=12, headers=NTS_HEADERS) as client:
-        for raw in names[:MAX_NAMES]:
-            name = (raw or "").strip()
-            if not name:
-                continue
-            key = normalize(name)
-            if not key:
-                continue
-            if key in seen:
-                out[name] = out[seen[key]]
-                continue
-            seen[key] = name
-            try:
-                out[name] = score_name(client, name)
-            except Exception as e:  # never fail the whole batch on one name
-                out[name] = None
-                print(f"score error for {name!r}: {e}")
+    unique: list[str] = []
+    for raw in names[:MAX_NAMES]:
+        name = (raw or "").strip()
+        if not name:
+            continue
+        key = normalize(name)
+        if not key:
+            continue
+        if key in seen:
+            continue
+        seen[key] = name
+        unique.append(name)
+
+    # Parallelise so the extra artist-page fetch fits inside Vercel's 10s
+    # serverless timeout even for full chunks.
+    if unique:
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            results = list(pool.map(_score_one_safe, unique))
+        for name, res in zip(unique, results):
+            out[name] = res
+
+    # Echo dedup'd display names back as aliases.
+    for raw in names[:MAX_NAMES]:
+        name = (raw or "").strip()
+        key = normalize(name) if name else ""
+        if key and name not in out and seen.get(key) in out:
+            out[name] = out[seen[key]]
     return out
 
 
