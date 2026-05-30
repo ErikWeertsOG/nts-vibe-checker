@@ -167,6 +167,10 @@
     "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag",
     "january", "february", "march", "april", "may", "june", "july", "august",
     "september", "october", "november", "december",
+    "timetable", "overview", "overzicht", "discover", "accommodations", "accommodation",
+    "stages", "stage", "artists", "artist", "lineup overview", "all", "alles",
+    "today", "tomorrow", "vandaag", "morgen", "schedule", "map", "plattegrond",
+    "food", "drinks", "newsletter", "nieuwsbrief", "subscribe", "follow",
   ]);
 
   function looksLikeName(txt) {
@@ -233,13 +237,19 @@
     document.querySelector(".ntsvc-results")?.remove();
     if (!liveMatches.length) return;
 
-    const acts = liveMatches.slice().sort((a, b) => b.act.score - a.act.score);
+    // One row per artist — the same name often appears in several elements.
+    const byName = new Map();
+    for (const m of liveMatches) {
+      const k = NV.normName(m.act.name);
+      if (!byName.has(k)) byName.set(k, m);
+    }
+    const acts = [...byName.values()].sort((a, b) => b.act.score - a.act.score);
     const panel = document.createElement("div");
     panel.className = "ntsvc-results";
 
     const head = document.createElement("div");
     head.className = "ntsvc-results-head";
-    head.innerHTML = `<strong>${acts.length} NTS-match${acts.length === 1 ? "" : "es"}</strong>`;
+    head.innerHTML = `<strong>${acts.length} NTS-act${acts.length === 1 ? "" : "s"}</strong>`;
     const close = document.createElement("button");
     close.className = "ntsvc-results-close";
     close.textContent = "×";
