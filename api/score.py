@@ -342,7 +342,7 @@ def score_many(names: list[str]) -> dict:
     # Parallelise so the extra artist-page fetch fits inside Vercel's 10s
     # serverless timeout even for full chunks.
     if unique:
-        with ThreadPoolExecutor(max_workers=8) as pool:
+        with ThreadPoolExecutor(max_workers=12) as pool:
             results = list(pool.map(_score_one_safe, unique))
         for name, res in zip(unique, results):
             out[name] = res

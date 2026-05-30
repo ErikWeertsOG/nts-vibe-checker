@@ -108,7 +108,9 @@ function indexByName(payload) {
 // Each artist is scored once and cached client-side, so repeated scans and
 // revisits cost nothing. Negative results (not on NTS) are cached too.
 const LIVE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-const LIVE_CHUNK = 40;
+// Small chunks keep each request well under the serverless timeout even when
+// the Claude vibe call is enabled (each name then takes ~1-3s).
+const LIVE_CHUNK = 12;
 
 // Versioned prefix: bump when scoring logic changes meaningfully, so old
 // negative-cache entries don't suppress fresh lookups.
