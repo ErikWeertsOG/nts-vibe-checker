@@ -198,6 +198,9 @@
     return byKey;
   }
 
+  // Collected across the whole scan so the results panel can list everything.
+  const liveMatches = []; // { act, el }
+
   function applyLive(results, byKey) {
     let n = 0;
     for (const [name, act] of Object.entries(results)) {
@@ -209,6 +212,7 @@
         el.dataset.ntsvcLive = "1";
         if (el.parentNode) {
           el.insertAdjacentElement("afterend", buildBadge(act, { inline: true }));
+          liveMatches.push({ act, el });
           n++;
         }
       }
@@ -216,10 +220,58 @@
     return n;
   }
 
+  function flash(el) {
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    const prev = el.style.cssText;
+    el.style.cssText += ";outline:3px solid #B80028 !important;outline-offset:2px;transition:outline 0.2s;";
+    setTimeout(() => { el.style.cssText = prev; }, 1800);
+  }
+
+  // Always-visible results list — inline badges can be clipped by host CSS,
+  // this panel guarantees the matches are reachable.
+  function showResultsPanel() {
+    document.querySelector(".ntsvc-results")?.remove();
+    if (!liveMatches.length) return;
+
+    const acts = liveMatches.slice().sort((a, b) => b.act.score - a.act.score);
+    const panel = document.createElement("div");
+    panel.className = "ntsvc-results";
+
+    const head = document.createElement("div");
+    head.className = "ntsvc-results-head";
+    head.innerHTML = `<strong>${acts.length} NTS-match${acts.length === 1 ? "" : "es"}</strong>`;
+    const close = document.createElement("button");
+    close.className = "ntsvc-results-close";
+    close.textContent = "×";
+    close.addEventListener("click", () => panel.remove());
+    head.appendChild(close);
+    panel.appendChild(head);
+
+    const list = document.createElement("div");
+    list.className = "ntsvc-results-list";
+    for (const { act, el } of acts) {
+      const row = document.createElement("button");
+      row.className = "ntsvc-results-row";
+      const badge = document.createElement("span");
+      badge.className = `ntsvc-results-score ${categoryClass(act.category)}`;
+      badge.textContent = Math.round(act.score);
+      const label = document.createElement("span");
+      label.className = "ntsvc-results-name";
+      label.textContent = act.name;
+      row.appendChild(badge);
+      row.appendChild(label);
+      row.addEventListener("click", () => { flash(el); showPanel(act); });
+      list.appendChild(row);
+    }
+    panel.appendChild(list);
+    document.body.appendChild(panel);
+  }
+
   let liveScanRunning = false;
   async function liveScan() {
     if (liveScanRunning) return;
     liveScanRunning = true;
+    liveMatches.length = 0;
     try {
       const byKey = collectCandidates();
       const names = [...byKey.values()].map((v) => v.name).slice(0, 120);
@@ -246,7 +298,8 @@
         }
       }
       console.log(`[NTS Vibe] done — ${badged} badges placed`);
-      toast(badged ? `Klaar — ${badged} badge${badged === 1 ? "" : "s"}.` : "Geen NTS-matches gevonden.");
+      showResultsPanel();
+      toast(badged ? `Klaar — ${badged} match${badged === 1 ? "" : "es"}. Zie lijst linksonder.` : "Geen NTS-matches gevonden.");
     } finally {
       liveScanRunning = false;
     }

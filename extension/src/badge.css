@@ -107,6 +107,64 @@
   pointer-events: none;
 }
 
+/* Always-visible scan-results list (bottom-left). */
+.ntsvc-results {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 280px;
+  max-height: 60vh;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  background: #1B1464;
+  color: #D9FFF9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.ntsvc-results-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(217, 255, 249, 0.15);
+}
+.ntsvc-results-close {
+  background: transparent;
+  border: 0;
+  color: #D9FFF9;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.ntsvc-results-list { overflow-y: auto; }
+.ntsvc-results-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(217, 255, 249, 0.08);
+  color: #D9FFF9;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ntsvc-results-row:hover { background: #2a1f8c; }
+.ntsvc-results-score {
+  flex: 0 0 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Impact, "Bebas Neue", "Oswald", sans-serif;
+  font-size: 16px;
+}
+.ntsvc-results-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
 /* Detail-page expandable "waarom?" panel. */
 .ntsvc-why {
   display: inline-block;
