@@ -410,6 +410,93 @@ Frontend laadt `/acts.json` op dezelfde origin (mee-gedeployd).
 
 ---
 
+## Bonus § — Timetable-integratie (optioneel per-festival adapter)
+
+Naast "welke acts scoren hoog?" wil je uiteindelijk ook "**welke high-scorers spelen wanneer, op
+welke stage, en met welke overlap?**". Dat betekent per act een `sets`-veld met `{day, stage,
+start_time}` in `acts.json`, en een frontend-tab die dat rendert als tijdrooster met NTS-kleur per
+blok, plus een NU-modus tijdens het festival zelf.
+
+**Bron per festival verschilt.** Waar de line-up-URL vaak SSR-HTML/JSON-LD levert, is het
+blokkenschema meestal een **PDF**, soms een aparte JSON-endpoint, soms een niet-scrapebare app.
+Dit is dus een echt **adapter**-vraagstuk: één klein contract, meerdere implementaties.
+
+### Adapter-contract
+
+```python
+def fetch_timetable(source: str | Path) -> list[Slot]: ...
+class Slot: day: str; stage: str; name: str; start_time: str
+```
+
+De rest van de pipeline weet niets van bron. Na `fetch_timetable` doe je `match_slots(slots, acts)`
+en `enrich_acts(acts, match_map)` — die logica is site-agnostisch (zie hieronder).
+
+### Adapter-varianten
+1. **PDF-blokkenschema** (Lowlands, Down The Rabbit Hole, veel klassiekers). Parse met
+   `pdfplumber`: haal chars + words uit elke pagina, cluster op x-coördinaat rond de tijd-tokens,
+   herbouw namen op char-niveau (gap `< 0.5pt` → mergen, anders spatie — dat vangt zowel dicht
+   gekernde comedy-letters als normale woordafstanden). Detecteer meerdere tijdrijen (echte
+   start-times vs decoratieve half-uur-liniaal) en pak de bovenste. Filter categorielabels
+   (COMEDY / THEATER / LITERATUUR) door hun eigen bounding-box.
+2. **HTML/JSON schema** (soms `MusicEvent`/`subEvent` JSON-LD op de line-up-pagina met velden
+   `startDate` / `location.name`). Als aanwezig: 0 tokens, direct parseerbaar.
+3. **Aparte API-endpoint** (soms `/api/schedule` of iets vergelijkbaars — kijk in het Network-tabblad).
+4. **Handmatige import** als laatste fallback: laat de gebruiker een CSV/JSON plakken.
+
+### Matching-strategie (site-agnostisch)
+
+Slot-namen komen uit de bron; act-slugs uit `acts.json`. Match in volgorde:
+1. **Exact slug**: `slugify(slot.name) == act.slug`.
+2. **Genormaliseerde naam** (lowercase, diakritieken weg, alleen alfanum) exact gelijk.
+3. **Substring op slug**: `slot-slug` bevat een `act-slug` als volledig hyphen-token-run
+   (vangt "richie-hawtin-dex-efx-x0x" → "richie-hawtin").
+4. **Bi-directionele norm-substring**: kleine parser-artefacten
+   (`"worldpeac dmt"` → `"worldpeace-dmt"`).
+5. **`difflib.get_close_matches(cutoff=0.85)`** als laatste vangnet.
+
+Non-matches (workshops, niet-muziek stages, kleine openers die niet in `acts.json` zitten) blijven
+in de output — de frontend rendert ze in de OFF-kleur zonder score.
+
+### Data-uitbreiding
+
+Voeg toe aan de payload:
+```ts
+Act.sets?: { day: string; stage: string; start_time: string; raw_name?: string }[]
+Payload.timetable?: { day; stage; name; start_time }[]   // ALLE ruwe slots, ook onmatched
+```
+
+`sets` is per-act (0..N optredens); `timetable` is de complete grid inclusief non-music/non-matched
+zodat de frontend een compleet rooster kan tonen zonder alleen de gescoorde acts te zien.
+
+### Frontend-view (grid + NU-modus)
+
+- **Grid**: horizontaal scrollend tijdrooster per dag. Rijen = stages, kolommen = 15-min-ticks van
+  09:30 → 05:00 (next day). Blokken gekleurd naar `category` (RESIDENT rood, NTS-VIBE cyaan, etc.).
+  Sticky stage-label links, sticky tijdheader boven. Klik op blok → paneel met blurb + vibe-reason
+  + links.
+- **NU-modus**: als de huidige tijd binnen een festivaldag valt (inclusief 00:00–05:00 = "gisteren
+  laat"), teken een verticale rode "NU"-lijn op de tijdpositie en auto-scroll naar dat punt. Highlight
+  blokken die op dit moment spelen met een ring.
+- **Filters**: categorie-drempel (ALLES / 40+ / VIBE 70+ / PRESENCE) om ruis te dimmen.
+- **Wrap over middernacht**: converteer HH:MM naar "minuten sinds 09:30" — tijden < 09:30 krijgen
+  +24u. Zo passen 02:00-slots naast 22:00 op dezelfde festivalrij.
+
+### Gotchas van PDF-parsing (bespaart je een middag)
+
+- Meerdere y-rijen met times in dezelfde stage-band betekent óf twee visuele lijnen voor
+  leesbaarheid (theater/comedy vs muziek in dezelfde rij, zeer dicht bij elkaar — mergen) óf een
+  decoratieve half-uur-liniaal ver onder de echte tijden (skip). Drempel: als een tweede rij > 8pt
+  onder de topmost tijd zit, skippen.
+- Woord-bounding-boxes van `pdfplumber` bevatten descenders → categorielabel-boxen kunnen chars van
+  de rij eronder "vangen". Filter op `top ± 2pt`, niet op de volle word-height.
+- Sommige PDF's spellen namen als losse glyphs met tiny x-gaps (design-effect). Char-level
+  reconstructie met gap-drempel is robuuster dan op woord-niveau werken.
+- Padding rond time-tokens: naam-start ligt vaak 5–60pt rechts van de tijd (afhankelijk van
+  slot-lengte); tolereer ~5pt links van de tijd zodat kort-vóór-de-tijd tekst nog binnen het blok
+  valt.
+
+---
+
 ## 10. Setup & run
 
 ```bash

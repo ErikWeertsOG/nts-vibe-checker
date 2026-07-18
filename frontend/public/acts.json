@@ -40,7 +40,15 @@
       "blurb": "Sam Shepherd is al jaren een van de meest consistente stemmen in de kruisbestuiving van jazz, elektronische muziek en psychedelische club. Zijn live-sets — gelaagd, precies, en nooit uitwisselbaar met een ander — zijn precies het soort curatorship waar NTS op gebouwd is.",
       "overridden": false,
       "score": 100,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "HEINEKEN",
+          "start_time": "20:45",
+          "raw_name": "FLOATING POINTS (LIVE)"
+        }
+      ]
     },
     {
       "id": 1342,
@@ -74,7 +82,15 @@
       "blurb": "Detroit-producer en Sound Signature-oprichter wiens benadering van tijd en ruimte op de dansvloer decennialang de standaard heeft gezet voor wat deep house eigenlijk betekent. Elf eigen NTS-episodes spreken voor zich.",
       "overridden": false,
       "score": 98,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "23:15",
+          "raw_name": "THIS MUST BE THE PACE WITH THEO PARRISH"
+        }
+      ]
     },
     {
       "id": 1344,
@@ -103,7 +119,15 @@
       "blurb": "Ben UFO is medeoprichter van Hessle Audio en een van de meest invloedrijke selectoren in de Britse underground-scene. Zijn sets bewegen moeiteloos tussen duistere techno, footwork en Britse rave — precies het soort genre-fluïde curatie waar NTS op draait.",
       "overridden": false,
       "score": 98,
-      "category": "NTS-PRESENCE"
+      "category": "NTS-PRESENCE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "02:00",
+          "raw_name": "BEN UFO"
+        }
+      ]
     },
     {
       "id": 1329,
@@ -140,7 +164,15 @@
       "blurb": "Upsammy (Thessa Torsing) opereert op het snijvlak van dancefloor-functionaliteit en texturele abstractie — thuis op labels als Dekmantel en relatief. 32 eigen NTS-episodes spreken boekdelen; dit is precies het soort curatorial bewustzijn en productionele eigenheid waar NTS zijn programmering omheen bouwt.",
       "overridden": false,
       "score": 97,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "03:15",
+          "raw_name": "UPSAMMY"
+        }
+      ]
     },
     {
       "id": 1345,
@@ -175,7 +207,15 @@
       "blurb": "Skee Mask draait al jaren mee in het Ilian Tape-ecosysteem — een van de weinige producers die IDM, grime en techno naadloos verbindt zonder formule. 97 episodes NTS-aanwezigheid zegt genoeg: dit is exact het type eigenwijze, labelonafhankelijke elektronika waar het station voor staat.",
       "overridden": false,
       "score": 97,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "23:30",
+          "raw_name": "SKEE MASK"
+        }
+      ]
     },
     {
       "id": 1264,
@@ -204,7 +244,15 @@
       "blurb": "Voices From The Lake — het Italiaanse duo van Donato Dozzy en Neel — beweegt zich in het schemergebied tussen ambient dub, minimal techno en rituele elektronica, precies waar NTS-curatoren als Fact, Hessle-adjacente programmering en kosmische selecties samenkomen. 'II' consolideert wat het debuut uit 2012 begon: een organisch, tijdloos geluid dat evenveel schuld heeft aan Wolfgang Voigt als aan onderwatergeologie.",
       "overridden": false,
       "score": 96,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "22:00",
+          "raw_name": "VOICES FROM THE LAKE"
+        }
+      ]
     },
     {
       "id": 1292,
@@ -233,7 +281,15 @@
       "blurb": "Barrington Hendricks bouwt tracks als gecrashte software: noise, trap-skeletons en metaalfragmenten zonder concessies aan luisterbaarheid. Canoniek in dezelfde ruimte als Death Grips en SOPHIE — curatoren die diep graven draaien dit zonder aarzeling.",
       "overridden": false,
       "score": 96,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "HEINEKEN",
+          "start_time": "17:15",
+          "raw_name": "JPEGMAFIA"
+        }
+      ]
     },
     {
       "id": 1379,
@@ -274,7 +330,15 @@
       "blurb": "james K is een vaste NTS-stem: haar 38-episode residency spreekt boekdelen. 'Friend' is precies het soort eclectische, labelonafhankelijke collagewerk dat NTS-curatoren tussen Dean Blunt en Grouper zouden droppen zonder knipperen.",
       "overridden": false,
       "score": 94,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "21:45",
+          "raw_name": "JAMES K"
+        }
+      ]
     },
     {
       "id": 1349,
@@ -303,7 +367,15 @@
       "blurb": "Felix Manuel's Djrum-project beweegt zich moeiteloos tussen jungle-edits, ambient textures en jazz-fragmenten in sets die meer weg hebben van improvisatie dan performance. Portrait With Firewood (2018, R&S) blijft een referentiepunt voor iedereen die dansmuziek als compositie benadert.",
       "overridden": false,
       "score": 94,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "01:30",
+          "raw_name": "DJRUM"
+        }
+      ]
     },
     {
       "id": 1355,
@@ -332,7 +404,15 @@
       "blurb": "Helena Hauff's werk beweegt zich tussen industrial, EBM en analoge techno met een oncompromisloze, anti-gladde productie-ethiek. Haar Return To Disorder-label en uitgesproken curatorschap plaatsen haar stevig in het onafhankelijke, club-bewuste spectrum dat NTS serieus neemt.",
       "overridden": false,
       "score": 93,
-      "category": "NTS-PRESENCE"
+      "category": "NTS-PRESENCE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "00:30",
+          "raw_name": "HELENA HAUFF"
+        }
+      ]
     },
     {
       "id": 1301,
@@ -367,7 +447,15 @@
       "blurb": "Derde-generatie Brits-Jamaicaanse producer die jungle en drum & bass terugbrengt via zelfgelanceerde releases en diepe dance-heritage. Haar NTS-residency en onberispelijke Londense underground-credibility maken haar tot een van de meest logische namen in dit spectrum.",
       "overridden": false,
       "score": 92,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "HEINEKEN",
+          "start_time": "19:30",
+          "raw_name": "NIA ARCHIVES"
+        }
+      ]
     },
     {
       "id": 1380,
@@ -402,7 +490,15 @@
       "blurb": "Jane Remover opereert in de snijvlak van digicore, hyperpop en shoegaze — een productie-esthetiek die meer schatplichtig is aan Bandcamp-forums dan aan streamingalgoritmen. 18 eigen NTS-episodes bevestigen de curatoriale geloofwaardigheid voorbij de Lowlands-popframing.",
       "overridden": false,
       "score": 92,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "16:45",
+          "raw_name": "JANE REMOVER"
+        }
+      ]
     },
     {
       "id": 1335,
@@ -431,7 +527,15 @@
       "blurb": "Amsterdamse selector met diepe wortels in de Dekmantel-scene, bekend om set-bouw die bass, acid en rave-tektoniek naadloos verbindt. Thuishaven: de donkere zaal, niet het hoofdpodium.",
       "overridden": false,
       "score": 91,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "03:30",
+          "raw_name": "IDENTIFIED PATIENT"
+        }
+      ]
     },
     {
       "id": 1340,
@@ -460,7 +564,15 @@
       "blurb": "Amsterdamse dj en mede-oprichter van Mindri-label, gespecialiseerd in hevige techno en retrofuturistische electro via Clone Records. Thuis op Club RAUM en Berghain; het type selectie dat NTS's underground-danceprogrammering van binnenuit begrijpt.",
       "overridden": false,
       "score": 91,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "23:00",
+          "raw_name": "AFRA"
+        }
+      ]
     },
     {
       "id": 1350,
@@ -489,7 +601,15 @@
       "blurb": "Istanbul-geboren producer gevestigd in Berlijn wiens werk techno als politiek instrument inzet — commentaar op repressie en rouw verpakt in keiharde clubstructuren. Precies het soort conceptueel geladen dancefloor-werk dat NTS-residenten naast Shackleton en Objekt zouden programmeren.",
       "overridden": false,
       "score": 91,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "03:30",
+          "raw_name": "NENE H"
+        }
+      ]
     },
     {
       "id": 1374,
@@ -518,7 +638,15 @@
       "blurb": "Fulu Miziki bouwt instrumenten en kostuums volledig uit gevonden afval — een politiek statement dat dieper gaat dan esthetiek. Kinshasa-rumba, elektronische ruis en punkintensiteit in één collectief: precies het soort curatorsvondst waar NTS-shows als Touching Bass of Awesome Tapes-achtige selecties op draaien.",
       "overridden": false,
       "score": 91,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "LIMA",
+          "start_time": "22:30",
+          "raw_name": "FULU MIZIKI"
+        }
+      ]
     },
     {
       "id": 1314,
@@ -553,7 +681,15 @@
       "blurb": "Baltimore hardcore-act wiens 2021 LP 'GLOW ON' de grenzen tussen hardcore, soul en psych-rock openbrak op een manier die crate-diggers en punkheads gelijktijdig aansprak. Vijf eigen NTS-episodes bevestigen een geloofwaardige underground-verbinding die ver buiten het festival-circuit reikt.",
       "overridden": false,
       "score": 88,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "ALPHA",
+          "start_time": "19:30",
+          "raw_name": "TURNSTILE"
+        }
+      ]
     },
     {
       "id": 1353,
@@ -582,7 +718,15 @@
       "blurb": "MARRØN bouwde zijn naam in Amsterdams illegale raafscenes via Eerste Communie, een collectief met een onmiskenbaar eigen ethos. Zijn techno trekt een directe lijn van Surinaams-Afrikaanse percussie naar de dancefloor — geen concessies aan de markt.",
       "overridden": false,
       "score": 88,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "03:00",
+          "raw_name": "MARRØN"
+        }
+      ]
     },
     {
       "id": 1272,
@@ -612,7 +756,15 @@
       "blurb": "Manchesterse vijfstuk die post-rock drone laat ontploffen in brullende, saxofoon-gedreven chaos — ergens tussen This Heat, Naked City en Melt-Banana. De soort band die een NTS-host inpland tussen een Sun Ra-blok en een Swans-diepteduik.",
       "overridden": false,
       "score": 84,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "17:30",
+          "raw_name": "MARUJA"
+        }
+      ]
     },
     {
       "id": 1328,
@@ -641,7 +793,15 @@
       "blurb": "Amsterdamse selector met een kwarteeuw underground dancefloor-ervaring achter de rug, van deep house naar de Afrikaanse diaspora-sounds die NTS al jaren serieus neemt. Gqom, afrotech en amapiano in de handen van iemand die de scene van binnenuit kent — geen trend-hopping, gewoon werk.",
       "overridden": false,
       "score": 84,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "02:15",
+          "raw_name": "WAXFIEND"
+        }
+      ]
     },
     {
       "id": 1375,
@@ -671,7 +831,15 @@
       "blurb": "Geordie Greep's solodebut trekt maximalistisch door jazzrock, exotica en Broadway-kakofonie zonder ook maar één keer op het gemakkelijke knopje te drukken. Precies het soort weelderige genre-weigering waar NTS-curatie op gedijt.",
       "overridden": false,
       "score": 84,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "22:00",
+          "raw_name": "GEORDIE GREEP"
+        }
+      ]
     },
     {
       "id": 1265,
@@ -701,7 +869,15 @@
       "blurb": "VMO opereert in het snijvlak van japanse noise-traditie, industrial techno en black metal — een lijn die loopt van Merzbow via Vatican Shadow naar iets wat geen label wil definiëren. Precies het soort act dat een NTS-host zou opgraven als bewijs dat genre-grenzen gewoon verzonnen zijn.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "00:30",
+          "raw_name": "VIOLENT MAGIC ORCHESTRA"
+        }
+      ]
     },
     {
       "id": 1289,
@@ -730,7 +906,15 @@
       "blurb": "Nu Genea graaft in het Napolitaans archief — library funk, italo-adjacent soul en mediterrane groove met afrobeat-DNA via Tony Allen. Precies het soort curatoriaal project dat NTS-presentatoren tussen Honest Jon's-vondsten en Sahel Sounds-uitstapjes zouden droppen.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "17:00",
+          "raw_name": "NU GENEA LIVE BAND"
+        }
+      ]
     },
     {
       "id": 1309,
@@ -759,7 +943,15 @@
       "blurb": "Virginia duo wiens cocaine-baroque aesthetic en schaarse productie-ethiek verder staan van radio-rap dan hun chartstatus suggereert. 'Let God Sort Em Out' sluit aan op een lange NTS-traditie van shows die hardboiled lyricism naast leftfield selecties programmeren — denk Benji B, niet Power 106.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "20:30",
+          "raw_name": "CLIPSE"
+        }
+      ]
     },
     {
       "id": 1336,
@@ -788,7 +980,15 @@
       "blurb": "Amsterdamse producer met Algerijnse roots die stampende elektronica laat kantelen richting abstracte textuur — het soort selector dat genres als gereedschap gebruikt, niet als branding. Haar soundscapes passen comfortabel tussen een Hessle Audio-set en een Black Truffle-uitstap.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "00:00",
+          "raw_name": "MARY LAKE"
+        }
+      ]
     },
     {
       "id": 1343,
@@ -817,7 +1017,15 @@
       "blurb": "Skream & Benga zijn twee van de architecten van de originele South London dubstep-scene — Tempa, DMZ, grime-adjacente bassweight uit de mid-00s. Een b2b set van deze twee past naadloos in het NTS-continuüm van dub-geïnformeerde clubmuziek, mits de selectie de originals bevoordeelt boven de later-era crossover.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "00:30",
+          "raw_name": "SKREAM & BENGA"
+        }
+      ]
     },
     {
       "id": 1356,
@@ -846,7 +1054,15 @@
       "blurb": "Freddy K draait al decennia techno met de precisie van iemand die nooit een algoritme nodig heeft gehad. KEY Vinyl houdt het analoog en hard — precies de hoek waar NTS zijn techno vandaan haalt.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "01:30",
+          "raw_name": "FREDDY K"
+        }
+      ]
     },
     {
       "id": 1398,
@@ -875,7 +1091,15 @@
       "blurb": "Zweedse outliers die hun Wire- en Birthday Party-invloeden combineren met sax, absurdisme en frontman-energie die ergens tussen GG Allin en Mark E. Smith hangt. Lofi en ongepolijst genoeg om naast Dry Cleaning of Warmduscher te programmeren zonder dat iemand z'n wenkbrauwen optrekt.",
       "overridden": false,
       "score": 82,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "21:30",
+          "raw_name": "VIAGRA BOYS"
+        }
+      ]
     },
     {
       "id": 1304,
@@ -904,7 +1128,15 @@
       "blurb": "Belfast drieluik dat Iers-talige rap door een no-wave lens gooit — antikoloniale teksten, rauwe productie, en genoeg rechtszaken om elke A&R op afstand te houden. Precies het soort act dat NTS zou programmeren naast een show over Gaelic vernacular en een set dub-poetry.",
       "overridden": false,
       "score": 81,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "ALPHA",
+          "start_time": "18:15",
+          "raw_name": "KNEECAP"
+        }
+      ]
     },
     {
       "id": 1373,
@@ -939,7 +1171,15 @@
       "blurb": "Rowan Miles en Gabriella Turton combineren lo-fi electronica met punky conceptuele humor op een manier die dichter bij PC Music-dissidentie zit dan bij Top 40. Debuutalbum 'I Have to Get Hotter' heeft de rauwe, nerdige eigenzinnigheid die NTS-curatoren aantrekken.",
       "overridden": false,
       "score": 80,
-      "category": "RESIDENT"
+      "category": "RESIDENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "15:15",
+          "raw_name": "THE E FEMCELS"
+        }
+      ]
     },
     {
       "id": 1269,
@@ -968,7 +1208,15 @@
       "blurb": "SMIB is geen 'mainstream nederhop'-act maar een Bijlmer-collectief van rappers, designers en videomakers — Ray Fuego, Nnelg, GRGY — die hip-hop, mode en visuele kunst onder één naam draaien. Het soort multidisciplinaire stadsscene-arbeid waar NTS structureel programma's voor maakt.",
       "overridden": true,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "00:00",
+          "raw_name": "SMIB"
+        }
+      ]
     },
     {
       "id": 1271,
@@ -1000,7 +1248,15 @@
       "blurb": "Amsterdam sextet met leden van Altın Gün en Jungle by Night die Indonesisch archipel-repertoire ombuigen naar iets dat ergens tussen kosmische dansplaat en ethnomusicologisch veldwerk zit. Het soort plaat dat je vindt bij Awesome Tapes From Africa of Honest Jon's — geen exoticisme, wel kennis van zaken.",
       "overridden": false,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "13:00",
+          "raw_name": "NUSANTARA BEAT"
+        }
+      ]
     },
     {
       "id": 1273,
@@ -1029,7 +1285,15 @@
       "blurb": "Frans duo dat Maghrebi en Levantijnse folklore verweeft met kosmische synthesizers en vintage drumcomputers — denk Habibi Funk-catalogus ontmoet Visible Cloaks. De samenwerking met Palestijnse en Egyptische zangers op 'Sîn' geeft het de curatoriale geloofwaardigheid die NTS-programmeurs aantrekken.",
       "overridden": false,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "LIMA",
+          "start_time": "14:15",
+          "raw_name": "KO SHIN MOON"
+        }
+      ]
     },
     {
       "id": 1297,
@@ -1059,7 +1323,15 @@
       "blurb": "Buraka Som Sistema legden begin jaren '10 de blauwdruk voor kuduro buiten Angola — dancehall, baile funk, club-electronics samengeperst tot iets dat Lisbon en Luanda tegelijk klinkt. NTS draait de scene al jaren: van Enchufada-affiliates tot Awesome Tapes-logica, BSS past in dat rijtje zonder uitleg nodig te hebben.",
       "overridden": false,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "HEINEKEN",
+          "start_time": "14:45",
+          "raw_name": "BURAKA SOM SISTEMA"
+        }
+      ]
     },
     {
       "id": 1310,
@@ -1091,7 +1363,15 @@
       "blurb": "Dev Hynes opereert in de marge waar soul, chamber-pop en downtown New York elkaar raken — consistent eigen, zelden format-vriendelijk. 'Essex Honey' past in hetzelfde spectrum als NTS-favorieten als Arca, serpentwithfeet of de organische kant van James Blake.",
       "overridden": false,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "HEINEKEN",
+          "start_time": "19:30",
+          "raw_name": "BLOOD ORANGE"
+        }
+      ]
     },
     {
       "id": 1368,
@@ -1121,7 +1401,15 @@
       "blurb": "Belfast vijftal dat punk-infrastructuur door een industriële techno-mangel haalt — crystalpunk als genre-label dekt de lading beter dan de meeste. Zit comfortabel naast Shackleton, Contort Yourself-compilaties en de hardere kant van Puce Mary op een NTS-avondprogramma.",
       "overridden": false,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "12:30",
+          "raw_name": "CHALK"
+        }
+      ]
     },
     {
       "id": 1397,
@@ -1150,7 +1438,15 @@
       "blurb": "Anoniem Brits collectief dat dansvloer-functionaliteit inruilt voor iets schurenders — minimale constructies met dubgewicht en ruimte voor bijdragende stemmen. Het 'post-bus'-gevoel dat kritici beschrijven sluit aan bij de NTS-flank die between Hessle Audio en deconstructed club opereert.",
       "overridden": false,
       "score": 78,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "18:45",
+          "raw_name": "TRACEY"
+        }
+      ]
     },
     {
       "id": 1333,
@@ -1179,7 +1475,15 @@
       "blurb": "NALA opereert in de overlap van juke, grime en jungle met een curatorial instinct dat verder gaat dan genre-plaatjes. Haar Dots-nacht positioneert haar stevig in het onafhankelijke clubcircuit — precies de habitat waar NTS-selectors hun mensen vinden.",
       "overridden": false,
       "score": 74,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "03:30",
+          "raw_name": "NALA"
+        }
+      ]
     },
     {
       "id": 1276,
@@ -1210,7 +1514,8 @@
       "blurb": "Cleveland-born vocalist met wortels diep in de neo-soul/spiritual R&B-traditie — denk Soulquarians-adjecenten, niet radio-glad. De Badu-connectie en Grammy-nominaties zonder mainstream doorbraak positioneren hem precies in het gat tussen cult en toegankelijk waar NTS-presentatoren graag opereren.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": []
     },
     {
       "id": 1281,
@@ -1240,7 +1545,15 @@
       "blurb": "Dario Bassolino puilt uit de traditie van Italiaanse library-muziek en giallo-soundtracks — een esthetiek die NTS-programmeurs al jaren serieus nemen. Elektrische piano's, jaren-70-filters en vergeten synthharmonieën landen moeiteloos tussen een Honest Jon's-selectie en een late-night kosmische set.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "LIMA",
+          "start_time": "19:45",
+          "raw_name": "BASSOLINO"
+        }
+      ]
     },
     {
       "id": 1282,
@@ -1270,7 +1583,15 @@
       "blurb": "Rio-based multi-instrumentalist op Mr Bongo — het label dat al jaren de brug slaat tussen Braziliaanse MPB, bossa en dancefloor-jazz. De Marcos Valle-cover met Crystal Waters-interpolatie is precies het soort onverwachte crate-dig-connectie dat een NTS-host tussen twee sets zou uitleggen.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "LIMA",
+          "start_time": "18:20",
+          "raw_name": "ANA FRANGO ELÉTRICO"
+        }
+      ]
     },
     {
       "id": 1286,
@@ -1299,7 +1620,15 @@
       "blurb": "Richie Hawtin's naam staat onlosmakelijk verbonden aan de Warp/Plus 8-canon en de minimal-techno codex die NTS-hosts jarenlang hebben gedoceerd. De A/V-spectakel-verpakking van DEX EFX X0X trekt het richting Lowlands-mainstage in plaats van de achterkamers waar Plastikman thuishoort.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "HEINEKEN",
+          "start_time": "21:30",
+          "raw_name": "RICHIE HAWTIN DEX EFX X0X"
+        }
+      ]
     },
     {
       "id": 1293,
@@ -1328,7 +1657,15 @@
       "blurb": "Sef en Abel als IJSLAND combineren Amsterdamse straatrap met punk-energie en uitgesproken politiek commentaar. Geen radio-formule, eerder de tradities van JPEGMAFIA en Death Grips toegepast op Nederlands taalgebied.",
       "overridden": true,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "17:00",
+          "raw_name": "IJSLAND"
+        }
+      ]
     },
     {
       "id": 1305,
@@ -1357,7 +1694,15 @@
       "blurb": "Ecuadoriaans-Zwitsers gitaarduo dat spaghetti-western-akoestiek, Latijns-Amerikaans fingerpicking en psych-drone verweeft tot trage, cinematische instrumentals. De Dan Auerbach-productie voegt wat glans toe die op NTS licht knelt, maar de meditieve kern past moeiteloos tussen Visible Cloaks en Awesome Tapes-selecties.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "ALPHA",
+          "start_time": "15:30",
+          "raw_name": "HERMANOS GUTIÉRREZ"
+        }
+      ]
     },
     {
       "id": 1306,
@@ -1387,7 +1732,15 @@
       "blurb": "New Yorkse vijfkoppige band die post-punk-textuur kruist met psychedelische uitweidingen en literaire duisternis — denk eerder aan de No Wave-erfenis dan aan het Spotify-indie-algoritme. 'Getting Killed' klinkt als iets dat tussen een Floating Points-set en een late-night slowburn-show past.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "19:15",
+          "raw_name": "GEESE"
+        }
+      ]
     },
     {
       "id": 1312,
@@ -1417,7 +1770,15 @@
       "blurb": "Melbournse punkband met een scherpe DIY-ethiek en politieke urgentie die richting de beste jaren van The Saints of X-Ray Spex leunt. Ruw genoeg voor NTS' post-punk en hardcore-minded programmering, al trekt de Dave Grohl-connectie het licht richting mainstreambewustzijn.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "ALPHA",
+          "start_time": "14:00",
+          "raw_name": "AMYL AND THE SNIFFERS"
+        }
+      ]
     },
     {
       "id": 1319,
@@ -1447,7 +1808,15 @@
       "blurb": "Tyler begon als lo-fi provocation uit de L.A. DIY-krochten en groeide uit tot een van de meest eigenzinnige producers in mainstream hip-hop — zijn orkestratie op Flower Boy en Igor trekt meer naar jazz-fusion en library-excentriciteit dan naar chartsformules. De spektakelshow en Golf Wang-mode-empire plaatsen hem eerder naast Frank Ocean of Standing on the Corner dan naast radio-nederhop, al maakt het crossover-succes van IGOR hem minder underground dan NTS doorgaans prefereert.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "ALPHA",
+          "start_time": "22:30",
+          "raw_name": "TYLER, THE CREATOR"
+        }
+      ]
     },
     {
       "id": 1331,
@@ -1476,7 +1845,15 @@
       "blurb": "Amsterdam-based selector met wortels in de Zuidoost-Londense UKG-scene en Manchester-dansscene. Diepe genre-kennis, curatoriële aanpak — het soort specialist dat NTS graag inzet voor niche-dance-programma's.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "23:00",
+          "raw_name": "SAIDAH"
+        }
+      ]
     },
     {
       "id": 1334,
@@ -1505,7 +1882,15 @@
       "blurb": "Nijmeegs drietal dat ravegabber, no-wave-energie en beschadigde lyriek samenperst tot iets dat te onfris is voor algoritmes. Ruw genoeg voor het grensgebied tussen Lasse Marhaug en Rotterdam gabber waar NTS-dj's graag vertoeven.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "02:00",
+          "raw_name": "KABOUTERTJE PUTLUCHT"
+        }
+      ]
     },
     {
       "id": 1338,
@@ -1534,7 +1919,15 @@
       "blurb": "Benny Rodrigues bouwt al decennia aan een catalogus die tussen pure house en strakke techno pendelt, zonder concessies aan de bühne. Het ROD-alias signaleert precies het soort bewuste compartimentering dat NTS-curatoren herkennen als vakmanschap.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "00:30",
+          "raw_name": "BENNY RODRIGUES"
+        }
+      ]
     },
     {
       "id": 1347,
@@ -1563,7 +1956,15 @@
       "blurb": "NY/Paris-gevormde dj-producer met eigen imprint en queer party-context — de SMIILE-avonden wijzen op scene-gedreven werk boven chart-aspiraties. Groovende, diep geselecteerde housesets die eerder Sound Signature dan Spotify-playlist doen vermoeden.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "00:30",
+          "raw_name": "CHLOÉ CAILLET"
+        }
+      ]
     },
     {
       "id": 1351,
@@ -1592,7 +1993,15 @@
       "blurb": "Flava D komt uit de pirate radio- en MySpace-grimescene, met een discografie die UK funky, bassline en drum-'n-bass doorloopt zonder ooit richting commercieel midden te bewegen. Hospital Records-deal en Lowlands-programmering zijn grootschalig, maar de selectie en productie-eigenheid houden haar stevig in het NTS-register.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "23:15",
+          "raw_name": "FLAVA D"
+        }
+      ]
     },
     {
       "id": 1354,
@@ -1621,7 +2030,15 @@
       "blurb": "Iers producer wiens 'B O D Y' via Mall Grab's USB de juiste kringen bereikte. Speelse, licht chaotische house met genoeg ruwheid om tussen Hessle Audio en eclectic balearic sets te landen.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "02:00",
+          "raw_name": "KETTAMA"
+        }
+      ]
     },
     {
       "id": 1357,
@@ -1650,7 +2067,15 @@
       "blurb": "Héctor Oaks draait harde, vinyl-gedreven techno vanuit de Berlijnse underground met eigen labels OAKS en KAOS als credentialen. Energiek en scène-verankerd, al schuurt de festivalretoriek licht tegen de NTS-sensibiliteit.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "02:00",
+          "raw_name": "HÉCTOR OAKS"
+        }
+      ]
     },
     {
       "id": 1365,
@@ -1680,7 +2105,15 @@
       "blurb": "Juan Correal's Bogotá-via-dancefloor project trekt cumbia, vallenato en salsa door een techno-prisma — precies het soort curatoriale fusie dat NTS's global-electronics shows voeden. Geen exoticisme, maar een scène-gegronde elektro-cumbia met eigen ritme-logica.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "LIMA",
+          "start_time": "22:30",
+          "raw_name": "ÁCIDO PANTERA"
+        }
+      ]
     },
     {
       "id": 1366,
@@ -1710,7 +2143,15 @@
       "blurb": "Frans-Senegalese in Londen gebaseerde vocalist wier werk rond 'Devotion & The Black Divine' draait — ergens tussen Alice Coltrane-spiritualiteit en neo-soul met West-Afrikaanse textuur. Precies het soort act dat je verwacht tussen een Honest Jon's-pluk en een Awesome Tapes-set.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "LIMA",
+          "start_time": "13:45",
+          "raw_name": "ANAIIS"
+        }
+      ]
     },
     {
       "id": 1372,
@@ -1740,7 +2181,15 @@
       "blurb": "Zweedse jamband die Arabische modaliteit, Amazone-fluit en kosmische gitaar samenvoegt tot pulserende meditatieve sets. Zit in het spectrum van labels als Awesome Tapes From Africa en Sublime Frequencies — global psychedelia met genoeg ruwheid om een late-night NTS-slot te rechtvaardigen.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "LIMA",
+          "start_time": "20:40",
+          "raw_name": "FAUNA"
+        }
+      ]
     },
     {
       "id": 1376,
@@ -1769,7 +2218,15 @@
       "blurb": "Gurriers brengen een soort noise-rock die eerder aan Shellac of Girls Against Boys denkt dan aan de gepolijste postpunk-revival. DIY-ruw, melodisch genoeg om te boeien, te abrasief voor de rest.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "19:50",
+          "raw_name": "GURRIERS"
+        }
+      ]
     },
     {
       "id": 1378,
@@ -1800,7 +2257,15 @@
       "blurb": "Cinematic Italo-funk kwartet dat opereert in het snijvlak van poliziottesco-soundtrack en diep soul-groef. Het soort act dat een NTS-host tussen Piero Umiliani en Cortex zou droppen zonder blikken of blozen.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "LIMA",
+          "start_time": "16:15",
+          "raw_name": "IL MAGO DEL GELATO"
+        }
+      ]
     },
     {
       "id": 1384,
@@ -1829,7 +2294,15 @@
       "blurb": "Brighton two-piece die party-punk en antifascistische agitprop samenvoegt met podiumhavoc. Zit in het kielzog van Amyl and the Sniffers en Destroy Boys — ruw genoeg voor de punkgerichte slots, politiek geladen genoeg voor de rest.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "HEINEKEN",
+          "start_time": "00:00",
+          "raw_name": "LAMBRINI GIRLS"
+        }
+      ]
     },
     {
       "id": 1392,
@@ -1860,7 +2333,15 @@
       "blurb": "Amsterdamse multidisciplinaire act die smartlap kruist met breakbeat en protestpunk — Protestfest-organisator, collaboraties met Goldband en Ploegendienst, uitgesproken politiek. Ruwe kantjes en scene-inbedding compenseren de pop-laag; past in een NTS-show ergens tussen Eefje de Visser's scherpe kant en early Lewsberg.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "14:30",
+          "raw_name": "SOPHIE STRAAT"
+        }
+      ]
     },
     {
       "id": 1393,
@@ -1890,7 +2371,15 @@
       "blurb": "PXL-Music-alumnus die cumbia, bolero en onrustige elektronica niet mengt maar destabiliseert — het soort diaspora-curatie dat NTS' global-programmering al jaren interesseert. Zit ergens tussen Honest Jon's en een Dekmantel-dancefloor-zijkamer.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "LIMA",
+          "start_time": "14:15",
+          "raw_name": "SUSOBRINO"
+        }
+      ]
     },
     {
       "id": 1396,
@@ -1919,7 +2408,15 @@
       "blurb": "Utrechtse black metal act met wortels in screamo en hardcore, vernoemd naar Marsman — dat soort literaire referentiekaders en anti-commercieel ethos sluit aan bij NTS-shows als die van Pharmakon of Full of Hell-adjacente programming. Anderhalf decennium eigengereid opereren op kleine labels zonder radio-aspiraties is precies het soort curriculum dat NTS-curaters waarderen.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "14:00",
+          "raw_name": "TERZIJ DE HORDE"
+        }
+      ]
     },
     {
       "id": 1401,
@@ -1950,7 +2447,15 @@
       "blurb": "Leo Fincham recycleert indiepop-bric-a-brac met genoeg zelfbewustzijn om het niet nostalgisch te laten klinken. Samenwerking met The Femcels-hoek suggereert een scene-driven aanpak die NTS's voorliefde voor leftfield Britse DIY raakt.",
       "overridden": false,
       "score": 72,
-      "category": "NTS-VIBE"
+      "category": "NTS-VIBE",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "14:45",
+          "raw_name": "WORLDPEAC DMT"
+        }
+      ]
     },
     {
       "id": 1283,
@@ -1980,7 +2485,15 @@
       "blurb": "Cornwall-viertal dat de Albini-studio opzocht voor hun tweede plaat, Tours met Fontaines D.C. als referentiepunt. Goed gepositioneerd in de post-punk/grunge-revival-scene, maar de emotionele directheid en festivalprogrammering duwt ze richting mainstream indie eerder dan leftfield crate-territory.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "HEINEKEN",
+          "start_time": "16:45",
+          "raw_name": "WUNDERHORSE"
+        }
+      ]
     },
     {
       "id": 1284,
@@ -2009,7 +2522,15 @@
       "blurb": "Birminghamse roots-reggae pioniers wiens Handsworth Revolution-era werk vaste rotatie verdient op elke dub-bewuste show. Politieke urgentie en sound-system-wortels overstijgen het festival-circuit; latere Grammy-glans haalt de score wat omlaag.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "12:30",
+          "raw_name": "STEEL PULSE"
+        }
+      ]
     },
     {
       "id": 1287,
@@ -2040,7 +2561,15 @@
       "blurb": "Chicago-gebaseerde neo-soul en alt-R&B act met productionele credentials via Steve Lacy en KAYTRANADA — dat schept een bruikbaar NTS-kader. Streamvolumes en Lowlands-hoofdpodium-energie suggeren echter een pop-crossover die de curatoriale kanten van het station net iets te glad passeert.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "HEINEKEN",
+          "start_time": "15:15",
+          "raw_name": "RAVYN LENAE"
+        }
+      ]
     },
     {
       "id": 1288,
@@ -2071,7 +2600,15 @@
       "blurb": "Gemaskerd solo-project met roots in spirituele soul, slowdisco en vintage pianist-singer-songwriter traditie — Siffre, Rotary Connection-hoek. Productie en intentie zitten dichter bij Leaving Records-sfeer dan bij streamingplatform-R&B.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "HEINEKEN",
+          "start_time": "17:15",
+          "raw_name": "PALE JAY"
+        }
+      ]
     },
     {
       "id": 1295,
@@ -2103,7 +2640,15 @@
       "blurb": "NY-duo op Technicolour met indietronica die leunen op nostalgie — house, breakbeat en rockrandje, maar de pakkende hooks maken het NTS-adjacent eerder dan NTS-core. Past in een late-avond eclectisch blok, niet als programmeerprioriteit.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "22:30",
+          "raw_name": "FCUKERS"
+        }
+      ]
     },
     {
       "id": 1308,
@@ -2133,7 +2678,15 @@
       "blurb": "Dijon beweegt zich in het raakvlak van leftfield R&B en indie-samenwerking — Prince-referenties, eigen productiewerk, Bon Iver-kring. Niet uitgesproken underground, maar de productie-aanpak en het witte-ruimte-gebruik in zijn arrangementen zijn dichter bij NTS dan bij Spotify Editorial.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "HEINEKEN",
+          "start_time": "18:45",
+          "raw_name": "DIJON"
+        }
+      ]
     },
     {
       "id": 1330,
@@ -2162,7 +2715,15 @@
       "blurb": "Utrechtse producer en dj wiens eclectische palet van gabber-texturen en veldopnames een bruikbare leftfield selectie oplevert. Samenwerkingen met Joost en Scooter suggereren pop-ambities die wringen met NTS' strikte underground-ethos, maar de MCR-T en horsegiirL connecties houden het geloofwaardig.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "03:30",
+          "raw_name": "TANTU BEATS"
+        }
+      ]
     },
     {
       "id": 1332,
@@ -2191,7 +2752,15 @@
       "blurb": "Amsterdamse selector met Nigeriaanse roots die hiphop, funk en amapiano door elkaar mixt — de Soulection- en Boiler Room-connectie geven hem scene-credibiliteit. Zwoele dansmuziek die dicht bij NTS-aestetic zit, al trekt de Major Lazer-affiliatie het richting mainstream-festival eerder dan diep underground.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "01:00",
+          "raw_name": "S!RENE"
+        }
+      ]
     },
     {
       "id": 1341,
@@ -2220,7 +2789,15 @@
       "blurb": "TLM combineert maximalistische house en vreemde elektronica met een trance-achtergrond — een eclectische mix die eerder aan de Dekmantel-rand zit dan aan de mainstage. De 'wilde mix'-aanpak en lokale scene-roots geven genoeg crate-credibility, al blijft de dansvloer-first houding NTS net iets te feestelijk voor de gemiddelde slot.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "HEINEKEN",
+          "start_time": "01:30",
+          "raw_name": "TLM"
+        }
+      ]
     },
     {
       "id": 1348,
@@ -2249,7 +2826,15 @@
       "blurb": "Berlijn-gebaseerd sibling-duo met Colombiaanse en Chileense achtergrond dat queer dancefloor-energie vertaalt naar eclectische house- en technosets. De 'more is more'-aanpak en politiek-culturele identiteit trekken richting NTS-territorium, al blijft het profiel dichter bij festivaldancefloor dan bij de leftfield crate-digger-kant van het station.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "23:00",
+          "raw_name": "S-CANDALO"
+        }
+      ]
     },
     {
       "id": 1371,
@@ -2279,7 +2864,15 @@
       "blurb": "Britse zelfproducent die barokke structuren koppelt aan eigentijdse DIY-sensibiliteit — zit ergens tussen Gazelle Twin en de minder commerciële kant van FKA twigs. Het 'betoverende alt-pop'-label is net iets te breed om NTS-programmeurs volledig te overtuigen, maar de zelfproductie en gotische textuur geven haar voldoende scene-credibiliteit voor een late-night slot.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "LIMA",
+          "start_time": "15:50",
+          "raw_name": "ERIN LECOUNT"
+        }
+      ]
     },
     {
       "id": 1377,
@@ -2308,7 +2901,15 @@
       "blurb": "Amsterdamse dj die put uit 90s hardcore, breaks en rave-electronica met een eigentijdse selectie-logica. Sterk genoeg voor een late-night NTS-slot, maar zonder labelhistorie of scene-aansluiting blijft de underground-credibility onbevestigd.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "03:00",
+          "raw_name": "GYSÈLE"
+        }
+      ]
     },
     {
       "id": 1383,
@@ -2337,7 +2938,15 @@
       "blurb": "Kelis is makkelijk te reduceren tot twee singles, maar haar catalog — van Wanderland's art-R&B tot Flesh Tone's Todd Terry-collab — is onregelmatiger en eigenwijzer dan festivalboekingen suggereren. De Kenia-periode en haar onafhankelijke houding ten opzichte van de industrie passen beter bij NTS-curatie dan de Lowlands-beschrijving doet vermoeden.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "ALPHA",
+          "start_time": "14:00",
+          "raw_name": "KELIS"
+        }
+      ]
     },
     {
       "id": 1386,
@@ -2366,7 +2975,15 @@
       "blurb": "Mokumse producer/dj die emotionele clubmuziek en ambient-texturen combineert, met een vaste plek in kleine zalen zoals Skatecafé. Eigen tracks leunen richting weemoedig leftfield-territoire — dat is de kant die NTS zou interesseren.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "22:30",
+          "raw_name": "MAEY"
+        }
+      ]
     },
     {
       "id": 1390,
@@ -2395,7 +3012,15 @@
       "blurb": "Radio Z opereert in de ruimte tussen nederhop-traditie en iets schurender — Kabul $lim's productie en de piratenzender-esthetiek wijzen op scene-bewustzijn dat verder gaat dan chartsingle-logica. Niet onmiddellijk NTS-programmering, maar de ruwe DIY-randjes en anti-mediasysteem-houding maken het compatibel met een late-night show die Nederlandse underground rap serieus neemt.",
       "overridden": false,
       "score": 62,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "14:30",
+          "raw_name": "RADIO Z"
+        }
+      ]
     },
     {
       "id": 1307,
@@ -2427,7 +3052,15 @@
       "blurb": "Eefje de Visser beweegt zich in het schemergebied tussen art-pop en indie-radio — de gelaagde synthesizers en introverte tekstuur passen in NTS-programmering, maar de festivalcampagne-taal en Edison-glans duiden op een publiek dat breder is dan de NTS-kern. Haar vroegere, ruwere werk zou hoger scoren.",
       "overridden": false,
       "score": 58,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "21:15",
+          "raw_name": "EEFJE DE VISSER"
+        }
+      ]
     },
     {
       "id": 1278,
@@ -2457,7 +3090,15 @@
       "blurb": "Cobrah begon in de darkroom en belandde op de hoofdpodia — de BDSM-esthetiek is intact maar de productie is meegegleden richting festival-ready electropop. NTS zou vroeg werk of een rauwer DJ-set kunnen plaatsen, maar de singles voelen te gepolijst voor de reguliere rotatie.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "18:15",
+          "raw_name": "COBRAH"
+        }
+      ]
     },
     {
       "id": 1280,
@@ -2488,7 +3129,15 @@
       "blurb": "Londens duo dat modderige synths en bizarre samples inzet tegen de verveling van het huidige muziekaanbod. De basspunk-aanpak heeft ruwe kanten die NTS-interessant zijn, maar de hyperpop-EDM-verhouding plaatst ze net buiten de core-selectie.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "23:00",
+          "raw_name": "BASSVICTIM"
+        }
+      ]
     },
     {
       "id": 1296,
@@ -2518,7 +3167,15 @@
       "blurb": "Ier gevestigd in Manchester, debuutplaat 'Blizzard' uit 2025 — ingetogen indierock met neofolk-randjes, op tour als opener voor Geese. Zit dichter bij het gitaarblad van 6 Music dan bij NTS' leftfield curatie, al maakt de Geese-associatie hem interessanter dan de omschrijving doet vermoeden.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "LIMA",
+          "start_time": "16:15",
+          "raw_name": "DOVE ELLIS"
+        }
+      ]
     },
     {
       "id": 1317,
@@ -2547,7 +3204,15 @@
       "blurb": "Het Schiermonnikoog-collectief dat in 2015 Nederlandse hip-hop herschreef — ruwer en eigenzinniger dan wat hen volgde, maar tien jaar later zijn de scherpste randen afgesleten en het publiek te breed voor NTS-programmering. Cultureel relevant, niet per se NTS-crate-materiaal anno nu.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "ALPHA",
+          "start_time": "22:40",
+          "raw_name": "NEW WAVE"
+        }
+      ]
     },
     {
       "id": 1346,
@@ -2576,7 +3241,15 @@
       "blurb": "Boys Noize Records heeft legitieme underground credentie gedrukt — Djedjotronic, Machinedrum, Gesaffelstein vroeg. Ridha zelf opereert inmiddels te comfortabel in de Lady Gaga-zone voor een NTS-resident, maar een gast-mix met nadruk op zijn electro- en techno-selectie is niet ondenkbaar.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "03:30",
+          "raw_name": "BOYS NOIZE"
+        }
+      ]
     },
     {
       "id": 1395,
@@ -2605,7 +3278,15 @@
       "blurb": "Liverpool/DC-duo dat dwarse gitaartexturen tegen hardcore-structuren aan gooit, met genoeg ruwheid om een leftfield rock-show te rechtvaardigen. Zit dichter bij het Shellac/Mclusky-spectrum dan bij stadion-punk, maar de festivalmoshpit-energie houdt het net buiten NTS' kernterritorium.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "12:45",
+          "raw_name": "TEEN MORTGAGE"
+        }
+      ]
     },
     {
       "id": 1402,
@@ -2635,7 +3316,21 @@
       "blurb": "Nederlandse multi-instrumentalist die drums, zang en elektronische productie combineert met punk- en hip-hopreferenties. DIY-ethos is aanwezig, maar de beschrijving wijst meer op live-showmanship dan op de sobere undergroundpositie die NTS-programmering doorgaans trekt.",
       "overridden": false,
       "score": 52,
-      "category": "ADJACENT"
+      "category": "ADJACENT",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "20:30",
+          "raw_name": "ZEP"
+        },
+        {
+          "day": "2026-08-23",
+          "stage": "JULIET",
+          "start_time": "17:00",
+          "raw_name": "ITA, JUNE YANEZ, LEILA SAHIR, ZEPHYR BRÜGGEN"
+        }
+      ]
     },
     {
       "id": 1267,
@@ -2665,7 +3360,15 @@
       "blurb": "SPEED levert ongepolijste Sydney hardcore met legitieme scene-connecties — Knocked Loose, Turnstile — maar het Coachella-podium en de polonaise-anekdote signaleren een crossover-ambities die verder gaan dan NTS' voorkeur voor underground cultacts. Juist die rauwheid die overblijft na het afpellen van het festivalvernisje zou een enkele NTS-hardcore-show rechtvaardigen, maar structureel past dit eerder in een kerncollectie dan in vaste rotatie.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "20:30",
+          "raw_name": "SPEED"
+        }
+      ]
     },
     {
       "id": 1268,
@@ -2695,7 +3398,21 @@
       "blurb": "Hoornse multi-instrumentalist die nachten doorwerkt aan trap-georiënteerde productie met dikke kicks en synths. Lowlands-podium en 'Trial & Error'-branding wijzen op fanbase-opbouw boven underground scene-credibility.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "ALPHA",
+          "start_time": "13:30",
+          "raw_name": "NEDERLANDS ORKEST"
+        },
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "21:45",
+          "raw_name": "SOR"
+        }
+      ]
     },
     {
       "id": 1274,
@@ -2724,7 +3441,15 @@
       "blurb": "Fuzzy gitaarrock met Britpop-DNA en uitverkochte headlinertouren — solide scene, maar oriënteert zich richting NME-covers en festivalpodia eerder dan de crate. Kings of Leon-supportslots signaleren een traject dat NTS zelden volgt.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "16:15",
+          "raw_name": "KEO"
+        }
+      ]
     },
     {
       "id": 1277,
@@ -2753,7 +3478,15 @@
       "blurb": "Belgisch-Limburgse rapper met Biggie-invloeden en eerlijke straatpoëzie op oldschool beats — solide craft, maar het Top Notch-circuit en grote festivalpodia plaatsen hem buiten NTS-selectiecriteria. Collaboraties met Zwangere Guy hebben meer scene-credibility, maar het totaalplaatje is te breed-publiek voor NTS-programmering.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "15:30",
+          "raw_name": "DIKKE"
+        }
+      ]
     },
     {
       "id": 1285,
@@ -2783,7 +3516,15 @@
       "blurb": "Zuidoost-Londense soulvocalist met doorleefde Amy Winehouse-invloeden en een debuut-ep die roots toont. De associaties met Elton John en stadion-pop-collega's plaatsen haar buiten het underground-circuit waar NTS op vaart.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "HEINEKEN",
+          "start_time": "13:15",
+          "raw_name": "SKYE NEWMAN"
+        }
+      ]
     },
     {
       "id": 1300,
@@ -2812,7 +3553,8 @@
       "blurb": "Verdi's Requiem is onweerlegbaar een meesterwerk, maar het NNO opereert in een institutioneel klassiek circuit dat weinig raakvlak heeft met NTS's voorliefde voor hedendaagse compositie, experimentele klassiek of de avant-garde kant van het genre. Arvo Pärt, Julius Eastman of Eliane Radigue zouden hier wél passen — dit niet.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": []
     },
     {
       "id": 1313,
@@ -2843,7 +3585,15 @@
       "blurb": "Eclectische productie-instincten zijn er, maar de Charli XCX/Bladee-kruising landt meer op Spotify-editorial dan in een NTS-selectie. De 'gemaakt voor een megapubliek'-energie trekt het weg van de underground-curatie waar NTS op draait.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "BRAVO",
+          "start_time": "16:30",
+          "raw_name": "CELESTE 2HOLLIS"
+        }
+      ]
     },
     {
       "id": 1352,
@@ -2872,7 +3622,15 @@
       "blurb": "Afro-Caribische club-fusion met Lowlands-feestframe: te veel Heineken-tent, te weinig Honest Jon's. Kybba's Movement heeft scene-wortels, maar de positionering als warmup-zweet-spektakel plaatst dit buiten NTS' selectieve register.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "HEINEKEN",
+          "start_time": "00:00",
+          "raw_name": "BASSHALL: KYBBA, TRIBAL KUSH & NEMS"
+        }
+      ]
     },
     {
       "id": 1367,
@@ -2902,7 +3660,8 @@
       "blurb": "Celeste beweegt zich in het snijvlak van vintage soul en cinematic pop — vakkundig, maar gepolijst genoeg voor BBC Radio 2 en Spotify editorial. Weinig aanknopingspunten met de ruwe, leftfield of scene-gedreven hoek die NTS zoekt.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": []
     },
     {
       "id": 1369,
@@ -2931,7 +3690,15 @@
       "blurb": "Middeleeuwse Siciliaanse folktradities via luit, doedelzak en lier — uitvoering gericht op publieksbeleving en straattheater. NTS raakt folk aan via archiefcuratie en veldopnames, minder via live-performance-ensembles zonder productionele eigenzinnigheid.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "LIMA",
+          "start_time": "21:45",
+          "raw_name": "COMPAGNIA LA GIOSTRA"
+        }
+      ]
     },
     {
       "id": 1385,
@@ -2962,7 +3729,15 @@
       "blurb": "Warme neosoul met Surinaams-Curaçaose spirituele tekstlagen en jazzinvloeden — de fundamenten kloppen. Metropole Orkest en opener voor John Legend plaatsen haar echter stevig in het toegankelijke, radio-gecureerde segment dat NTS doorgaans links laat liggen.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "LIMA",
+          "start_time": "12:15",
+          "raw_name": "LATANYA ALBERTO"
+        }
+      ]
     },
     {
       "id": 1387,
@@ -2992,7 +3767,15 @@
       "blurb": "Rotterdamse vocalsit met Sade-referenties en Drake-labelaffiliatie — de stem is er, maar de productionele keuzes mikken op streamingplatforms eerder dan op het crate-digger-circuit. OVO Sound-affiliatie positioneert haar stevig in mainstream R&B-territorium dat NTS doorgaans links laat liggen.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "19:30",
+          "raw_name": "NAOMI SHARON"
+        }
+      ]
     },
     {
       "id": 1399,
@@ -3022,7 +3805,15 @@
       "blurb": "PJ Harvey en The Breeders als kapstok klinkt veelbelovend, maar 'Be Sweet to Me' leest als een verzorgd major-label debuut met beroemde achternaam als marketingvehikel. NTS trekt eerder naar de rauwe bron dan naar de erfgenaam.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "14:15",
+          "raw_name": "VIOLET GROHL"
+        }
+      ]
     },
     {
       "id": 1400,
@@ -3053,7 +3844,15 @@
       "blurb": "Willem opereert in het segment van de gepolijste Amsterdamse hip-hop — gelaagde teksten, maar de productie en positionering richten zich op festivalmainstage en brede luisteraars. Te glad en toegankelijk voor de NTS-curatie, die zelfs binnen Nederlandstalige hip-hop de ruwere of meer experimentele kant zoekt.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "19:15",
+          "raw_name": "WILLEM"
+        }
+      ]
     },
     {
       "id": 1403,
@@ -3085,7 +3884,15 @@
       "blurb": "Zeyne opereert in het Arabische crossover-segment waar regionale supersterdom en electropop-productie samenkomen — een circuit dat dichter bij streaming-playlists zit dan bij Honest Jon's-selecties. De dabke-referentie en Levantijnse roots zijn interessant maar dragen de act niet voorbij het festival-pop-format.",
       "overridden": false,
       "score": 38,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "LIMA",
+          "start_time": "20:30",
+          "raw_name": "ZEYNE"
+        }
+      ]
     },
     {
       "id": 1279,
@@ -3116,7 +3923,15 @@
       "blurb": "Slick UK-based electropop met punk-vernisje — de 'overnacht festivalsensatie'-boog en Spotify-klaar productiegeluid plaatsen haar buiten NTS-curatie-territorium. Te glad voor de crate, te snel voor de scene.",
       "overridden": false,
       "score": 32,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "INDIA",
+          "start_time": "18:20",
+          "raw_name": "CHLOE QISHA"
+        }
+      ]
     },
     {
       "id": 1275,
@@ -3145,7 +3960,15 @@
       "blurb": "Guilt Trip speelt de festivalcircuit-metal die zichzelf als underground positioneert maar de productie en schaal van mainstream rock heeft. Zonder experimentele uitlopers of scene-aansluiting buiten het grote festivalcircuit valt dit buiten NTS z'n curatorische focus.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "X-RAY",
+          "start_time": "15:40",
+          "raw_name": "GUILT TRIP"
+        }
+      ]
     },
     {
       "id": 1302,
@@ -3176,7 +3999,15 @@
       "blurb": "Maribou State opereert in het segment waar downtempo en indietronica samenkomen met festival-productiewaarden en brede toegankelijkheid. Te glad voor de crate-digger-context van NTS, te gesettled in het KEXP/6Music-spectrum.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "ALPHA",
+          "start_time": "17:30",
+          "raw_name": "MARIBOU STATE"
+        }
+      ]
     },
     {
       "id": 1316,
@@ -3207,7 +4038,15 @@
       "blurb": "Parcels levert vakkundige nu-disco en synthpop, maar de productieglans en festivalformule plaatsen ze stevig in mainstream indie-pop-territorium. Buiten het NTS-spectrum.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "ALPHA",
+          "start_time": "20:30",
+          "raw_name": "PARCELS"
+        }
+      ]
     },
     {
       "id": 1318,
@@ -3237,7 +4076,15 @@
       "blurb": "Lorde opereert comfortabel in het major-pop spectrum — daverend succes en Afas Live-shows plaatsen haar buiten het underground-circuit dat NTS beweegt. 'Virgin' klinkt elektronischer, maar elektronischer-dan-vorige-plaat is niet hetzelfde als leftfield.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "ALPHA",
+          "start_time": "21:30",
+          "raw_name": "LORDE"
+        }
+      ]
     },
     {
       "id": 1364,
@@ -3267,7 +4114,15 @@
       "blurb": "Rose Gray maakt toegankelijke club-georiënteerde pop met queer sensibiliteit — eerder Spotify editorial dan crate-digger-selectie. Het clubnarratief is er, de underground-edge ontbreekt.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "X-RAY",
+          "start_time": "16:15",
+          "raw_name": "ROSE GRAY"
+        }
+      ]
     },
     {
       "id": 1382,
@@ -3298,7 +4153,15 @@
       "blurb": "José González levert verzorgde akoestische singer-songwriter muziek met brede festivalaantrekkingskracht. Te glad en te centraal in het indie-mainstreamsegment om op NTS te landen.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "BRAVO",
+          "start_time": "13:00",
+          "raw_name": "JOSÉ GONZÁLEZ"
+        }
+      ]
     },
     {
       "id": 1388,
@@ -3327,7 +4190,15 @@
       "blurb": "Australische producer wiens werk zich bevindt in het hyperpop/cyberrave-kwadrant — productioneel vaardig maar gericht op mainstream festivalcircuits en streamingplatforms. Te veel Skrillex-bravado, te weinig crate-digging-onderbouw voor NTS.",
       "overridden": false,
       "score": 28,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "20:15",
+          "raw_name": "NINAJIRACHI"
+        }
+      ]
     },
     {
       "id": 1266,
@@ -3358,7 +4229,15 @@
       "blurb": "Lennon-en-Orbison-vergelijkingen op een debuutplaat is zelden een goed teken voor curatorial interesse. Later with Jools Holland zegt genoeg.",
       "overridden": false,
       "score": 22,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "LIMA",
+          "start_time": "18:25",
+          "raw_name": "TYLER BALLGAME"
+        }
+      ]
     },
     {
       "id": 1299,
@@ -3387,7 +4266,15 @@
       "blurb": "S10 opereert comfortabel in het Nederlandse pop-mainstream circuit — Eurovisie, grote podia, radiodraaiingen. Te gepolijst en te breed-publiek voor de niche curatorische lens van NTS.",
       "overridden": false,
       "score": 22,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "ALPHA",
+          "start_time": "16:00",
+          "raw_name": "S10"
+        }
+      ]
     },
     {
       "id": 1391,
@@ -3417,7 +4304,15 @@
       "blurb": "Excelsior Recordings-indiefolk met country-tinten en een Lowlands-traject gericht op brede festivalpublieken. Buiten NTS-spectrum.",
       "overridden": false,
       "score": 22,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "LIMA",
+          "start_time": "12:15",
+          "raw_name": "ROMY LIZ ROSE"
+        }
+      ]
     },
     {
       "id": 1394,
@@ -3447,7 +4342,15 @@
       "blurb": "Strak geproduceerde Australische poppunk met QotSA-referenties en Foo Fighters-support slots — dat vertelt je waar dit lands. Buiten het NTS-spectrum.",
       "overridden": false,
       "score": 22,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "X-RAY",
+          "start_time": "18:30",
+          "raw_name": "AND THE JEAN TEASERS"
+        }
+      ]
     },
     {
       "id": 1270,
@@ -3477,7 +4380,15 @@
       "blurb": "Masked metalcore act met EDM-productie en Lowlands/Download-circuitpositioning — te glad en te groot voor NTS-spectrum.",
       "overridden": false,
       "score": 18,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "20:30",
+          "raw_name": "PRESIDENT"
+        }
+      ]
     },
     {
       "id": 1290,
@@ -3506,7 +4417,15 @@
       "blurb": "Mainstream Amsterdamse drip-rap gericht op lifestyle en status, productioneel en thematisch stevig verankerd in het Top 40-segment van de nederhop.",
       "overridden": false,
       "score": 18,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "HEINEKEN",
+          "start_time": "13:15",
+          "raw_name": "MILOLAATHETLUKKEN"
+        }
+      ]
     },
     {
       "id": 1291,
@@ -3537,7 +4456,15 @@
       "blurb": "Boterzachte Nieuw-Zeelandse loungerock met Spotify-playlist-afwerking — buiten NTS-spectrum.",
       "overridden": false,
       "score": 18,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "HEINEKEN",
+          "start_time": "15:15",
+          "raw_name": "LEISURE"
+        }
+      ]
     },
     {
       "id": 1389,
@@ -3568,7 +4495,15 @@
       "blurb": "Skapunk met moshpit-energie en radio-vriendelijke productie uit Zutphen. Buiten het NTS-spectrum.",
       "overridden": false,
       "score": 18,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "LIMA",
+          "start_time": "12:00",
+          "raw_name": "POLITIE WARNSVELD"
+        }
+      ]
     },
     {
       "id": 1303,
@@ -3599,7 +4534,15 @@
       "blurb": "Major Lazer is een stadion-dancehall-EDM crossover project gebouwd op radio-singles en Coachella-hoofdpodia.",
       "overridden": false,
       "score": 14,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "ALPHA",
+          "start_time": "18:15",
+          "raw_name": "MAJOR LAZER"
+        }
+      ]
     },
     {
       "id": 1315,
@@ -3630,7 +4573,15 @@
       "blurb": "Slaapkamer-naar-stadion-traject met bijbehorende productieglans — dit is Spotify editorial-territorium.",
       "overridden": false,
       "score": 14,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-22",
+          "stage": "ALPHA",
+          "start_time": "20:30",
+          "raw_name": "SOMBR"
+        }
+      ]
     },
     {
       "id": 1370,
@@ -3659,7 +4610,15 @@
       "blurb": "Catalaanse folk-bluegrass act met circlepit-energie en jodelrepertoire — buiten NTS-spectrum.",
       "overridden": false,
       "score": 14,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "LIMA",
+          "start_time": "17:45",
+          "raw_name": "EL PONY PISADOR"
+        }
+      ]
     },
     {
       "id": 1339,
@@ -3688,7 +4647,15 @@
       "blurb": "Mainstage drum-'n-bass met EDC Las Vegas-pedigree valt buiten het NTS-spectrum.",
       "overridden": false,
       "score": 12,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "INDIA",
+          "start_time": "02:00",
+          "raw_name": "ANDROMEDIK"
+        }
+      ]
     },
     {
       "id": 1381,
@@ -3717,7 +4684,15 @@
       "blurb": "Lowlands-podium, debuutalbum in het vizier, 'female gaze' als verkooppunt — dit is gewoon pop.",
       "overridden": false,
       "score": 12,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "INDIA",
+          "start_time": "14:00",
+          "raw_name": "JET VAN DER STEEN"
+        }
+      ]
     },
     {
       "id": 1311,
@@ -3747,7 +4722,15 @@
       "blurb": "Lowlands hoofdpodium-pop gebouwd voor Spotify-algoritmes en streamingrecords.",
       "overridden": false,
       "score": 8,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "ALPHA",
+          "start_time": "16:00",
+          "raw_name": "ANTOON"
+        }
+      ]
     },
     {
       "id": 1337,
@@ -3776,7 +4759,15 @@
       "blurb": "Paradiso-vullende pop party gecureerd door 3FM-dj, playlist-driven around chart-queer-pop. Buiten NTS-spectrum.",
       "overridden": false,
       "score": 8,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-23",
+          "stage": "HEINEKEN",
+          "start_time": "23:00",
+          "raw_name": "ICONIC"
+        }
+      ]
     },
     {
       "id": 1298,
@@ -3806,7 +4797,15 @@
       "blurb": "Lowlands-vriendelijke dancepop met LA-glans, Demi Lovato-co-sign en choreografie als verkoopargument. Buiten NTS-spectrum.",
       "overridden": false,
       "score": 6,
-      "category": "OFF"
+      "category": "OFF",
+      "sets": [
+        {
+          "day": "2026-08-21",
+          "stage": "BRAVO",
+          "start_time": "15:00",
+          "raw_name": "ADÉLA"
+        }
+      ]
     }
   ],
   "stats": {
@@ -3814,6 +4813,1239 @@
     "with_own_show": 14,
     "with_presence": 11,
     "with_vibe_50_plus": 87,
-    "with_vibe_70_plus": 64
-  }
+    "with_vibe_70_plus": 64,
+    "with_timetable": 123
+  },
+  "timetable": [
+    {
+      "day": "2026-08-21",
+      "stage": "ALPHA",
+      "name": "AMYL AND THE SNIFFERS",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ALPHA",
+      "name": "ANTOON",
+      "start_time": "16:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ALPHA",
+      "name": "KNEECAP",
+      "start_time": "18:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ALPHA",
+      "name": "PARCELS",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ALPHA",
+      "name": "NEW WAVE",
+      "start_time": "22:40"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "NUSANTARA BEAT",
+      "start_time": "13:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "ADÉLA",
+      "start_time": "15:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "NU GENEA LIVE BAND",
+      "start_time": "17:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "WILLEM",
+      "start_time": "19:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "VIAGRA BOYS",
+      "start_time": "21:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "S-CANDALO",
+      "start_time": "23:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "CHLOÉ CAILLET",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "BEN UFO",
+      "start_time": "02:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "BRAVO",
+      "name": "IDENTIFIED PATIENT",
+      "start_time": "03:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HEINEKEN",
+      "name": "SKYE NEWMAN",
+      "start_time": "13:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HEINEKEN",
+      "name": "LEISURE",
+      "start_time": "15:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HEINEKEN",
+      "name": "JPEGMAFIA",
+      "start_time": "17:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HEINEKEN",
+      "name": "BLOOD ORANGE",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HEINEKEN",
+      "name": "RICHIE HAWTIN DEX EFX X0X",
+      "start_time": "21:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HEINEKEN",
+      "name": "BASSHALL: KYBBA, TRIBAL KUSH & NEMS",
+      "start_time": "00:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "ROMY LIZ ROSE",
+      "start_time": "12:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "SUSOBRINO",
+      "start_time": "14:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "DOVE ELLIS",
+      "start_time": "16:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "ANA FRANGO ELÉTRICO",
+      "start_time": "18:20"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "ZEYNE",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "FULU MIZIKI",
+      "start_time": "22:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "LIMA",
+      "name": "HET ALTERNATIEF",
+      "start_time": "00:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "YOGA",
+      "start_time": "11:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "JET VAN DER STEEN",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "JOY (ANONYMOUS)",
+      "start_time": "16:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "COBRAH",
+      "start_time": "18:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "PRESIDENT",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "FCUKERS",
+      "start_time": "22:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "MARY LAKE",
+      "start_time": "00:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "FREDDY K",
+      "start_time": "01:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "INDIA",
+      "name": "MARRØN",
+      "start_time": "03:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "CHALK",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "RADIO Z",
+      "start_time": "14:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "ROSE GRAY",
+      "start_time": "16:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "SONS",
+      "start_time": "18:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "GURRIERS",
+      "start_time": "19:50"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "JAMES K",
+      "start_time": "21:45"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "BASSVICTIM",
+      "start_time": "23:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "VIOLENT MAGIC ORCHESTRA",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "KABOUTERTJE PUTLUCHT",
+      "start_time": "02:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "X-RAY",
+      "name": "GYSÈLE",
+      "start_time": "03:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "KIM JOSEFINE",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "CHARMAINE",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "LASHANTI",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "JEA",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "TINS",
+      "start_time": "22:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "TIENSON",
+      "start_time": "23:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "DAM SWINDLE",
+      "start_time": "01:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "HACIENDA",
+      "name": "LAURA MEESTER",
+      "start_time": "03:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "JULIET",
+      "name": "ORKATER",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "JULIET",
+      "name": "BOYS WON'T BE BOYS",
+      "start_time": "17:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "JULIET",
+      "name": "DIEHELEDING",
+      "start_time": "19:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "JULIET",
+      "name": "DAVID LINSZEN",
+      "start_time": "21:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "JULIET",
+      "name": "MARCEL VAN ROOSMALEN",
+      "start_time": "22:45"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "JULIET",
+      "name": "COMEDYTRAIN",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "LITERAIRE DARKROOM",
+      "start_time": "10:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "BAKKIE LLIT",
+      "start_time": "10:45"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "FLIP THE SCRIPT!",
+      "start_time": "12:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "WAT NU? VERZET!",
+      "start_time": "13:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "MENSEN ZEGGEN DINGEN",
+      "start_time": "15:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "AYOUB KHARKHACH",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "JANNEKE DE BIJL",
+      "start_time": "17:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "MARK WAUMANS",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ADONIS",
+      "name": "MARIE KOET",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ALPHA",
+      "name": "KELIS",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ALPHA",
+      "name": "S10",
+      "start_time": "16:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ALPHA",
+      "name": "MAJOR LAZER",
+      "start_time": "18:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ALPHA",
+      "name": "SOMBR",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ALPHA",
+      "name": "TYLER, THE CREATOR",
+      "start_time": "22:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "JOSÉ GONZÁLEZ",
+      "start_time": "13:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "ZIMMER90",
+      "start_time": "15:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "IJSLAND",
+      "start_time": "17:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "GEESE",
+      "start_time": "19:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "EEFJE DE VISSER",
+      "start_time": "21:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "AFRA",
+      "start_time": "23:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "HELENA HAUFF",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "HÉCTOR OAKS",
+      "start_time": "02:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "BRAVO",
+      "name": "BOYS NOIZE",
+      "start_time": "03:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "SOUL LINEDANCE WORKSHOP DOOR SUMMER DANCE FOREVER",
+      "start_time": "11:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "MILOLAATHETLUKKEN",
+      "start_time": "13:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "RAVYN LENAE",
+      "start_time": "15:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "PALE JAY",
+      "start_time": "17:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "NIA ARCHIVES",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "ROYAL BLOOD",
+      "start_time": "21:45"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "LAMBRINI GIRLS",
+      "start_time": "00:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HEINEKEN",
+      "name": "TLM",
+      "start_time": "01:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "LATANYA ALBERTO",
+      "start_time": "12:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "KO SHIN MOON",
+      "start_time": "14:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "IL MAGO DEL GELATO",
+      "start_time": "16:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "TYLER BALLGAME",
+      "start_time": "18:25"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "FAUNA",
+      "start_time": "20:40"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "ÁCIDO PANTERA",
+      "start_time": "22:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "LIMA",
+      "name": "OLÁ BRAZIL!",
+      "start_time": "00:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "YOGA",
+      "start_time": "11:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "VIOLET GROHL",
+      "start_time": "14:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "KEO",
+      "start_time": "16:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "CHLOE QISHA",
+      "start_time": "18:20"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "ZEP",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "MAEY",
+      "start_time": "22:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "SMIB",
+      "start_time": "00:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "S!RENE",
+      "start_time": "01:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "WAXFIEND",
+      "start_time": "02:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "INDIA",
+      "name": "NALA",
+      "start_time": "03:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "TERZIJ DE HORDE",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "GUILT TRIP",
+      "start_time": "15:40"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "SOPHIA STEL",
+      "start_time": "17:10"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "TRACEY",
+      "start_time": "18:45"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "SPEED",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "VOICES FROM THE LAKE",
+      "start_time": "22:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "SKEE MASK",
+      "start_time": "23:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "DJRUM",
+      "start_time": "01:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "X-RAY",
+      "name": "UPSAMMY",
+      "start_time": "03:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "KETAMA MAN",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "FOLAKE",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "YŮSU",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "FIESTA MACUMBA SOUNDSYSTEM",
+      "start_time": "21:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "ROCKEFELLABABE",
+      "start_time": "23:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "TERA KÒRÁ",
+      "start_time": "01:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "HACIENDA",
+      "name": "LAMSI",
+      "start_time": "03:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "JULIET",
+      "name": "NASRDIN DCHAR",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "JULIET",
+      "name": "AQUEERIUS",
+      "start_time": "17:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "JULIET",
+      "name": "IRC",
+      "start_time": "19:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "JULIET",
+      "name": "ISABELLE KAFANDO",
+      "start_time": "21:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "JULIET",
+      "name": "RON VAN ZALMSAUS",
+      "start_time": "22:45"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "JULIET",
+      "name": "CLUB HAUG",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "LITERAIR DARKROO",
+      "start_time": "10:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "E BAKKIE M LLIT",
+      "start_time": "10:45"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "ROCKING BOOKS: GIPHART X GOLDBACH",
+      "start_time": "12:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "WAT NU? MYSTIEK!",
+      "start_time": "13:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "VPRO CLUB LEES",
+      "start_time": "15:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "ALINA SHARIPOVA",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "TEUN DE VRIES",
+      "start_time": "17:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "KEES VAN AMSTEL",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ADONIS",
+      "name": "CHICKS IN DIALOGUE",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ALPHA",
+      "name": "NEDERLANDS ORKEST",
+      "start_time": "13:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ALPHA",
+      "name": "HERMANOS GUTIÉRREZ",
+      "start_time": "15:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ALPHA",
+      "name": "MARIBOU STATE",
+      "start_time": "17:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ALPHA",
+      "name": "TURNSTILE",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ALPHA",
+      "name": "LORDE",
+      "start_time": "21:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "STEEL PULSE",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "SOPHIE STRAAT",
+      "start_time": "14:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "CELESTE 2HOLLIS",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "CLIPSE",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "SAIDAH",
+      "start_time": "23:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "BENNY RODRIGUES",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "KETTAMA",
+      "start_time": "02:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "BRAVO",
+      "name": "NENE H",
+      "start_time": "03:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HEINEKEN",
+      "name": "MERIJN SCHOLTEN",
+      "start_time": "12:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HEINEKEN",
+      "name": "BURAKA SOM SISTEMA",
+      "start_time": "14:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HEINEKEN",
+      "name": "WUNDERHORSE",
+      "start_time": "16:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HEINEKEN",
+      "name": "DIJON",
+      "start_time": "18:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HEINEKEN",
+      "name": "FLOATING POINTS (LIVE)",
+      "start_time": "20:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HEINEKEN",
+      "name": "ICONIC",
+      "start_time": "23:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "POLITIE WARNSVELD",
+      "start_time": "12:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "ANAIIS",
+      "start_time": "13:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "ERIN LECOUNT",
+      "start_time": "15:50"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "EL PONY PISADOR",
+      "start_time": "17:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "BASSOLINO",
+      "start_time": "19:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "COMPAGNIA LA GIOSTRA",
+      "start_time": "21:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "LIMA",
+      "name": "VLOOIENCIRCUS",
+      "start_time": "23:15"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "YOGA",
+      "start_time": "11:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "BROTHER WALLACE",
+      "start_time": "13:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "DIKKE",
+      "start_time": "15:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "MARUJA",
+      "start_time": "17:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "NAOMI SHARON",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "SOR",
+      "start_time": "21:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "FLAVA D",
+      "start_time": "23:15"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "SKREAM & BENGA",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "ANDROMEDIK",
+      "start_time": "02:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "INDIA",
+      "name": "TANTU BEATS",
+      "start_time": "03:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "TEEN MORTGAGE",
+      "start_time": "12:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "WORLDPEAC DMT",
+      "start_time": "14:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "THE E FEMCELS",
+      "start_time": "15:15"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "JANE REMOVER",
+      "start_time": "16:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "AND THE JEAN TEASERS",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "NINAJIRACHI",
+      "start_time": "20:15"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "GEORDIE GREEP",
+      "start_time": "22:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "X-RAY",
+      "name": "THIS MUST BE THE PACE WITH THEO PARRISH",
+      "start_time": "23:15"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "ABIBA SOKOTO B2B PELANOIR",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "EILEEN",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "SHADY LADY",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "KINGDOM SOUND",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "AK SOUNDSYSTEM",
+      "start_time": "22:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "DEEJAY ABSTRACT",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "HACIENDA",
+      "name": "YUCKY",
+      "start_time": "02:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "JULIET",
+      "name": "SARAH JANNEH, NITE, UTRECHT, MUSICALMAKERS",
+      "start_time": "14:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "JULIET",
+      "name": "ITA, JUNE YANEZ, LEILA SAHIR, ZEPHYR BRÜGGEN",
+      "start_time": "17:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "JULIET",
+      "name": "CIRCUMSTANCES",
+      "start_time": "19:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "JULIET",
+      "name": "DAAN VAN DER HOEVEN",
+      "start_time": "21:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "JULIET",
+      "name": "DE NATIONALE AVOND VAN DE WOORDGRAP",
+      "start_time": "22:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "JULIET",
+      "name": "DE LOWLANDS GROTE* TALENTENSHOW",
+      "start_time": "00:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "LITERAIRE DARKROOM",
+      "start_time": "10:15"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "BAKKIE LLIT",
+      "start_time": "10:45"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "DARLING, DEAREST, DEAD",
+      "start_time": "12:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "WAT NU? FANTASY!",
+      "start_time": "13:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "EINDELOOS VERTIER",
+      "start_time": "15:00"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "DAVID VAN ROSMALEN",
+      "start_time": "16:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "MARTIJN CRINS",
+      "start_time": "17:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "DAVINE PERIK",
+      "start_time": "18:30"
+    },
+    {
+      "day": "2026-08-23",
+      "stage": "ADONIS",
+      "name": "JASPER VAN DER VEEN",
+      "start_time": "19:30"
+    }
+  ]
 }

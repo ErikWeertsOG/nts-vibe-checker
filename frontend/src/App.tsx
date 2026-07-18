@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Act, Category, Payload } from "./types";
 import InstallModal from "./InstallModal";
+import Timetable from "./Timetable";
 
-type Tab = "vibe" | "all";
+type Tab = "vibe" | "all" | "timetable";
 
 const categoryStyle: Record<Category, { bg: string; label: string }> = {
   RESIDENT:       { bg: "bg-ll-red text-ll-cream",        label: "NTS RESIDENT" },
@@ -180,9 +181,9 @@ export default function App() {
         </header>
         {showInstall && <InstallModal onClose={() => setShowInstall(false)} />}
 
-        <div className="sticky top-0 bg-ll-indigo-deep/95 backdrop-blur py-3 z-10 border-b border-ll-indigo flex gap-2 items-center">
-          <div className="flex gap-0">
-            {(["vibe", "all"] as Tab[]).map((t) => (
+        <div className="sticky top-0 bg-ll-indigo-deep/95 backdrop-blur py-3 z-10 border-b border-ll-indigo flex gap-2 items-center flex-wrap">
+          <div className="flex gap-0 flex-wrap">
+            {(["vibe", "all", "timetable"] as Tab[]).map((t) => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
@@ -192,26 +193,35 @@ export default function App() {
                     : "bg-ll-indigo text-ll-cream/80 hover:text-ll-cream"
                 }`}
               >
-                {t === "vibe" ? "NTS-VIBE (40+)" : "ALLE 126"}
+                {t === "vibe" ? "NTS-VIBE (40+)" : t === "all" ? `ALLE ${data.stats.total}` : "TIMETABLE"}
               </button>
             ))}
           </div>
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="zoek act / genre..."
-            className="ml-auto bg-ll-indigo text-ll-cream px-3 py-2 text-sm border-2 border-ll-indigo focus:border-ll-cyan outline-none w-44 font-body placeholder:text-ll-cream/40"
-          />
+          {tab !== "timetable" && (
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="zoek act / genre..."
+              className="ml-auto bg-ll-indigo text-ll-cream px-3 py-2 text-sm border-2 border-ll-indigo focus:border-ll-cyan outline-none w-44 font-body placeholder:text-ll-cream/40"
+            />
+          )}
         </div>
 
-        <ul>
-          {filtered.map((a) => (
-            <ActCard key={a.slug} act={a} expanded={!!open[a.slug]} onToggle={() => setOpen((o) => ({ ...o, [a.slug]: !o[a.slug] }))} />
-          ))}
-        </ul>
-
-        {filtered.length === 0 && (
-          <p className="text-ll-cream/40 p-8 text-center font-body">Geen acts gevonden.</p>
+        {tab === "timetable" ? (
+          <div className="mt-4">
+            <Timetable acts={data.acts} rawSlots={data.timetable ?? []} />
+          </div>
+        ) : (
+          <>
+            <ul>
+              {filtered.map((a) => (
+                <ActCard key={a.slug} act={a} expanded={!!open[a.slug]} onToggle={() => setOpen((o) => ({ ...o, [a.slug]: !o[a.slug] }))} />
+              ))}
+            </ul>
+            {filtered.length === 0 && (
+              <p className="text-ll-cream/40 p-8 text-center font-body">Geen acts gevonden.</p>
+            )}
+          </>
         )}
 
         <footer className="mt-12 pt-6 border-t border-ll-indigo flex justify-between items-baseline">
