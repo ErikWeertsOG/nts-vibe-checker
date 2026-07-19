@@ -54,7 +54,19 @@ type Enriched = RawSlot & {
   endMin: number;
 };
 
-export default function Timetable({ acts, rawSlots }: { acts: Act[]; rawSlots: RawSlot[] }) {
+function humanTimeAgo(iso: string): string {
+  const then = new Date(iso).getTime();
+  if (isNaN(then)) return "";
+  const diffSec = (Date.now() - then) / 1000;
+  if (diffSec < 60) return "zojuist bijgewerkt";
+  if (diffSec < 3600) return `${Math.floor(diffSec / 60)} min geleden bijgewerkt`;
+  if (diffSec < 86400) return `${Math.floor(diffSec / 3600)}u geleden bijgewerkt`;
+  return `${Math.floor(diffSec / 86400)}d geleden bijgewerkt`;
+}
+
+export default function Timetable({ acts, rawSlots, updatedAt }: {
+  acts: Act[]; rawSlots: RawSlot[]; updatedAt?: string;
+}) {
   const nowFest = useMemo(nowInFestival, []);
   const [day, setDay] = useState<string>(nowFest?.day ?? DAYS[0].iso);
   const [minCat, setMinCat] = useState<number>(0);           // 0=all, 2=adjacent+, 3=vibe+, 4=presence+
@@ -158,8 +170,11 @@ export default function Timetable({ acts, rawSlots }: { acts: Act[]; rawSlots: R
         </div>
       </div>
 
-      <div className="ll-tag text-ll-cream/50 mt-3 mb-2">
-        {DAYS.find(d => d.iso === day)?.full}
+      <div className="mt-3 mb-2 flex justify-between items-baseline gap-4">
+        <span className="ll-tag text-ll-cream/50">{DAYS.find(d => d.iso === day)?.full}</span>
+        {updatedAt && (
+          <span className="ll-tag text-ll-cream/40 text-[10px]">{humanTimeAgo(updatedAt)}</span>
+        )}
       </div>
 
       {/* Timeline */}

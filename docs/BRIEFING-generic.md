@@ -481,6 +481,34 @@ zodat de frontend een compleet rooster kan tonen zonder alleen de gescoorde acts
 - **Wrap over middernacht**: converteer HH:MM naar "minuten sinds 09:30" — tijden < 09:30 krijgen
   +24u. Zo passen 02:00-slots naast 22:00 op dezelfde festivalrij.
 
+### Static-source resilience (belangrijk bij PDF-bronnen)
+
+Een PDF is een dode drop: geen etag-hint dat het schema veranderde, geen structured diff. Bouw
+daar deze vier lagen omheen zodat het niet echt "statisch" voelt:
+
+1. **Freshness-check bij elke fetch.** Stuur `If-Modified-Since` / `If-None-Match` mee met de vorige
+   response-headers; als 304 → cache gebruiken, klaar. Bij 200 → SHA-256 van de bytes vergelijken
+   met de vorige — pas parsen als de hash echt anders is. Bespaart tokens én laat je duidelijk zien
+   wanneer de bron écht wijzigde.
+2. **Diff-log tussen runs.** Roteer de vorige `slots.json` naar `slots.prev.json` vóór je de nieuwe
+   schrijft. Een simpele `diff_slots(prev, current)` levert `{added, removed, moved}` (waarbij
+   "moved" = zelfde `(day, name)` maar andere stage/tijd). Print dat in de build-log — je ziet zo
+   direct welke acts verzet/geschrapt/toegevoegd zijn.
+3. **LLM-name-fixup als laatste redmiddel voor parser-artefacten.** Als na alle rule-based
+   matching er nog ongematchte slots én ongematchte canonieke acts overblijven, stuur je ze
+   samen naar een goedkoop model (Haiku) met de opdracht: "map de PDF-namen naar canonieke namen
+   als het overduidelijk hetzelfde artiest is, bij twijfel niet mappen." Cache de mapping op
+   sha256 van de input-set — dan draait het LLM alleen als de stragglers wijzigen. Vangt
+   "WORLDPEAC DMT" → "Worldpeace DMT" en "AND THE JEAN TEASERS" → "Teen Jesus and the Jean
+   Teasers" af zonder dat je fuzzy-thresholds hoeft te tunen tot ze false-positives geven.
+4. **Dagelijkse CI-refresh.** GitHub Action (cron 06:00 UTC + `workflow_dispatch`) die alléén de
+   timetable-stap draait — geen line-up-fetch, geen vibe-judging. Als `acts.json` wijzigt: commit
+   + push → Vercel deployt automatisch. Zo staat de laatste editie altijd live zonder handmatig
+   ingrijpen.
+
+Schrijf `timetable_updated_at` in de payload zodat de frontend "X uur geleden bijgewerkt" kan
+tonen — kleine UX-touch die vertrouwen wekt tijdens het festival.
+
 ### Gotchas van PDF-parsing (bespaart je een middag)
 
 - Meerdere y-rijen met times in dezelfde stage-band betekent óf twee visuele lijnen voor

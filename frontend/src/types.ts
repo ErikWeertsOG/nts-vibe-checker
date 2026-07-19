@@ -47,6 +47,7 @@ export type Act = {
 
 export type Payload = {
   generated_at: string;
+  timetable_updated_at?: string;
   acts: Act[];
   timetable?: RawSlot[];
   stats: {

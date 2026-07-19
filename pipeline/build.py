@@ -8,7 +8,10 @@ from lineup import fetch_lineup, enrich_with_genres
 from nts import fetch_show_index, lookup_acts, fetch_mixtape_credits
 from score import score_all, combine
 from vibe import judge_all
-from timetable import fetch_pdf, parse_pdf, match_slots, enrich_acts
+from timetable import (
+    fetch_pdf, parse_pdf, match_slots_with_fixup, enrich_acts,
+    diff_slots, SLOTS_CACHE, PREV_SLOTS_CACHE,
+)
 
 OUT = Path(__file__).parent.parent / "frontend" / "public" / "acts.json"
 TIMETABLE_URL = "https://lowlands.nl/media/documents/LL26_Blokkenschema.pdf"
@@ -39,17 +42,38 @@ def main():
     final = combine(scored, judgments)
 
     print("[6/6] Timetable...")
+    raw_slots: list = []
     try:
-        pdf = fetch_pdf(TIMETABLE_URL)
+        pdf, changed = fetch_pdf(TIMETABLE_URL)
+        print(f"  pdf: {'CHANGED — reparsing' if changed else 'unchanged (using cache)'}")
         slots = parse_pdf(pdf)
-        match_map = match_slots(slots, final)
-        final = enrich_acts(final, match_map)
         raw_slots = [s.to_dict() for s in slots]
+
+        # Show what moved since the last run (helps spot upstream schedule edits)
+        if PREV_SLOTS_CACHE.exists():
+            try:
+                prev = json.loads(PREV_SLOTS_CACHE.read_text())
+                d = diff_slots(prev, raw_slots)
+                if d["added"] or d["removed"] or d["moved"]:
+                    print(f"  diff: +{len(d['added'])} added, -{len(d['removed'])} removed, "
+                          f"~{len(d['moved'])} moved")
+                    for s in d["added"][:5]:
+                        print(f"    + {s['day']} {s['stage']} {s['start_time']}  {s['name']}")
+                    for s in d["removed"][:5]:
+                        print(f"    - {s['day']} {s['stage']} {s['start_time']}  {s['name']}")
+                    for m in d["moved"][:5]:
+                        print(f"    ~ {m['from']['name']}: "
+                              f"{m['from']['stage']} {m['from']['start_time']} → "
+                              f"{m['to']['stage']} {m['to']['start_time']}")
+            except Exception as e:
+                print(f"  diff: skipped ({e})")
+
+        match_map = match_slots_with_fixup(slots, final)
+        final = enrich_acts(final, match_map)
         matched_acts = sum(1 for a in final if a.get("sets"))
         print(f"  {len(slots)} slots · matched to {matched_acts} acts")
     except Exception as e:
         print(f"  ! timetable step failed: {e}")
-        raw_slots = []
 
     payload = {
         "generated_at": datetime.utcnow().isoformat() + "Z",

@@ -209,7 +209,7 @@ export default function App() {
 
         {tab === "timetable" ? (
           <div className="mt-4">
-            <Timetable acts={data.acts} rawSlots={data.timetable ?? []} />
+            <Timetable acts={data.acts} rawSlots={data.timetable ?? []} updatedAt={data.timetable_updated_at ?? data.generated_at} />
           </div>
         ) : (
           <>

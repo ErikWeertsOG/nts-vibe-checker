@@ -8,7 +8,9 @@ key off the time-tokens as block boundaries.
 """
 from __future__ import annotations
 import difflib
+import hashlib
 import json
+import os
 import re
 import unicodedata
 from collections import defaultdict
@@ -20,7 +22,10 @@ import pdfplumber
 
 CACHE_DIR = Path(__file__).parent.parent / "data" / "cache"
 PDF_CACHE = CACHE_DIR / "blokkenschema.pdf"
+PDF_META_CACHE = CACHE_DIR / "blokkenschema.meta.json"
 SLOTS_CACHE = CACHE_DIR / "timetable_slots.json"
+PREV_SLOTS_CACHE = CACHE_DIR / "timetable_slots.prev.json"
+LLM_FIXUP_CACHE = CACHE_DIR / "timetable_llm_fixup.json"
 
 # Order matches the visual layout of the PDF (Fri / Sat / Sun 2026).
 DAYS = ["2026-08-21", "2026-08-22", "2026-08-23"]
@@ -43,15 +48,48 @@ class Slot:
         return asdict(self)
 
 
-def fetch_pdf(url: str, force: bool = False) -> Path:
-    """Download the blokkenschema PDF (cached)."""
-    if PDF_CACHE.exists() and not force:
-        return PDF_CACHE
+def fetch_pdf(url: str, force: bool = False) -> tuple[Path, bool]:
+    """Download the blokkenschema PDF. Returns (path, changed).
+
+    Uses If-Modified-Since / If-None-Match when we have prior metadata, and
+    falls back to a content-hash comparison — so we know whether to redo the
+    downstream work or reuse cached slot data.
+    """
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    r = httpx.get(url, timeout=60, follow_redirects=True)
+    prev_meta = {}
+    if PDF_META_CACHE.exists():
+        try:
+            prev_meta = json.loads(PDF_META_CACHE.read_text())
+        except Exception:
+            prev_meta = {}
+    headers = {}
+    if not force and PDF_CACHE.exists():
+        if "etag" in prev_meta:
+            headers["If-None-Match"] = prev_meta["etag"]
+        if "last_modified" in prev_meta:
+            headers["If-Modified-Since"] = prev_meta["last_modified"]
+
+    with httpx.Client(timeout=60, follow_redirects=True) as client:
+        r = client.get(url, headers=headers)
+
+    if r.status_code == 304 and PDF_CACHE.exists():
+        return PDF_CACHE, False
+
     r.raise_for_status()
-    PDF_CACHE.write_bytes(r.content)
-    return PDF_CACHE
+    new_bytes = r.content
+    new_hash = hashlib.sha256(new_bytes).hexdigest()
+    changed = new_hash != prev_meta.get("sha256")
+
+    PDF_CACHE.write_bytes(new_bytes)
+    PDF_META_CACHE.write_text(json.dumps({
+        "url": url,
+        "sha256": new_hash,
+        "etag": r.headers.get("etag", ""),
+        "last_modified": r.headers.get("last-modified", ""),
+        "fetched_at": r.headers.get("date", ""),
+        "bytes": len(new_bytes),
+    }, indent=2))
+    return PDF_CACHE, changed
 
 
 def _chars_to_string(chars: list[dict], gap_space: float = 0.5) -> str:
@@ -149,15 +187,53 @@ def _parse_page(page, day: str) -> list[Slot]:
 
 
 def parse_pdf(path: Path) -> list[Slot]:
-    """Parse the blokkenschema into flat Slot records."""
+    """Parse the blokkenschema into flat Slot records. Also rotates the previous
+    cache so `diff_slots(prev, current)` can show what changed between runs.
+    """
     out: list[Slot] = []
     with pdfplumber.open(path) as pdf:
         for i, page in enumerate(pdf.pages):
             day = DAYS[i] if i < len(DAYS) else f"page-{i+1}"
             out.extend(_parse_page(page, day))
     SLOTS_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    if SLOTS_CACHE.exists():
+        PREV_SLOTS_CACHE.write_text(SLOTS_CACHE.read_text())
     SLOTS_CACHE.write_text(json.dumps([s.to_dict() for s in out], ensure_ascii=False, indent=2))
     return out
+
+
+def diff_slots(prev: list[dict], current: list[dict]) -> dict:
+    """Return {added, removed, moved} between two slot lists.
+
+    Keys on (day, stage, name); a move is same name+day but different stage or
+    start_time. Anything else is either fully added or fully removed.
+    """
+    def key(s):  # matches on name-in-day, so a rescheduled act is a 'move'
+        return (s["day"], s["stage"], s["start_time"], s["name"])
+    def name_key(s):
+        return (s["day"], s["name"])
+
+    prev_set = {key(s) for s in prev}
+    cur_set = {key(s) for s in current}
+    added = [s for s in current if key(s) not in prev_set]
+    removed = [s for s in prev if key(s) not in cur_set]
+
+    # Detect moves: same (day, name) pair on both sides but different stage/time.
+    prev_by_name = {name_key(s): s for s in prev}
+    cur_by_name = {name_key(s): s for s in current}
+    moved = []
+    added_final, removed_final = [], []
+    added_names = {name_key(s) for s in added}
+    removed_names = {name_key(s) for s in removed}
+    for s in added:
+        if name_key(s) in removed_names:
+            moved.append({"from": prev_by_name[name_key(s)], "to": s})
+        else:
+            added_final.append(s)
+    for s in removed:
+        if name_key(s) not in added_names:
+            removed_final.append(s)
+    return {"added": added_final, "removed": removed_final, "moved": moved}
 
 
 # ---------- Matching Slot → Act -------------------------------------------------
@@ -237,12 +313,6 @@ def match_slots(slots: list[Slot], acts: list[dict]) -> dict[str, list[dict]]:
                 continue
         unmatched.append(s)
 
-    if unmatched:
-        print(f"  timetable: {len(unmatched)} unmatched slots (non-music or naming differences):")
-        for s in unmatched[:20]:
-            print(f"    {s.day} {s.stage} {s.start_time}  {s.name}")
-        if len(unmatched) > 20:
-            print(f"    ... and {len(unmatched) - 20} more")
     return dict(result)
 
 
@@ -251,6 +321,129 @@ def enrich_acts(acts: list[dict], match_map: dict[str, list[dict]]) -> list[dict
     for a in acts:
         a["sets"] = match_map.get(a["slug"], [])
     return acts
+
+
+# ---------- LLM name-fixup for parser artifacts --------------------------------
+
+LLM_FIXUP_MODEL = "claude-haiku-4-5-20251001"  # cheap model — this is filtering, not reasoning
+
+_LLM_SYSTEM = """Je krijgt twee lijsten:
+1. TIMETABLE_NAMES — namen zoals ze uit een PDF-schema zijn gehaald. Sommige zijn
+   licht corrupt door OCR-achtige artefacten (missende letter, kapotte kerning,
+   afgekapte woorden).
+2. ACT_NAMES — de canonieke, correct gespelde artiestennamen.
+
+Voor ELKE naam in TIMETABLE_NAMES die duidelijk hetzelfde artiest is als één in
+ACT_NAMES (ondanks de corruptie), geef je een mapping. Alleen echte matches
+opnemen. Bij twijfel: NIET mappen.
+
+Regels:
+- Geen algemene fuzzy-guessing. Een match moet fonetisch/typografisch
+  overduidelijk zijn ("WORLDPEAC DMT" ↔ "Worldpeace DMT", "AND THE JEAN TEASERS"
+  ↔ "Teen Jesus and the Jean Teasers").
+- "YOGA", "SOUL LINEDANCE WORKSHOP" enzovoort zijn geen artiesten — mappen niet
+  toevoegen als er geen kandidaat is.
+- Behoud de originele TIMETABLE_NAME als sleutel exact zoals gegeven.
+
+Output: één strikt JSON-object, niets daarbuiten:
+{
+  "matches": [
+    {"pdf_name": "<TIMETABLE_NAME>", "act_name": "<ACT_NAME>"},
+    ...
+  ]
+}
+"""
+
+
+def llm_fixup(unmatched_slots: list[Slot], unmatched_acts: list[dict],
+              force: bool = False) -> dict[str, str]:
+    """Return {pdf_name: act_slug} for parser-artifact matches. Cached on disk.
+
+    Cache key = sha256(sorted names) so we only re-query when the input set
+    genuinely changes.
+    """
+    if not unmatched_slots or not unmatched_acts:
+        return {}
+
+    pdf_names = sorted({s.name for s in unmatched_slots})
+    act_names = sorted({a["name"] for a in unmatched_acts})
+    cache_key = hashlib.sha256(
+        (json.dumps(pdf_names) + "||" + json.dumps(act_names)).encode()
+    ).hexdigest()[:16]
+
+    cache: dict = {}
+    if LLM_FIXUP_CACHE.exists() and not force:
+        try:
+            cache = json.loads(LLM_FIXUP_CACHE.read_text())
+        except Exception:
+            cache = {}
+    if cache.get("key") == cache_key:
+        return cache.get("mapping", {})
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        print("  llm_fixup: no ANTHROPIC_API_KEY — skipping")
+        return {}
+
+    try:
+        from anthropic import Anthropic
+    except ImportError:
+        print("  llm_fixup: anthropic SDK not installed — skipping")
+        return {}
+
+    user = (
+        "TIMETABLE_NAMES:\n" + "\n".join(f"- {n}" for n in pdf_names) +
+        "\n\nACT_NAMES:\n" + "\n".join(f"- {n}" for n in act_names) +
+        "\n\nGeef de mapping als JSON."
+    )
+    client = Anthropic(api_key=api_key)
+    msg = client.messages.create(
+        model=LLM_FIXUP_MODEL,
+        max_tokens=1000,
+        system=[{"type": "text", "text": _LLM_SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        messages=[{"role": "user", "content": user}],
+    )
+    raw = msg.content[0].text.strip()
+    m = re.search(r"\{.*\}", raw, re.S)
+    if not m:
+        print("  llm_fixup: could not parse response")
+        return {}
+    try:
+        parsed = json.loads(m.group(0))
+    except json.JSONDecodeError:
+        return {}
+
+    slug_by_name = {a["name"]: a["slug"] for a in unmatched_acts}
+    mapping: dict[str, str] = {}
+    for pair in parsed.get("matches", []):
+        pn, an = pair.get("pdf_name"), pair.get("act_name")
+        if pn in pdf_names and an in slug_by_name:
+            mapping[pn] = slug_by_name[an]
+
+    LLM_FIXUP_CACHE.write_text(json.dumps({"key": cache_key, "mapping": mapping}, indent=2))
+    print(f"  llm_fixup: {len(mapping)} additional matches from Claude")
+    return mapping
+
+
+def match_slots_with_fixup(slots: list[Slot], acts: list[dict],
+                           force_llm: bool = False) -> dict[str, list[dict]]:
+    """Rule-based matching, then LLM fixup for the stragglers."""
+    result = match_slots(slots, acts)
+    matched_keys = {(s["day"], s["stage"], s["start_time"], s["raw_name"])
+                    for sets in result.values() for s in sets}
+    unmatched = [s for s in slots
+                 if (s.day, s.stage, s.start_time, s.name) not in matched_keys]
+    matched_slugs = set(result.keys())
+    unmatched_acts = [a for a in acts if a["slug"] not in matched_slugs]
+
+    fixup = llm_fixup(unmatched, unmatched_acts, force=force_llm)
+    for s in unmatched:
+        if s.name in fixup:
+            result.setdefault(fixup[s.name], []).append({
+                "day": s.day, "stage": s.stage, "start_time": s.start_time,
+                "raw_name": s.name,
+            })
+    return result
 
 
 # ---------- CLI ------------------------------------------------------------------
