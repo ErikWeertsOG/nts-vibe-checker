@@ -35,6 +35,17 @@ h1 {
 }
 #search:focus { outline: 2px solid #D9FFF9; outline-offset: -2px; }
 
+#festival {
+  width: 100%;
+  padding: 8px 10px;
+  background: #2a1f8c;
+  border: 1px solid rgba(217,255,249,0.2);
+  color: #D9FFF9;
+  font: inherit;
+  cursor: pointer;
+}
+#festival:focus { outline: 2px solid #D9FFF9; outline-offset: -2px; }
+
 .filters { display: flex; gap: 4px; }
 .filters button {
   flex: 1;
@@ -50,7 +61,24 @@ h1 {
 }
 .filters button.active { background: #D9FFF9; color: #1B1464; border-color: #D9FFF9; }
 
-.list { list-style: none; margin: 0; padding: 0; max-height: 440px; overflow-y: auto; }
+.scan-btn {
+  display: block;
+  width: calc(100% - 28px);
+  margin: 0 14px 8px;
+  padding: 10px;
+  background: #D9FFF9;
+  color: #1B1464;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.scan-btn:hover { background: #fff; }
+.scan-btn:disabled { opacity: 0.5; cursor: default; }
+
+.list { list-style: none; margin: 0; padding: 0; max-height: 360px; overflow-y: auto; }
 .list li {
   display: flex;
   align-items: center;
@@ -78,6 +106,31 @@ h1 {
 .list .blurb { font-size: 11px; opacity: 0.8; margin-top: 2px; line-height: 1.3; }
 .list a { color: inherit; text-decoration: none; }
 .list a:hover { text-decoration: underline; }
+
+.settings {
+  padding: 8px 14px;
+  border-top: 1px solid rgba(217,255,249,0.1);
+  font-size: 11px;
+}
+.settings summary { cursor: pointer; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.05em; }
+.settings label { display: block; margin: 8px 0 4px; opacity: 0.8; }
+.settings input {
+  width: 100%;
+  padding: 6px 8px;
+  background: #2a1f8c;
+  border: 1px solid rgba(217,255,249,0.2);
+  color: #D9FFF9;
+  font: inherit;
+}
+.settings button {
+  margin-top: 6px;
+  background: transparent;
+  border: 1px solid rgba(217,255,249,0.3);
+  color: #D9FFF9;
+  font: inherit;
+  padding: 4px 8px;
+  cursor: pointer;
+}
 
 footer {
   display: flex;

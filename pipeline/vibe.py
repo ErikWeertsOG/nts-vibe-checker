@@ -67,8 +67,8 @@ Output: één strikt JSON-object, niets daarbuiten:
 Voor zeer lage vibe (<20): blurb is één droge zin dat het buiten NTS-spectrum valt."""
 
 USER_TEMPLATE = """Act: {name}
-Lowlands beschrijving: {bio}
-Lowlands genres: {genres}
+Festival-beschrijving: {bio}
+Festival-genres: {genres}
 {nts_signal}
 
 Beoordeel."""
@@ -98,10 +98,11 @@ def _extract_json(text: str) -> dict | None:
 
 def judge(client: Anthropic, act: dict) -> dict:
     bio = (act.get("bio") or "")[:1200]
+    genres = act.get("genres") or act.get("lowlands_genres") or []
     user = USER_TEMPLATE.format(
         name=act["name"],
         bio=bio or "(geen bio beschikbaar)",
-        genres=", ".join(act.get("lowlands_genres") or []) or "n/a",
+        genres=", ".join(genres) or "n/a",
         nts_signal=_build_nts_signal(act),
     )
     msg = client.messages.create(

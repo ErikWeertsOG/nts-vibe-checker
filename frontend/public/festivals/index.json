@@ -1,0 +1,18 @@
+{
+  "festivals": [
+    {
+      "id": "lowlands",
+      "name": "Lowlands 2026",
+      "file": "/acts.json",
+      "total": 126,
+      "generated_at": "2026-05-17T12:20:57.774686Z"
+    },
+    {
+      "id": "demo-festival",
+      "name": "Demo Festival",
+      "file": "/festivals/demo-festival.json",
+      "total": 12,
+      "generated_at": "2026-05-22T11:31:05.775147Z"
+    }
+  ]
+}

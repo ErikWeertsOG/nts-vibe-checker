@@ -6047,5 +6047,10 @@
       "name": "JASPER VAN DER VEEN",
       "start_time": "19:30"
     }
-  ]
+  ],
+  "festival": {
+    "id": "lowlands",
+    "name": "Lowlands 2026",
+    "url": "https://lowlands.nl/acts/"
+  }
 }

@@ -60,6 +60,25 @@
 .ntsvc-badge--detail .ntsvc-score { font-size: 32px; }
 .ntsvc-badge--detail .ntsvc-label { font-size: 11px; margin-top: 4px; }
 
+/* Generic name-matched sites: small inline badge placed after the act name. */
+.ntsvc-badge--inline {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  display: inline-flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 0;
+  padding: 2px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  pointer-events: auto;
+}
+.ntsvc-badge--inline .ntsvc-score { font-size: 13px; }
+.ntsvc-badge--inline .ntsvc-label { font-size: 9px; margin-top: 0; }
+
 /* Category colors — mirror DESIGN-lowlands.md tokens. */
 .ntsvc-cat-resident      { background: #B80028; color: #FFEBE7; }
 .ntsvc-cat-nts-vibe      { background: #D9FFF9; color: #1B1464; }
@@ -69,6 +88,82 @@
 
 /* Marker so we don't double-inject. */
 .ntsvc-host { position: relative; }
+
+/* Live-scan status toast. */
+.ntsvc-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
+  padding: 10px 14px;
+  background: #1B1464;
+  color: #D9FFF9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+/* Always-visible scan-results list (bottom-left). */
+.ntsvc-results {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 280px;
+  max-height: 60vh;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  background: #1B1464;
+  color: #D9FFF9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.ntsvc-results-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(217, 255, 249, 0.15);
+}
+.ntsvc-results-close {
+  background: transparent;
+  border: 0;
+  color: #D9FFF9;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.ntsvc-results-list { overflow-y: auto; }
+.ntsvc-results-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(217, 255, 249, 0.08);
+  color: #D9FFF9;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ntsvc-results-row:hover { background: #2a1f8c; }
+.ntsvc-results-score {
+  flex: 0 0 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Impact, "Bebas Neue", "Oswald", sans-serif;
+  font-size: 16px;
+}
+.ntsvc-results-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* Detail-page expandable "waarom?" panel. */
 .ntsvc-why {

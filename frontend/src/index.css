@@ -5,14 +5,46 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --ll-red: #b80028;
-    --ll-indigo: #1b1464;
-    --ll-indigo-deep: #0d0840;
-    --ll-cyan: #d9fff9;
-    --ll-blue: #1371c3;
-    --ll-cream: #ffebe7;
-    --ll-ink: #262626;
+  /* Colors are space-separated RGB triplets so Tailwind's /opacity modifier
+     works (rgb(var(--x) / <alpha-value>)). Default = Lowlands house style. */
+  :root, [data-theme="lowlands"] {
+    --ll-red: 184 0 40;
+    --ll-indigo: 27 20 100;
+    --ll-indigo-deep: 13 8 64;
+    --ll-cyan: 217 255 249;
+    --ll-blue: 19 113 195;
+    --ll-cream: 255 235 231;
+    --ll-ink: 38 38 38;
+  }
+  /* Neutral fallback theme for any festival without a bespoke palette. */
+  [data-theme="default"] {
+    --ll-red: 224 64 72;
+    --ll-indigo: 38 38 46;
+    --ll-indigo-deep: 16 16 20;
+    --ll-cyan: 198 240 232;
+    --ll-blue: 60 150 210;
+    --ll-cream: 237 237 240;
+    --ll-ink: 26 26 26;
+  }
+  /* Hidden Garden — botanical green/teal. */
+  [data-theme="hiddengarden"] {
+    --ll-red: 226 122 70;
+    --ll-indigo: 18 48 42;
+    --ll-indigo-deep: 8 26 22;
+    --ll-cyan: 170 240 202;
+    --ll-blue: 52 158 138;
+    --ll-cream: 234 245 238;
+    --ll-ink: 18 30 26;
+  }
+  /* Demo festival — violet. */
+  [data-theme="demo-festival"] {
+    --ll-red: 236 88 120;
+    --ll-indigo: 44 26 76;
+    --ll-indigo-deep: 22 12 40;
+    --ll-cyan: 214 196 255;
+    --ll-blue: 138 110 230;
+    --ll-cream: 240 235 250;
+    --ll-ink: 26 20 36;
   }
   html {
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
