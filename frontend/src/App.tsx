@@ -155,6 +155,25 @@ function ActCard({
   );
 }
 
+const FESTIVAL_DAYS = ["2026-08-21", "2026-08-22", "2026-08-23"];
+
+// Are we mid-festival right now? Includes the 00:00–05:00 "night-after"
+// window so anyone opening the app at 03:00 Saturday still lands on the
+// Friday programme (matches Timetable's own logic).
+function isFestivalNow(): boolean {
+  const now = new Date();
+  const iso = now.toISOString().slice(0, 10);
+  if (FESTIVAL_DAYS.includes(iso)) return true;
+  const prev = new Date(now.getTime() - 6 * 3600 * 1000).toISOString().slice(0, 10);
+  return FESTIVAL_DAYS.includes(prev);
+}
+
+function initialTab(): Tab {
+  const p = new URLSearchParams(window.location.search).get("tab");
+  if (p === "timetable" || p === "all" || p === "vibe") return p;
+  return isFestivalNow() ? "timetable" : "vibe";
+}
+
 export default function App() {
   const [index, setIndex] = useState<FestivalIndexEntry[]>(FALLBACK_INDEX);
   const [selectedId, setSelectedId] = useState<string>(() => {
@@ -163,7 +182,7 @@ export default function App() {
   });
   const [data, setData] = useState<Payload | null>(null);
   const [err, setErr] = useState<string>("");
-  const [tab, setTab] = useState<Tab>("vibe");
+  const [tab, setTab] = useState<Tab>(initialTab);
   const [q, setQ] = useState("");
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const [showInstall, setShowInstall] = useState(false);
@@ -215,6 +234,16 @@ export default function App() {
     const url = new URL(window.location.href);
     if (id === index[0]?.id) url.searchParams.delete("f");
     else url.searchParams.set("f", id);
+    window.history.replaceState({}, "", url);
+  };
+
+  // Reflect the current tab in the URL so a shared link opens on the same view.
+  const selectTab = (t: Tab) => {
+    setTab(t);
+    const url = new URL(window.location.href);
+    const isDefault = t === (isFestivalNow() ? "timetable" : "vibe");
+    if (isDefault) url.searchParams.delete("tab");
+    else url.searchParams.set("tab", t);
     window.history.replaceState({}, "", url);
   };
 
@@ -286,7 +315,7 @@ export default function App() {
             {tabs.map((t) => (
               <button
                 key={t}
-                onClick={() => setTab(t)}
+                onClick={() => selectTab(t)}
                 className={`ll-btn text-sm ${
                   activeTab === t
                     ? "bg-ll-cyan text-ll-indigo"
