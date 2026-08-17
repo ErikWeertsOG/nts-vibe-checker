@@ -10,6 +10,10 @@ Lowlands keeps its dedicated rich adapter and its canonical output path, so the
 no-argument run behaves exactly as before. Every other URL goes through the
 generic extractor and is written as a separate festival file plus an index
 entry, leaving Lowlands untouched.
+
+For Lowlands specifically, a sixth step attaches the blokkenschema PDF: each
+matched act gets a `sets` field, and the payload gains a top-level `timetable`
+list plus a `timetable_updated_at` timestamp.
 """
 from __future__ import annotations
 
@@ -22,9 +26,14 @@ from extract import extract_acts
 from nts import fetch_show_index, lookup_acts, fetch_mixtape_credits, nts_available
 from score import score_all, combine
 from vibe import judge_all
+from timetable import (
+    fetch_pdf, parse_pdf, match_slots_with_fixup, enrich_acts,
+    diff_slots, PREV_SLOTS_CACHE,
+)
 
 PUBLIC = Path(__file__).parent.parent / "frontend" / "public"
 LOWLANDS_URL = "https://lowlands.nl/acts/"
+LOWLANDS_TIMETABLE_URL = "https://lowlands.nl/media/documents/LL26_Blokkenschema.pdf"
 
 
 def _output_path(fid: str) -> Path:
@@ -57,6 +66,44 @@ def _update_index(meta: dict, payload: dict) -> None:
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=2))
 
 
+def _attach_lowlands_timetable(final: list[dict]) -> tuple[list[dict], list[dict], str | None]:
+    """For Lowlands: parse the blokkenschema PDF, match slots to acts, return
+    (final_with_sets, raw_slots, iso_timestamp). On any failure returns
+    (final, [], None) so the pipeline still succeeds."""
+    try:
+        pdf, changed = fetch_pdf(LOWLANDS_TIMETABLE_URL)
+        print(f"  pdf: {'CHANGED — reparsing' if changed else 'unchanged (using cache)'}")
+        slots = parse_pdf(pdf)
+        raw = [s.to_dict() for s in slots]
+
+        if PREV_SLOTS_CACHE.exists():
+            try:
+                prev = json.loads(PREV_SLOTS_CACHE.read_text())
+                d = diff_slots(prev, raw)
+                if d["added"] or d["removed"] or d["moved"]:
+                    print(f"  diff: +{len(d['added'])} added, -{len(d['removed'])} removed, "
+                          f"~{len(d['moved'])} moved")
+                    for s in d["added"][:5]:
+                        print(f"    + {s['day']} {s['stage']} {s['start_time']}  {s['name']}")
+                    for s in d["removed"][:5]:
+                        print(f"    - {s['day']} {s['stage']} {s['start_time']}  {s['name']}")
+                    for m in d["moved"][:5]:
+                        print(f"    ~ {m['from']['name']}: "
+                              f"{m['from']['stage']} {m['from']['start_time']} → "
+                              f"{m['to']['stage']} {m['to']['start_time']}")
+            except Exception as e:
+                print(f"  diff: skipped ({e})")
+
+        match_map = match_slots_with_fixup(slots, final)
+        final = enrich_acts(final, match_map)
+        matched_acts = sum(1 for a in final if a.get("sets"))
+        print(f"  {len(slots)} slots · matched to {matched_acts} acts")
+        return final, raw, datetime.utcnow().isoformat() + "Z"
+    except Exception as e:
+        print(f"  ! timetable step failed: {e}")
+        return final, [], None
+
+
 def build(url: str, force: bool = False, method: str = "auto") -> dict:
     print(f"[1/5] Extract line-up: {url}")
     meta, acts = extract_acts(url, force=force, method=method)
@@ -83,7 +130,14 @@ def build(url: str, force: bool = False, method: str = "auto") -> dict:
     print("[5/5] Combine + write...")
     final = combine(scored, judgments)
 
-    payload = {
+    # Lowlands-only: attach the blokkenschema PDF.
+    raw_slots: list[dict] = []
+    timetable_ts: str | None = None
+    if meta["id"] == "lowlands":
+        print("[6/6] Timetable (Lowlands)...")
+        final, raw_slots, timetable_ts = _attach_lowlands_timetable(final)
+
+    payload: dict = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
         "festival": {"id": meta["id"], "name": meta["name"], "url": meta["url"]},
         "acts": final,
@@ -95,6 +149,10 @@ def build(url: str, force: bool = False, method: str = "auto") -> dict:
             "with_vibe_70_plus": sum(1 for a in final if a["vibe_score"] >= 70),
         },
     }
+    if raw_slots:
+        payload["timetable"] = raw_slots
+        payload["timetable_updated_at"] = timetable_ts
+        payload["stats"]["with_timetable"] = sum(1 for a in final if a.get("sets"))
 
     out = _output_path(meta["id"])
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -104,8 +162,15 @@ def build(url: str, force: bool = False, method: str = "auto") -> dict:
     print(f"\nWrote {out}")
     print("\nTop 20:")
     for a in final[:20]:
-        print(f"  {a['score']:3d}  p:{a['presence_score']:3d} v:{a['vibe_score']:3d}  "
-              f"[{a['category']:13}]  {a['name']}")
+        cat = a["category"]
+        ps = a["presence_score"]
+        vs = a["vibe_score"]
+        sets = a.get("sets") or []
+        when = ""
+        if sets:
+            s = sets[0]
+            when = f"  ⏱  {s['day'][-5:]} {s['stage']:8} {s['start_time']}"
+        print(f"  {a['score']:3d}  p:{ps:3d} v:{vs:3d}  [{cat:13}]  {a['name']}{when}")
     return payload
 
 

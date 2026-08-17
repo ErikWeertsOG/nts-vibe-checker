@@ -1,0 +1,55 @@
+name: Refresh timetable
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # daily at 06:00 UTC (08:00 Amsterdam summer)
+  workflow_dispatch: {}    # manual trigger
+
+concurrency:
+  group: refresh-timetable
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install pipeline deps
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Restore timetable cache
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: timetable-cache-v1
+          # `restore-keys` lets us pick up any previous cache on branch churn
+          restore-keys: |
+            timetable-cache-
+
+      - name: Run refresh
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        working-directory: pipeline
+        run: python refresh_timetable.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet frontend/public/acts.json; then
+            echo "No change — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/acts.json
+          git commit -m "Refresh timetable (auto)"
+          git push
