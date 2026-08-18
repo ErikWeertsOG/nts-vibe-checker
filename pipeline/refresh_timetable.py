@@ -40,6 +40,25 @@ def main() -> int:
     slots = parse_pdf(pdf)
     raw_slots = [s.to_dict() for s in slots]
 
+    # Sanity check: if the new parse dropped >20% of slots or lost an entire
+    # festival day, refuse to overwrite. The published PDF may have changed
+    # shape (parser regression) or the upstream file may be temporarily bad.
+    prev_slots = payload.get("timetable") or []
+    if prev_slots:
+        prev_n = len(prev_slots)
+        prev_days = {s["day"] for s in prev_slots}
+        new_days = {s["day"] for s in raw_slots}
+        missing_days = prev_days - new_days
+        if missing_days:
+            print(f"! REFUSING TO WRITE: new parse lost days {sorted(missing_days)}",
+                  file=sys.stderr)
+            return 3
+        if len(raw_slots) < prev_n * 0.8:
+            print(f"! REFUSING TO WRITE: new parse has {len(raw_slots)} slots "
+                  f"vs previous {prev_n} (>20% drop). Inspect the PDF.",
+                  file=sys.stderr)
+            return 3
+
     if PREV_SLOTS_CACHE.exists():
         try:
             prev = json.loads(PREV_SLOTS_CACHE.read_text())

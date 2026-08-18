@@ -297,8 +297,12 @@ def match_slots(slots: list[Slot], acts: list[dict]) -> dict[str, list[dict]]:
             continue
         # 4. bi-directional norm-substring (catches parser artifacts like
         #    'worldpeac dmt' → 'worldpeace dmt', 'nederlands orkest' → 'noord nederlands orkest')
+        # BOTH sides must be >=6 chars — otherwise short act names like 'sor'
+        # would substring-match into every longer slot containing those letters.
         if len(n) >= 6:
             for norm_name, a in by_norm_name.items():
+                if len(norm_name) < 6:
+                    continue
                 if n in norm_name or norm_name in n:
                     result[a["slug"]].append(set_info)
                     matched = True
