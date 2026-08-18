@@ -41,14 +41,7 @@
       "overridden": false,
       "score": 100,
       "category": "RESIDENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "HEINEKEN",
-          "start_time": "20:45",
-          "raw_name": "FLOATING POINTS (LIVE)"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1342,
@@ -83,14 +76,7 @@
       "overridden": false,
       "score": 98,
       "category": "RESIDENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "23:15",
-          "raw_name": "THIS MUST BE THE PACE WITH THEO PARRISH"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1344,
@@ -491,14 +477,7 @@
       "overridden": false,
       "score": 92,
       "category": "RESIDENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "16:45",
-          "raw_name": "JANE REMOVER"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1335,
@@ -602,14 +581,7 @@
       "overridden": false,
       "score": 91,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "03:30",
-          "raw_name": "NENE H"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1374,
@@ -682,14 +654,7 @@
       "overridden": false,
       "score": 88,
       "category": "RESIDENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "ALPHA",
-          "start_time": "19:30",
-          "raw_name": "TURNSTILE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1353,
@@ -757,14 +722,7 @@
       "overridden": false,
       "score": 84,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "17:30",
-          "raw_name": "MARUJA"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1328,
@@ -832,14 +790,7 @@
       "overridden": false,
       "score": 84,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "22:00",
-          "raw_name": "GEORDIE GREEP"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1265,
@@ -944,14 +895,7 @@
       "overridden": false,
       "score": 82,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "20:30",
-          "raw_name": "CLIPSE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1336,
@@ -1018,14 +962,7 @@
       "overridden": false,
       "score": 82,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "00:30",
-          "raw_name": "SKREAM & BENGA"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1356,
@@ -1172,14 +1109,7 @@
       "overridden": false,
       "score": 80,
       "category": "RESIDENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "15:15",
-          "raw_name": "THE E FEMCELS"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1269,
@@ -1324,14 +1254,7 @@
       "overridden": false,
       "score": 78,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "HEINEKEN",
-          "start_time": "14:45",
-          "raw_name": "BURAKA SOM SISTEMA"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1310,
@@ -1546,14 +1469,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "LIMA",
-          "start_time": "19:45",
-          "raw_name": "BASSOLINO"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1282,
@@ -1588,7 +1504,7 @@
         {
           "day": "2026-08-21",
           "stage": "LIMA",
-          "start_time": "18:20",
+          "start_time": "18:30",
           "raw_name": "ANA FRANGO ELÉTRICO"
         }
       ]
@@ -1695,14 +1611,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "ALPHA",
-          "start_time": "15:30",
-          "raw_name": "HERMANOS GUTIÉRREZ"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1306,
@@ -1846,14 +1755,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "23:00",
-          "raw_name": "SAIDAH"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1334,
@@ -1920,14 +1822,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "00:30",
-          "raw_name": "BENNY RODRIGUES"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1347,
@@ -1994,14 +1889,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "23:15",
-          "raw_name": "FLAVA D"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1354,
@@ -2031,14 +1919,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "02:00",
-          "raw_name": "KETTAMA"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1357,
@@ -2144,14 +2025,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "LIMA",
-          "start_time": "13:45",
-          "raw_name": "ANAIIS"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1372,
@@ -2334,14 +2208,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "14:30",
-          "raw_name": "SOPHIE STRAAT"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1393,
@@ -2448,14 +2315,7 @@
       "overridden": false,
       "score": 72,
       "category": "NTS-VIBE",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "14:45",
-          "raw_name": "WORLDPEAC DMT"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1283,
@@ -2486,14 +2346,7 @@
       "overridden": false,
       "score": 62,
       "category": "ADJACENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "HEINEKEN",
-          "start_time": "16:45",
-          "raw_name": "WUNDERHORSE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1284,
@@ -2523,14 +2376,7 @@
       "overridden": false,
       "score": 62,
       "category": "ADJACENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "12:30",
-          "raw_name": "STEEL PULSE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1287,
@@ -2679,14 +2525,7 @@
       "overridden": false,
       "score": 62,
       "category": "ADJACENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "HEINEKEN",
-          "start_time": "18:45",
-          "raw_name": "DIJON"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1330,
@@ -2716,14 +2555,7 @@
       "overridden": false,
       "score": 62,
       "category": "ADJACENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "03:30",
-          "raw_name": "TANTU BEATS"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1332,
@@ -2865,14 +2697,7 @@
       "overridden": false,
       "score": 62,
       "category": "ADJACENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "LIMA",
-          "start_time": "15:50",
-          "raw_name": "ERIN LECOUNT"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1377,
@@ -3279,14 +3104,7 @@
       "overridden": false,
       "score": 52,
       "category": "ADJACENT",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "12:45",
-          "raw_name": "TEEN MORTGAGE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1402,
@@ -3323,12 +3141,6 @@
           "stage": "INDIA",
           "start_time": "20:30",
           "raw_name": "ZEP"
-        },
-        {
-          "day": "2026-08-23",
-          "stage": "JULIET",
-          "start_time": "17:00",
-          "raw_name": "ITA, JUNE YANEZ, LEILA SAHIR, ZEPHYR BRÜGGEN"
         }
       ]
     },
@@ -3399,20 +3211,7 @@
       "overridden": false,
       "score": 38,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "ALPHA",
-          "start_time": "13:30",
-          "raw_name": "NEDERLANDS ORKEST"
-        },
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "21:45",
-          "raw_name": "SOR"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1274,
@@ -3479,14 +3278,7 @@
       "overridden": false,
       "score": 38,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "15:30",
-          "raw_name": "DIKKE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1285,
@@ -3586,14 +3378,7 @@
       "overridden": false,
       "score": 38,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "BRAVO",
-          "start_time": "16:30",
-          "raw_name": "CELESTE 2HOLLIS"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1352,
@@ -3691,14 +3476,7 @@
       "overridden": false,
       "score": 38,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "LIMA",
-          "start_time": "21:45",
-          "raw_name": "COMPAGNIA LA GIOSTRA"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1385,
@@ -3768,14 +3546,7 @@
       "overridden": false,
       "score": 38,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "19:30",
-          "raw_name": "NAOMI SHARON"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1399,
@@ -4000,14 +3771,7 @@
       "overridden": false,
       "score": 28,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "ALPHA",
-          "start_time": "17:30",
-          "raw_name": "MARIBOU STATE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1316,
@@ -4043,7 +3807,7 @@
         {
           "day": "2026-08-21",
           "stage": "ALPHA",
-          "start_time": "20:30",
+          "start_time": "20:15",
           "raw_name": "PARCELS"
         }
       ]
@@ -4077,14 +3841,7 @@
       "overridden": false,
       "score": 28,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "ALPHA",
-          "start_time": "21:30",
-          "raw_name": "LORDE"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1364,
@@ -4191,14 +3948,7 @@
       "overridden": false,
       "score": 28,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "20:15",
-          "raw_name": "NINAJIRACHI"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1266,
@@ -4343,14 +4093,7 @@
       "overridden": false,
       "score": 22,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "X-RAY",
-          "start_time": "18:30",
-          "raw_name": "AND THE JEAN TEASERS"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1270,
@@ -4496,14 +4239,7 @@
       "overridden": false,
       "score": 18,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "LIMA",
-          "start_time": "12:00",
-          "raw_name": "POLITIE WARNSVELD"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1303,
@@ -4611,14 +4347,7 @@
       "overridden": false,
       "score": 14,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "LIMA",
-          "start_time": "17:45",
-          "raw_name": "EL PONY PISADOR"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1339,
@@ -4648,14 +4377,7 @@
       "overridden": false,
       "score": 12,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "INDIA",
-          "start_time": "02:00",
-          "raw_name": "ANDROMEDIK"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1381,
@@ -4760,14 +4482,7 @@
       "overridden": false,
       "score": 8,
       "category": "OFF",
-      "sets": [
-        {
-          "day": "2026-08-23",
-          "stage": "HEINEKEN",
-          "start_time": "23:00",
-          "raw_name": "ICONIC"
-        }
-      ]
+      "sets": []
     },
     {
       "id": 1298,
@@ -4814,7 +4529,7 @@
     "with_presence": 11,
     "with_vibe_50_plus": 87,
     "with_vibe_70_plus": 64,
-    "with_timetable": 123
+    "with_timetable": 84
   },
   "timetable": [
     {
@@ -4839,7 +4554,7 @@
       "day": "2026-08-21",
       "stage": "ALPHA",
       "name": "PARCELS",
-      "start_time": "20:30"
+      "start_time": "20:15"
     },
     {
       "day": "2026-08-21",
@@ -4959,7 +4674,7 @@
       "day": "2026-08-21",
       "stage": "LIMA",
       "name": "ANA FRANGO ELÉTRICO",
-      "start_time": "18:20"
+      "start_time": "18:30"
     },
     {
       "day": "2026-08-21",
@@ -5179,9 +4894,57 @@
     },
     {
       "day": "2026-08-21",
-      "stage": "ADONIS",
-      "name": "LITERAIRE DARKROOM",
-      "start_time": "10:15"
+      "stage": "ECHO",
+      "name": "WE MOETEN HET HEBBEN OVER: FEMICIDE",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "VPRO TEGENLICHT",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "HOE ZIEK IS DE GEOPOLITIEK: SOEDAN",
+      "start_time": "15:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "NEW SCIENTIST LIVE",
+      "start_time": "16:45"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "NWQ",
+      "start_time": "18:00"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "THE MAKING OF DE JEUGD VAN TEGENWOORDIG – LIVE",
+      "start_time": "19:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "BILLIE EILISH: HIT ME HARD AND SOFT",
+      "start_time": "21:15"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "FANTASTIC PLANET",
+      "start_time": "23:30"
+    },
+    {
+      "day": "2026-08-21",
+      "stage": "ECHO",
+      "name": "TEENAGE SEX AND DEATH AT CAMP MIASMA",
+      "start_time": "01:05"
     },
     {
       "day": "2026-08-21",
@@ -5599,14 +5362,62 @@
     },
     {
       "day": "2026-08-22",
-      "stage": "ADONIS",
-      "name": "LITERAIR DARKROO",
-      "start_time": "10:15"
+      "stage": "ECHO",
+      "name": "WE MOETEN HET HEBBEN OVER: DE RECHTSSTAAT",
+      "start_time": "12:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "VPRO TEGENLICHT",
+      "start_time": "14:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "HOE ZIEK IS DE GEOPOLITIEK: IRAN",
+      "start_time": "15:15"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "NEW SCIENTIST LIVE",
+      "start_time": "16:45"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "NWQ",
+      "start_time": "18:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "FANTASTIC SHORTS",
+      "start_time": "19:00"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "THE ROCKY HORROR PICTURE SHOW SING-ALONG",
+      "start_time": "20:30"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "THE DRAMA",
+      "start_time": "22:45"
+    },
+    {
+      "day": "2026-08-22",
+      "stage": "ECHO",
+      "name": "AKIRA",
+      "start_time": "00:50"
     },
     {
       "day": "2026-08-22",
       "stage": "ADONIS",
-      "name": "E BAKKIE M LLIT",
+      "name": "BAKKIE LLIT",
       "start_time": "10:45"
     },
     {
@@ -5650,402 +5461,6 @@
       "stage": "ADONIS",
       "name": "CHICKS IN DIALOGUE",
       "start_time": "19:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ALPHA",
-      "name": "NEDERLANDS ORKEST",
-      "start_time": "13:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ALPHA",
-      "name": "HERMANOS GUTIÉRREZ",
-      "start_time": "15:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ALPHA",
-      "name": "MARIBOU STATE",
-      "start_time": "17:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ALPHA",
-      "name": "TURNSTILE",
-      "start_time": "19:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ALPHA",
-      "name": "LORDE",
-      "start_time": "21:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "STEEL PULSE",
-      "start_time": "12:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "SOPHIE STRAAT",
-      "start_time": "14:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "CELESTE 2HOLLIS",
-      "start_time": "16:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "CLIPSE",
-      "start_time": "20:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "SAIDAH",
-      "start_time": "23:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "BENNY RODRIGUES",
-      "start_time": "00:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "KETTAMA",
-      "start_time": "02:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "BRAVO",
-      "name": "NENE H",
-      "start_time": "03:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HEINEKEN",
-      "name": "MERIJN SCHOLTEN",
-      "start_time": "12:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HEINEKEN",
-      "name": "BURAKA SOM SISTEMA",
-      "start_time": "14:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HEINEKEN",
-      "name": "WUNDERHORSE",
-      "start_time": "16:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HEINEKEN",
-      "name": "DIJON",
-      "start_time": "18:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HEINEKEN",
-      "name": "FLOATING POINTS (LIVE)",
-      "start_time": "20:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HEINEKEN",
-      "name": "ICONIC",
-      "start_time": "23:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "POLITIE WARNSVELD",
-      "start_time": "12:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "ANAIIS",
-      "start_time": "13:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "ERIN LECOUNT",
-      "start_time": "15:50"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "EL PONY PISADOR",
-      "start_time": "17:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "BASSOLINO",
-      "start_time": "19:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "COMPAGNIA LA GIOSTRA",
-      "start_time": "21:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "LIMA",
-      "name": "VLOOIENCIRCUS",
-      "start_time": "23:15"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "YOGA",
-      "start_time": "11:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "BROTHER WALLACE",
-      "start_time": "13:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "DIKKE",
-      "start_time": "15:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "MARUJA",
-      "start_time": "17:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "NAOMI SHARON",
-      "start_time": "19:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "SOR",
-      "start_time": "21:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "FLAVA D",
-      "start_time": "23:15"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "SKREAM & BENGA",
-      "start_time": "00:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "ANDROMEDIK",
-      "start_time": "02:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "INDIA",
-      "name": "TANTU BEATS",
-      "start_time": "03:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "TEEN MORTGAGE",
-      "start_time": "12:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "WORLDPEAC DMT",
-      "start_time": "14:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "THE E FEMCELS",
-      "start_time": "15:15"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "JANE REMOVER",
-      "start_time": "16:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "AND THE JEAN TEASERS",
-      "start_time": "18:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "NINAJIRACHI",
-      "start_time": "20:15"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "GEORDIE GREEP",
-      "start_time": "22:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "X-RAY",
-      "name": "THIS MUST BE THE PACE WITH THEO PARRISH",
-      "start_time": "23:15"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "ABIBA SOKOTO B2B PELANOIR",
-      "start_time": "12:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "EILEEN",
-      "start_time": "16:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "SHADY LADY",
-      "start_time": "18:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "KINGDOM SOUND",
-      "start_time": "20:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "AK SOUNDSYSTEM",
-      "start_time": "22:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "DEEJAY ABSTRACT",
-      "start_time": "00:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "HACIENDA",
-      "name": "YUCKY",
-      "start_time": "02:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "JULIET",
-      "name": "SARAH JANNEH, NITE, UTRECHT, MUSICALMAKERS",
-      "start_time": "14:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "JULIET",
-      "name": "ITA, JUNE YANEZ, LEILA SAHIR, ZEPHYR BRÜGGEN",
-      "start_time": "17:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "JULIET",
-      "name": "CIRCUMSTANCES",
-      "start_time": "19:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "JULIET",
-      "name": "DAAN VAN DER HOEVEN",
-      "start_time": "21:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "JULIET",
-      "name": "DE NATIONALE AVOND VAN DE WOORDGRAP",
-      "start_time": "22:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "JULIET",
-      "name": "DE LOWLANDS GROTE* TALENTENSHOW",
-      "start_time": "00:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "LITERAIRE DARKROOM",
-      "start_time": "10:15"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "BAKKIE LLIT",
-      "start_time": "10:45"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "DARLING, DEAREST, DEAD",
-      "start_time": "12:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "WAT NU? FANTASY!",
-      "start_time": "13:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "EINDELOOS VERTIER",
-      "start_time": "15:00"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "DAVID VAN ROSMALEN",
-      "start_time": "16:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "MARTIJN CRINS",
-      "start_time": "17:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "DAVINE PERIK",
-      "start_time": "18:30"
-    },
-    {
-      "day": "2026-08-23",
-      "stage": "ADONIS",
-      "name": "JASPER VAN DER VEEN",
-      "start_time": "19:30"
     }
   ],
   "festival": {
@@ -6053,5 +5468,5 @@
     "name": "Lowlands 2026",
     "url": "https://lowlands.nl/acts/"
   },
-  "timetable_updated_at": "2026-08-17T20:07:16.620279Z"
+  "timetable_updated_at": "2026-08-18T06:40:14.133261Z"
 }
