@@ -13,6 +13,13 @@
       "file": "/festivals/demo-festival.json",
       "total": 12,
       "generated_at": "2026-05-22T11:31:05.775147Z"
+    },
+    {
+      "id": "lief",
+      "name": "Lief Festival 2026",
+      "file": "/festivals/lief.json",
+      "total": 19,
+      "generated_at": "2026-08-18T12:00:00Z"
     }
   ]
 }
